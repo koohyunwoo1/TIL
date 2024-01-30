@@ -50,9 +50,18 @@ dec(arr, N)
 print(arr)
 
 
+# 20240130
 
 
+num = 456789
+c = [0] * 12
 
+for i in range(6):
+    c[num % 10] += 1
+    num // 10
+
+
+# input() 함수 사용시 문자열로 들어온다.
 
 
 
