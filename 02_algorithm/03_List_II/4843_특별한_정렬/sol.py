@@ -37,5 +37,5 @@ for _ in range(1, T+1):
         result.append(bi[i])
         result.append(ai[i])
 
-    print(f'#{_} {result}')
+    print(f'#{_} {" ".join(map(str, result))}')
 
