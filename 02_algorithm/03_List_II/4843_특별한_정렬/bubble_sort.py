@@ -9,20 +9,20 @@ for test_case in range(1, T+1):
 
 
 
-for i in range(N-1, 0, -1):
-    for j in range(i):
-        if ai[j] > ai[j+1]:
-            ai[j], ai[j+1] = ai[j+1], ai[j]
+    for i in range(N-1, 0, -1):
+        for j in range(i):
+            if ai[j] > ai[j+1]:
+                ai[j], ai[j+1] = ai[j+1], ai[j]
     
-result = []
+    result = []
 
-for i in range(len(ai)):
-    if i % 2 == 0:
-        result.append(ai.pop())
-    else:
-        result.append(ai.pop(0))
+    for i in range(len(ai)):
+        if i % 2 == 0:
+            result.append(ai.pop())
+        else:
+            result.append(ai.pop(0))
 
-print(f'#{test_case}', *result)
+    print(f'#{test_case}', *result)
 
 
 
