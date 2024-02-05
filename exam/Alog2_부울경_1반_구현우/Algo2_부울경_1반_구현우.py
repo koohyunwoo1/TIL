@@ -1,5 +1,5 @@
-# import sys
-# sys.stdin = open('algo2_sample_in.txt')
+import sys
+sys.stdin = open('algo2_sample_in.txt')
 
 T = int(input())
 
