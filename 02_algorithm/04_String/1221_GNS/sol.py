@@ -15,6 +15,7 @@ for _ in range(1,T+1):
     # 테스트케이스를 data에 넣어준다.
     for i in range(int(n)):
         data[i] = arr.index(data[i])
+    # print(data)
     # data 리스트의 각 요소를 arr 리스트의 해당 인덱스를 찾아서
     # data[i]에 갱신한다.
     data.sort()

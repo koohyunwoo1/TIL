@@ -9,6 +9,7 @@ T =int(input())
 
 for _ in range(1,T+1):
     N , M = map(int, input().split())
+    # M  :  길이
     arr = [input() for _ in range(N)]
 
 
@@ -18,22 +19,27 @@ for _ in range(1,T+1):
         for j in range(N - M + 1): 
             if arr[i][j:j+M] == arr[i][j:j+M][::-1] :
                 # 단어가 회문이라면
-                result = arr[i][j:j+M]
+                final_result = arr[i][j:j+M]
                 # 그 회문인 단어를 result에 넣겠다.
 
     
     # 세로 방향에서 회문 찾기
-                
+    result = []
+
+    for i in range(N):
+        sero = ''
+        for j in range(M):
+            sero += arr[j][i]
+        result.append(sero)
+    
+
     for i in range(N):
         for j in range(N - M + 1):
-            sero = ''
-            for k in range(M):
-                sero += arr[j + k][i]
-            if sero == sero[::-1]:
-                result = sero
+            if result[i][j:j+M] == result[i][j:j+M][::-1]:
+                final_result = result[i][j:j+M]
 
 
-    print(f"#{_} {''.join(result)}")
+    print(f"#{_} {''.join(final_result)}")
 
 
 
