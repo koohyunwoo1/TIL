@@ -7,7 +7,7 @@ sys.stdin = open('input.txt')
 
 T =int(input())
 
-for _ in range(1,T+1):
+for tc in range(1,T+1):
     N , M = map(int, input().split())
     # M  :  길이
     arr = [input() for _ in range(N)]
@@ -28,10 +28,9 @@ for _ in range(1,T+1):
 
     for i in range(N):
         sero = ''
-        for j in range(M):
+        for j in range(N):  
             sero += arr[j][i]
         result.append(sero)
-    
 
     for i in range(N):
         for j in range(N - M + 1):
@@ -39,7 +38,10 @@ for _ in range(1,T+1):
                 final_result = result[i][j:j+M]
 
 
-    print(f"#{_} {''.join(final_result)}")
+    print(f"#{tc} {final_result}")
+
+
+
 
 
 
