@@ -3,25 +3,8 @@ sys.stdin = open('input.txt')
 
 
 
-def :
+def min_sum():
     pass
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 T = int(input())
 for tc in range(1, T+1):
