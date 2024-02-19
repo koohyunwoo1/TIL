@@ -1,38 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b89cb389-e7c7-49ca-afc7-a55a8e6cd608" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../02_algorithm/10_Queue/20240215/Queue.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02_algorithm/10_Queue/5097_회전/input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02_algorithm/10_Queue/5097_회전/sol.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2차원 배열/10798/10798.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2차원 배열/10798/input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2차원 배열/2563/2563.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2차원 배열/2563/input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2차원 배열/2566/2566.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2차원 배열/2566/input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2차원 배열/2738/2738.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2차원 배열/2738/input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_algorithm/09_Stack_II/1223_계산기2/sol.py" beforeDir="false" afterPath="$PROJECT_DIR$/../02_algorithm/09_Stack_II/1223_계산기2/sol.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_algorithm/10_Queue/1225_암호생성기/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../02_algorithm/10_Queue/1225_암호생성기/input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_algorithm/10_Queue/1225_암호생성기/sol.py" beforeDir="false" afterPath="$PROJECT_DIR$/../02_algorithm/10_Queue/1225_암호생성기/sol.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_algorithm/10_Queue/5099_피자굽기/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../02_algorithm/10_Queue/5099_피자굽기/input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_algorithm/10_Queue/5099_피자굽기/sol.py" beforeDir="false" afterPath="$PROJECT_DIR$/../02_algorithm/10_Queue/5099_피자굽기/sol.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_algorithm/10_Queue/5907_회전/input.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02_algorithm/10_Queue/5907_회전/sol.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/심화(1)/10988/10988.py" beforeDir="false" afterPath="$PROJECT_DIR$/심화(1)/10988/10988.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/심화(1)/10988/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/심화(1)/10988/input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/심화(1)/1157/1157.py" beforeDir="false" afterPath="$PROJECT_DIR$/심화(1)/1157/1157.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/심화(1)/1157/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/심화(1)/1157/input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/심화(1)/1316/1316.py" beforeDir="false" afterPath="$PROJECT_DIR$/심화(1)/1316/1316.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/심화(1)/1316/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/심화(1)/1316/input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/심화(1)/2444/2444.py" beforeDir="false" afterPath="$PROJECT_DIR$/심화(1)/2444/2444.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/심화(1)/25206/25206.py" beforeDir="false" afterPath="$PROJECT_DIR$/심화(1)/25206/25206.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/심화(1)/25206/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/심화(1)/25206/input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/심화(1)/2941/2941.py" beforeDir="false" afterPath="$PROJECT_DIR$/심화(1)/2941/2941.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/심화(1)/2941/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/심화(1)/2941/input.txt" afterDir="false" />
-    </list>
+    <list default="true" id="b89cb389-e7c7-49ca-afc7-a55a8e6cd608" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
