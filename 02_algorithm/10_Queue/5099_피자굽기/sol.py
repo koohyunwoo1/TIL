@@ -1,5 +1,6 @@
 import sys
 sys.stdin = open('input.txt')
+# from collections import deque
 # 마지막까지 남아있는 피자의 번호를 알아야함
 # 인덱스로 해야 할듯 ?
 T = int(input())
@@ -7,7 +8,8 @@ T = int(input())
 for tc in range(1, T+1):
     N, M = map(int, input().split())
     Ci = list(map(int, input().split()))  # 치즈의 양
-
+    # q = deque([9])
+    # print(q)
     pizza_number = []
     for i in range(M):
         pizza_number.append([i+1, Ci[i]])

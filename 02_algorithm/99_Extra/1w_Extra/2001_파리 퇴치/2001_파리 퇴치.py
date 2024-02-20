@@ -9,9 +9,15 @@ for tc in range(1, T+1):
     N, M = map(int, input().split())
     arr = [list(map(int, input().split())) for _ in range(N)]
 
-    s = []
+    max_cnt = 0
     for i in range(N-M+1):
-        pass
+        for j in range(N-M+1):
+            cnt = 0
+            for k in range(M):
+                for l in range(M):
+                    cnt += arr[i+k][j+l]
+            if max_cnt < cnt:
+                max_cnt = cnt
 
-    # 파리채를 내려칠곳을 알아야함.
-    # 그리고 그 후에 잡을수있는 파리의 수 
+
+    print(f'#{tc} {max_cnt}')
