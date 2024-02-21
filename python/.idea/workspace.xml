@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b89cb389-e7c7-49ca-afc7-a55a8e6cd608" name="Default Changelist" comment="" />
+    <list default="true" id="b89cb389-e7c7-49ca-afc7-a55a8e6cd608" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../02_algorithm/13_Tree/5177_이진_힙/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../02_algorithm/13_Tree/5177_이진_힙/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_algorithm/13_Tree/5178_노드의_합/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../02_algorithm/13_Tree/5178_노드의_합/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_algorithm/13_Tree/5178_노드의_합/sol.py" beforeDir="false" afterPath="$PROJECT_DIR$/../02_algorithm/13_Tree/5178_노드의_합/sol.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../3월 과목평가 및 월말평가 대비/4881_배열최소합/solution.py" beforeDir="false" afterPath="$PROJECT_DIR$/../3월 과목평가 및 월말평가 대비/4881_배열최소합/solution.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../3월 과목평가 및 월말평가 대비/bj_1244_스위치_켜고_끄기/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../3월 과목평가 및 월말평가 대비/bj_1244_스위치_켜고_끄기/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../3월 과목평가 및 월말평가 대비/bj_1244_스위치_켜고_끄기/solution.py" beforeDir="false" afterPath="$PROJECT_DIR$/../3월 과목평가 및 월말평가 대비/bj_1244_스위치_켜고_끄기/solution.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,7 +29,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.sol (1)">
     <configuration name="2563" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -43,8 +51,52 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="sol (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/브루트포스/1018" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/브루트포스/1018/sol.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sol" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/브루트포스/19532" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/브루트포스/19532/sol.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.sol (1)" />
+        <item itemvalue="Python.sol" />
         <item itemvalue="Python.2563" />
       </list>
     </recent_temporary>
