@@ -20,15 +20,17 @@ for st in range(student):
     # 남자인 경우
     if gender == 1:
         for i in range(number, switch+1, number):
-            if switch[i] == 0:
-                switch[i] = 1
-            else:
-                switch[i] = 0
+            # if switch[i] == 0:
+            #     switch[i] = 1
+            switch[i] = 1 - switch[i]
+            # else:
+            #     switch[i] = 0
 
     # 여자인 경우
     else:
         if switch[number] == 0:
             switch[number] = 1
         else:
+            pass
 
 
