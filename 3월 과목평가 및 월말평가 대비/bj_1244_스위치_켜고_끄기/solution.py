@@ -10,27 +10,40 @@ sys.stdin = open('input.txt')
 
 '''
 
-switch_num = int(input())  # 스위치의 개수
-switch = list(map(int, input().split()))  # 스위치의 현재 상태
-student = int(input())  # 학생 수 
+N = int(input())
+switch = list(map(int, input().split()))
+M = int(input()) # 학생 수
+for _ in range(M):
+    s, n = map(int, input().split())
 
-for st in range(student):
-    gender , number = map(int, input().split())  # 한 학생의 성별, 학생이 받은 수
-    
-    # 남자인 경우
-    if gender == 1:
-        for i in range(number, switch+1, number):
-            # if switch[i] == 0:
-            #     switch[i] = 1
-            switch[i] = 1 - switch[i]
-            # else:
-            #     switch[i] = 0
-
-    # 여자인 경우
+    if s == 1:
+        for i in range(n-1, N, n):
+            if switch[i]:
+                switch[i] = 0
+            else:
+                switch[i] = 1
     else:
-        if switch[number] == 0:
-            switch[number] = 1
-        else:
-            pass
+        n -= 1
+        left = right = n
+        while left >= 0 and right < N:
+            if switch[left] == switch[right]:
+                if switch[left]:
+                    switch[left] = 0
+                    switch[right] = 0
+                else:
+                    switch[left] = 1
+                    switch[right] = 1
+            else:
+                break
+            left -= 1
+            right += 1
+
+if N <= 20:
+    print(*switch)
+else:
+    for i in range(len(switch)):
+        print(switch[i], end=" ")
+        if i+1 >= 20 and (i+1)%20 == 0:
+            print()
 
 
