@@ -3,6 +3,7 @@ sys.stdin = open('input.txt')
 '''
 세로로 같은 줄에서 두 개 이상의 숫자를 고를수 없음.
 '''
+'''
 T = int(input())
 
 for tc in range(1, T+1):
@@ -21,15 +22,16 @@ for tc in range(1, T+1):
                     lst[k][j] = 999999999999999999999999999999999999999999999999999999
 
 
-    # print(lst)
+    print(lst)
 
     print(f'#{tc} {min_sum}')
 
 '''
-2 1 2
-5 8 5
-7 2 2
-'''
+T = int(input())
 
+for tc in range(1, T+1):
+    N = int(input())
+    lst = [list(map(int, input().split())) for _ in range(N)]
 
+    pass
 
