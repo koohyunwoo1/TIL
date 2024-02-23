@@ -1,8 +1,6 @@
 import sys
 sys.stdin = open('input.txt')
 
-
-
 arr = []
 for tc in range(9):
     ar = list(map(int, input().split()))

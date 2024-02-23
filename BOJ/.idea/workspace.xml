@@ -2,17 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b89cb389-e7c7-49ca-afc7-a55a8e6cd608" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/조건문/1330/input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/조건문/1330/sol.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/조건문/14681/input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/조건문/14681/sol.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/조건문/2480/input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/조건문/2480/sol.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/조건문/2525/input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/조건문/2525/sol.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/조건문/2753/input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/조건문/2753/sol.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/조건문/2884/input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/조건문/2884/sol.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/조건문/9498/input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/조건문/9498/sol.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/집합과 맵/10815/sol.py" beforeDir="false" afterPath="$PROJECT_DIR$/집합과 맵/10815/sol.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/집합과 맵/10816/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/집합과 맵/10816/input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/집합과 맵/10816/sol.py" beforeDir="false" afterPath="$PROJECT_DIR$/집합과 맵/10816/sol.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/집합과 맵/11478/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/집합과 맵/11478/input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/집합과 맵/11478/sol.py" beforeDir="false" afterPath="$PROJECT_DIR$/집합과 맵/11478/sol.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/집합과 맵/1269/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/집합과 맵/1269/input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/집합과 맵/1269/sol.py" beforeDir="false" afterPath="$PROJECT_DIR$/집합과 맵/1269/sol.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/집합과 맵/1764/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/집합과 맵/1764/input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/집합과 맵/1764/sol.py" beforeDir="false" afterPath="$PROJECT_DIR$/집합과 맵/1764/sol.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/집합과 맵/7785/sol.py" beforeDir="false" afterPath="$PROJECT_DIR$/집합과 맵/7785/sol.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2차원 배열/2563/2563.py" beforeDir="false" afterPath="$PROJECT_DIR$/2차원 배열/2563/2563.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2차원 배열/2566/2566.py" beforeDir="false" afterPath="$PROJECT_DIR$/2차원 배열/2566/2566.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/스택, 큐, 덱/11866/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/스택, 큐, 덱/11866/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/스택, 큐, 덱/11866/sol.py" beforeDir="false" afterPath="$PROJECT_DIR$/스택, 큐, 덱/11866/sol.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/스택, 큐, 덱/12789/sol.py" beforeDir="false" afterPath="$PROJECT_DIR$/스택, 큐, 덱/12789/sol.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/스택, 큐, 덱/2164/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/스택, 큐, 덱/2164/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/스택, 큐, 덱/2164/sol.py" beforeDir="false" afterPath="$PROJECT_DIR$/스택, 큐, 덱/2164/sol.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/스택, 큐, 덱/2346/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/스택, 큐, 덱/2346/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/스택, 큐, 덱/2346/sol.py" beforeDir="false" afterPath="$PROJECT_DIR$/스택, 큐, 덱/2346/sol.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/스택, 큐, 덱/24511/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/스택, 큐, 덱/24511/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/스택, 큐, 덱/24511/sol.py" beforeDir="false" afterPath="$PROJECT_DIR$/스택, 큐, 덱/24511/sol.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +38,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="2c3wKG9B7Z7DbYPpEKlc0fFFQzT" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -31,10 +48,21 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/조건문/14681" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.sol (1)">
-    <configuration name="sol (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\SSAFY\Desktop\Algorithm\BOJ\조건문\14681" />
+      <recent name="C:\Users\SSAFY\Desktop\Algorithm\BOJ\조건문\9498" />
+      <recent name="C:\Users\SSAFY\Desktop\Algorithm\BOJ\조건문\2884" />
+      <recent name="C:\Users\SSAFY\Desktop\Algorithm\BOJ\조건문\2753" />
+      <recent name="C:\Users\SSAFY\Desktop\Algorithm\BOJ\조건문\2525" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.2563">
+    <configuration name="2563" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -42,11 +70,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/집합과 맵/11478" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/2차원 배열/2563" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/집합과 맵/11478/sol.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2차원 배열/2563/2563.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -55,7 +83,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="sol (3)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="2566" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -63,11 +91,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/집합과 맵/10816" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/2차원 배열/2566" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/집합과 맵/10816/sol.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2차원 배열/2566/2566.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -84,11 +112,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/집합과 맵/10815" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/스택, 큐, 덱/11866" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/집합과 맵/10815/sol.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/스택, 큐, 덱/11866/sol.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -105,11 +133,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/집합과 맵/1764" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/스택, 큐, 덱/2346" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/집합과 맵/1764/sol.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/스택, 큐, 덱/2346/sol.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -126,11 +154,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/집합과 맵/1269" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/조건문/1330" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/집합과 맵/1269/sol.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/조건문/1330/sol.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -141,11 +169,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.sol (1)" />
+        <item itemvalue="Python.2563" />
+        <item itemvalue="Python.2566" />
         <item itemvalue="Python.sol" />
         <item itemvalue="Python.sol (5)" />
         <item itemvalue="Python.sol (4)" />
-        <item itemvalue="Python.sol (3)" />
       </list>
     </recent_temporary>
   </component>

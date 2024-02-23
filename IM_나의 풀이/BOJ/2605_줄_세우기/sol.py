@@ -1,13 +1,11 @@
 import sys
 sys.stdin = open('input.txt')
 
+num = int(input())
+number = list(map(int, input().split()))
 
-N = int(input())
-arr = list(map(int, input().split()))
+lst = []
+for i in range(num):
+    lst.insert(number[i], i+1)
 
-cnt = 1
-line = [0]
-for idx, i in enumerate(arr, 1):
-    line.insert(cnt - i, idx)
-    cnt += 1
-print(*line[1:])
+print(*lst[::-1])

@@ -1,6 +1,11 @@
 import sys
 sys.stdin = open('input.txt')
 
+'''
+한 방에는 같은 학년을 배정하고 또한 성별도 같아야한다.
+여학생이 0 남학생이 1
+한 방에 배정할수 있는 최대의 수 K
+'''
 
 N, K = map(int, input().split())
 
@@ -18,4 +23,3 @@ for i in range(N):
         cnt += 1        # 방 하나 더 추가
     arr[Y][S] -= 1      # 해당 방에 넣을 수 있는 사람 수 감소
 print(cnt)
-

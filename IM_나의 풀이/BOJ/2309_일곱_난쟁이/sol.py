@@ -1,13 +1,24 @@
 import sys
 sys.stdin = open('input.txt')
 
-from itertools import combinations
+'''
+난쟁이의 키의 합은 100
+'''
 
+ki = []
 
-data = [int(input()) for x in range(9)]
+for tc in range(9):
+    key = int(input())
+    ki.append(key)
 
-# 전체 요소중, 7개로 만들 수 있는 조합 구성, 그 중 전체 합이 100인경우
-result = [x for x in combinations(data, 7) if sum(x) == 100]
-# 아무거나 뽑으면 되므로, 0번째 요소를 정렬한다음 출력
-for num in sorted(result[0]):
-    print(num)
+ki_sum = sum(ki)
+ki.sort()
+for i in range(len(ki)):
+    for j in range(i+1, len(ki)):
+        if ki_sum - ki[i] - ki[j] == 100:
+            for k in range(len(ki)):
+                if k == i or k == j:
+                    pass
+                else:
+                    print(ki[k])
+            exit()
