@@ -5,11 +5,6 @@ sys.stdin = open('input.txt')
 여학생 -> 자기가 받은 수의 스위치를 중심으로 좌우대칭이면서 가장 많은 스위치를 포함
 하는 구간을 찾아서, 그 구간에 속한 스위치의 상태를 모두 바꾼다.
 '''
-'''
-
-
-'''
-
 N = int(input())
 switch = list(map(int, input().split()))
 M = int(input()) # 학생 수
