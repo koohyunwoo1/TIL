@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d21cdb7e-8bce-486d-9628-3c5ec74c168d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../02_algorithm/99_Extra/1w_Extra/9490_풍선팡/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_algorithm/99_Extra/1w_Extra/9490_풍선팡/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/student_Extra.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/배열최소합-특수한줄/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/배열최소합-특수한줄/output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/배열최소합-특수한줄/배열최소합-특수한줄.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/배열최소합_리메이크/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/배열최소합_리메이크/output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/배열최소합_리메이크/remake.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/스위치켜고끄기_remake/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/스위치켜고끄기_remake/output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/스위치켜고끄기_remake/스위치 켜고 끄기 문제 리메이크.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/파리퇴치-방사능/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/파리퇴치-방사능/output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/파리퇴치-방사능/파리퇴치-방사능.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/파리퇴치_diamond/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/파리퇴치_diamond/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/파리퇴치_diamond/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/파리퇴치_diamond/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/파리퇴치_diamond/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/파리퇴치_diamond/.idea/파리퇴치_diamond.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/파리퇴치_diamond/image/image.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/파리퇴치_diamond/image/image2.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/파리퇴치_diamond/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/파리퇴치_diamond/output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/파리퇴치_diamond/sol.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/파리퇴치_diamond/파리퇴치diamond.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/파리퇴치_리메이크/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/파리퇴치_리메이크/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/파리퇴치_리메이크/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/파리퇴치_리메이크/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/파리퇴치_리메이크/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/파리퇴치_리메이크/.idea/파리퇴치_리메이크.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/파리퇴치_리메이크/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/파리퇴치_리메이크/output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/파리퇴치_리메이크/sol.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/파리퇴치_리메이크/파리퇴치remake.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/풍선팡_리메이크/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/풍선팡_리메이크/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/풍선팡_리메이크/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/풍선팡_리메이크/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/풍선팡_리메이크/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/풍선팡_리메이크/.idea/풍선팡_리메이크.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/풍선팡_리메이크/easy/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/풍선팡_리메이크/easy/.idea/easy.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/풍선팡_리메이크/easy/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/풍선팡_리메이크/easy/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/풍선팡_리메이크/easy/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/풍선팡_리메이크/easy/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/풍선팡_리메이크/easy/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/풍선팡_리메이크/easy/output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/풍선팡_리메이크/easy/sol.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/풍선팡_리메이크/easy/풍선팡.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/풍선팡_리메이크/hard/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/풍선팡_리메이크/hard/output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/풍선팡_리메이크/hard/풍선팡.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../서술형.md" beforeDir="false" afterPath="$PROJECT_DIR$/../서술형.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2cnw8utcvKYLzLGMNu6iFiCzaFV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="sol" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="student_Extra" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\82105\AppData\Local\Programs\Python\Python312\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/파리퇴치_리메이크" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/파리퇴치_리메이크/sol.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.sol" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d21cdb7e-8bce-486d-9628-3c5ec74c168d" name="Default Changelist" comment="" />
+      <created>1708760497266</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708760497266</updated>
+    </task>
+    <servers />
+  </component>
+</project>
