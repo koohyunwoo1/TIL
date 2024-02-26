@@ -1,34 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b89cb389-e7c7-49ca-afc7-a55a8e6cd608" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/조건문/1330/input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/조건문/1330/sol.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/조건문/14681/input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/조건문/14681/sol.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/조건문/2480/input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/조건문/2480/sol.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/조건문/2525/input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/조건문/2525/sol.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/조건문/2753/input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/조건문/2753/sol.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/조건문/2884/input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/조건문/2884/sol.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/조건문/9498/input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/조건문/9498/sol.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2차원 배열/2563/2563.py" beforeDir="false" afterPath="$PROJECT_DIR$/2차원 배열/2563/2563.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2차원 배열/2566/2566.py" beforeDir="false" afterPath="$PROJECT_DIR$/2차원 배열/2566/2566.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/스택, 큐, 덱/11866/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/스택, 큐, 덱/11866/input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/스택, 큐, 덱/11866/sol.py" beforeDir="false" afterPath="$PROJECT_DIR$/스택, 큐, 덱/11866/sol.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/스택, 큐, 덱/12789/sol.py" beforeDir="false" afterPath="$PROJECT_DIR$/스택, 큐, 덱/12789/sol.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/스택, 큐, 덱/2164/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/스택, 큐, 덱/2164/input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/스택, 큐, 덱/2164/sol.py" beforeDir="false" afterPath="$PROJECT_DIR$/스택, 큐, 덱/2164/sol.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/스택, 큐, 덱/2346/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/스택, 큐, 덱/2346/input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/스택, 큐, 덱/2346/sol.py" beforeDir="false" afterPath="$PROJECT_DIR$/스택, 큐, 덱/2346/sol.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/스택, 큐, 덱/24511/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/스택, 큐, 덱/24511/input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/스택, 큐, 덱/24511/sol.py" beforeDir="false" afterPath="$PROJECT_DIR$/스택, 큐, 덱/24511/sol.py" afterDir="false" />
-    </list>
+    <list default="true" id="b89cb389-e7c7-49ca-afc7-a55a8e6cd608" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
