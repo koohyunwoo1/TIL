@@ -34,30 +34,8 @@ for i in range(1, 11):
 
 
 
-# # 강사님 답
-# for tc in range(1,11):
-#     N = int(input())
-#     data = list(map(int, input().split()))
 
-#     # 최종 결과값 : 조망권 총 개수
-#     result = 0
-#     # 전부 다 조사
-#     # 앞 뒤 2칸은 건물 없음이 조건 (조사범위에서 앞 뒤 2개씩 뻄)
-#     for i in range(2, N-2):
-#         # 임시 변수 i -> data[i] 번째 조사 대상 건물을 말한다.
-#         # 항상 5개씩 조사
-#         # 각 건물의 최대 높이 255
-#         min_value = 256
-#         for j in range(5):
-#             '''
-#                i == 3 j == 0
-#                i - 2 + j =>
 
-#             '''
-#             if j != 2:
-#                 if data[i] - data[i - 2 + j] < min_value:
-#                     min_value = data[i] - data[i - 2 + j]
-#         if min_value > 0:
-#             result = result + min_value
-#     print(result)
+
+
 
