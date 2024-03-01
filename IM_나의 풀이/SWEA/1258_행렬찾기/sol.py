@@ -46,3 +46,18 @@ for tc in range(1, T+1):
     for data in result:
         print(*data[1:], end=' ')
     print()
+
+
+for i in range(1,3):
+    for j in range(1,4):
+        if arr[i][j]:
+            result.append(search(i, j))
+
+
+
+    result.sort()
+
+    print(f'#{tc}', len(result), end= ' ')
+    for data in result:
+        print(*data[1:], end=' ')
+    print()

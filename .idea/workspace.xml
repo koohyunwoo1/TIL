@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd3de1d2-1c49-4d4e-95ca-9a35af292e56" name="Default Changelist" comment="" />
+    <list default="true" id="fd3de1d2-1c49-4d4e-95ca-9a35af292e56" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3월 과목평가 및 월말평가 대비/9490_풍선팡/solution.py" beforeDir="false" afterPath="$PROJECT_DIR$/3월 과목평가 및 월말평가 대비/9490_풍선팡/solution.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IM_나의 풀이/SWEA/1258_행렬찾기/sol.py" beforeDir="false" afterPath="$PROJECT_DIR$/IM_나의 풀이/SWEA/1258_행렬찾기/sol.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
