@@ -1,30 +1,30 @@
 import sys
 sys.stdin = open('input.txt')
-'''
-시간초과뜸
 
-'''
 N = int(input())
 stack = []
-for tc in range(N):
-    lst = input()
+for tc in range(1, N+1):
+    command = input().rstrip()
 
-    if len(lst) > 2:
-        stack.append(int(lst[1:]))
+    if len(command) > 2:
+        stack.append(int(command[2:]))
 
-    elif lst == '2':
+    elif command == '2':
         if len(stack) == 0:
             print(-1)
         else:
             print(stack.pop())
-    elif lst == '3':
+
+    elif command == '3':
         print(len(stack))
-    elif lst == '4':
-        if len(stack) == 0:
-            print(1)
-        else:
+
+    elif command == '4':
+        if stack:
             print(0)
-    else:
+        else:
+            print(1)
+
+    elif command == '5':
         if len(stack) == 0:
             print(-1)
         else:

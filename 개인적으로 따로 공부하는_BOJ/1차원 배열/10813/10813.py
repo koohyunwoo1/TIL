@@ -1,8 +1,14 @@
 import sys
 sys.stdin = open('input.txt')
 
+N, M = map(int, input().split())
+# N : 바구니의 수 M : 바구니 교환 횟수
+basket = []
+for a in range(1, N+1):
+    basket.append(a)
 
-# 바구니를 총 N개 가지고 있음.
-# 각각의 바구니에는 1번부터 N번까지 번호가 매겨져 있음.
-# 바구니에는 공이 1개씩 들어있음.
-# 
+for m in range(1, M+1):
+    i, j = map(int, input().split())
+    basket[i-1], basket[j-1] = basket[j-1], basket[i-1]
+
+print(*basket)
