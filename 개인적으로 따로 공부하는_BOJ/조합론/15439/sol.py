@@ -1,4 +1,5 @@
 import sys
 sys.stdin = open('input.txt')
 
-print(int(input()) * 4)
+N = int(input())
+print(N*N-N)
