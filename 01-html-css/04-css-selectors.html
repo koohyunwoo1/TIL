@@ -7,16 +7,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
+    * {
+      color: red;
+    }
+
+    h2 {
+      color: orange;
+    }
+
+    h3,
+    h4 {
+      color: blue;
+    }
+
+    .green{
+      color: green;
+    }
+
+    #purple {
+      color: purple;
+    }
+
+    .green > span {
+      font-size: 50px;
+    }
+
+    .green li {
+      color: brown;
+    }
   </style>
 </head>
 
 <body>
-  <h1>Heading</h1>
+  <h1 class="green">Heading</h1>
   <h2>선택자</h2>
   <h3>연습</h3>
   <h4>반가워요</h4>
-  <p>과목 목록</p>
-  <ul>
+  <p id="purple">과목 목록</p>
+  <ul class="green">
     <li>파이썬</li>
     <li>알고리즘</li>
     <li>웹
@@ -27,7 +55,7 @@
       </ol>
     </li>
   </ul>
-  <p>Lorem, <span>ipsum</span> dolor.</p>
+  <p class="green">Lorem, <span>ipsum</span> dolor.</p>
 </body>
 
 </html>
