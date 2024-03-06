@@ -2,16 +2,19 @@ import sys
 sys.stdin = open('input.txt')
 
 N = int(input())
-lst = set()
+st = set()
 cnt = 0
 
 for i in range(N):
-    S = str(input())
-    lst.add(S)
+    name = input()
 
+    if name != 'ENTER':
+        if name not in st:
+            cnt += 1
+            st.add(name)
 
-for i in lst:
-    if i != 'ENTER':
-        cnt += 1
+    elif name == 'ENTER':
+        st.clear()
+
 
 print(cnt)

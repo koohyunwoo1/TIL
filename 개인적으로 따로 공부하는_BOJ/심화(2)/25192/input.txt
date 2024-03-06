@@ -1,8 +1,4 @@
-7
+3
 ENTER
-pjshwa
-chansol
-chogahui05
-ENTER
-pjshwa
-chansol
+lms0806
+lms0806
