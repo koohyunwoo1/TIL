@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <title>음악 스트리밍 서비스</title>
+  <style>
+    .content {
+      text-align: center;
+    }
+
+    .album-img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .album-title {
+      font-weight: bold;
+    }
+
+    .album-description {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">음악 스트리밍 서비스</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">홈</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">아티스트</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">플레이리스트</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">즐겨찾기</a>
+            </li>
+            <li class="nav-item">
+              <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="검색" aria-label="Search" style="height: 40px;">
+                <button class="btn btn-outline-success" type="submit" style="width: 80px;">검색</button>
+              </form>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">사용자 정보</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+    <div class="now-playing bg-light p-3 mt-5 sticky-top d-none d-sm-block">
+        <h3 class="now-playing-title mb-3">Now Playing: Song Title</h3>
+        <div class="audio-controls">
+            <audio src="song.mp3" controls class="w-100"></audio>
+        </div>
+        </div>
+        
+        <div class="now-playing bg-light p-3 mt-5 d-block d-sm-none">
+        <div class="sticky-top">
+            <h3 class="now-playing-title mb-3">Now Playing: Song Title</h3>
+            <div class="audio-controls">
+            <audio src="song.mp3" controls class="w-100"></audio>
+            </div>
+        </div>
+        </div>
+          
+      <h1 class="mt-5">Albums</h1>
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="album.png" alt="Album 1" class="card-img-top album-img">
+            <div class="card-body">
+              <h5 class="card-title album-title">Album 1</h5>
+              <p class="card-text album-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <a href="#" class="btn btn-primary">Play</a>
+              <a href="#" class="btn btn-secondary">Add to Playlist</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="album.png" alt="Album 2" class="card-img-top album-img">
+            <div class="card-body">
+              <h5 class="card-title album-title">Album 2</h5>
+              <p class="card-text album-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <a href="#" class="btn btn-primary">Play</a>
+              <a href="#" class="btn btn-secondary">Add to Playlist</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="album.png" alt="Album 3" class="card-img-top album-img">
+            <div class="card-body">
+              <h5 class="card-title album-title">Album 3</h5>
+              <p class="card-text album-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <a href="#" class="btn btn-primary">Play</a>
+              <a href="#" class="btn btn-secondary">Add to Playlist</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    &copy; 2023 Music Player. All rights reserved.
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
