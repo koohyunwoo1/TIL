@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 클래스 선택자 . */
+    .card {
+      /* border-style: dashed;
+      border-width: 2px;
+      border-color: black; */
+      border: 1px solid black;
+      width: 300px;
+      height: 500px;
+      padding: 20px;
+    }
+
+    .card-header img {
+      width: 100%;
+    }
+    .card-header {
+      position: relative;
+    }
+    /* .card {
+      position: relative;
+    } */
+    .card-header p {
+      /* 
+        position absolute 사용시
+        부모 요소가 relative인 값이
+        있는지 확인하고 사용하기
+        없으면 body 따라감
+      */
+      position: absolute;
+      bottom: 2px;
+      margin: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      /* rgb -> red blue green */
+      /* CYMK -> cyan, yellow, magenta, and black */
+      /* HSL -> hue, staurataion, lightness */
+      /* 16진법으로 나타내는법 */
+      /* rgba */
+      background-color:rgb(255, 160, 143, 0.5)
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <!-- class 이름 지을때 역할군 기재 -->
+    <!-- kebab-case -->
+    <div class="card-header">
+      <img src="profile.jpg" alt="Profile Image">
+      <p>Name</p>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci unde officiis ad nostrum. Laboriosam mollitia similique provident fuga tenetur saepe sit, amet eaque neque eius quaerat expedita ea illum veniam.</p>
+  </div>
+</body>
+</html>

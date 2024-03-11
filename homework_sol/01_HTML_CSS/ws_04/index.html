@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .outer-box {
+      width : 400px;
+      height: 200px;
+      /* width : 400px;
+      height: 200px; */
+      border: 2px solid black;
+      text-align: center;
+      color: red;
+    }
+    /* 
+      outer-box의 자식들에게 속성을 적용시키는데
+      :not -> 얘 뺴고
+     */
+    /* .outer-box > :not(.inner-box) {
+      color: red;
+      text-align: center;
+    } */
+		/* 추가 css 코드 작성 1 */
+		
+    /* 
+      너비, 높이는 부모요소를 상속받지 않지만,
+      상대 크기 사용할 수 있다.
+    */
+    .inner-box {
+      width : 50%;
+      height: 50%;
+			/* 추가 css 코드 작성 2 */
+      /* 원래 상속 안되는 속성인 부모 요소 속성 상속 받게 만들 수 있다. */
+			border: inherit;
+      text-align: left;
+      color: black;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="outer-box">
+    <div>
+      <span>첫 번째</span>
+    </div>
+    <div class="inner-box">
+      <span>두 번째</span>
+    </div>
+  </div>
+</body>
+</html>
