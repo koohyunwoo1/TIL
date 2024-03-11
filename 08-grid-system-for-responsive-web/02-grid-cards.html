@@ -11,8 +11,10 @@
 <body>
   <h2 class="text-center">Grid Cards</h2>
   <div class="container">
-    <div class="row">
-      <div class="">
+    <div class="row row-cols-1 row-cols-sm-3 row-cols-md-2 gy-3">
+      <!-- 이정도 사이즈가 되면 몇개를 출력한다는 개수를 의미  -->
+      <!-- 여기 자리에 offset을 쓰면안됨 -->
+      <div class="col">
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
@@ -21,7 +23,7 @@
           </div>
         </div>
       </div>
-      <div class="">
+      <div class="col">
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
@@ -30,7 +32,7 @@
           </div>
         </div>
       </div>
-      <div class="">
+      <div class="col">
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
@@ -39,7 +41,8 @@
           </div>
         </div>
       </div>
-      <div class="">
+      <div class="col offset-sm-4 offset-md-0">
+        <!-- 여기 자리에 offset을 써야됨 -->
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Card title</h5>

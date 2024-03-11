@@ -17,36 +17,39 @@
 
 <body>
   <h2 class="text-center">Basic</h2>
-  <div class="">
-    <div class="">
-      <div class="box">col</div>
-      <div class="box">col</div>
-      <div class="box">col</div>
+  <div class="container">
+    <!-- 보통 12를 기준으로 나눠줌. 4 4 4 // 2 8 2 -->
+    <!-- 3등분 하는 방법 1-->
+    <div class="row">   
+      <div class="box col">col</div>
+      <div class="box col">col</div>
+      <div class="box col">col</div>
     </div>
-    <div class="">
-      <div class="box">col-4</div>
-      <div class="box">col-4</div>
-      <div class="box">col-4</div>
+    <!-- 3등분 하는 방법 2-->
+    <div class="row">
+      <div class="box col-4">col-4</div>
+      <div class="box col-4">col-4</div>
+      <div class="box col-4">col-4</div>
     </div>
-    <div class="">
-      <div class="box">col-2</div>
-      <div class="box">col-8</div>
-      <div class="box">col-2</div>
+    <div class="row">
+      <div class="box col-2">col-2</div>
+      <div class="box col-8">col-8</div>
+      <div class="box col-2">col-2</div>
     </div>
   </div>
 
   <hr>
 
   <h2 class="text-center">Nesting</h2>
-  <div class="">
-    <div class="">
-      <div class="box">col-4</div>
-      <div class="box">
-        <div class="">
-          <div class="box">col-6</div>
-          <div class="box">col-6</div>
-          <div class="box">col-6</div>
-          <div class="box">col-6</div>
+  <div class="container">
+    <div class="row">
+      <div class="box col-4">col-4</div>
+      <div class="box col-8">
+        <div class="row">
+          <div class="box col-6">col-6</div>
+          <div class="box col-6">col-6</div>
+          <div class="box col-6">col-6</div>  
+          <div class="box col-6">col-6</div>
         </div>
       </div>
     </div>
@@ -55,29 +58,30 @@
   <hr>
 
   <h2 class="text-center">Offset</h2>
-  <div class="">
-    <div class="">
-      <div class="box">col-4</div>
-      <div class="box">col-4 offset-4</div>
+  <div class="container">
+    <div class="row">
+      <div class="box col-4">col-4</div>
+      <div class="box col-4 offset-4">col-4 offset-4</div>
     </div>
-    <div class="">
-      <div class="box">col-3 offset-3</div>
-      <div class="box">col-3 offset-3</div>
+    <div class="row">
+      <div class="box col-3 offset-3">col-3 offset-3</div>
+      <div class="box col-3 offset-3">col-3 offset-3</div>
     </div>
-    <div class="">
-      <div class="box">col-6 offset-3</div>
+    <div class="row">
+      <div class="box col-6 offset-3">col-6 offset-3</div>
     </div>
   </div>
 
   <hr>
-
+<!-- Gutters x축은 padding, y축은 margin으로 여백을 생성한다. -->
   <h2 class="text-center">Gutters(gx-0)</h2>
-  <div class="">
-    <div class="">
-      <div class="">
+  <div class="container">
+    <div class="row gx-0">  
+      <!-- gx-0 좌우의 여백을 gx-0을 통해서 없애버림 -->
+      <div class="col-6">
         <div class="box">col</div>
       </div>
-      <div class="">
+      <div class="col-6">
         <div class="box">col</div>
       </div>
     </div>
@@ -86,18 +90,19 @@
   <br>
 
   <h2 class="text-center">Gutters(gy-5)</h2>
-  <div class="">
-    <div class="">
-      <div class="">
+  <div class="container">
+    <div class="row">
+      <!-- gy-5 상하의 여백을 gx-5를 통해서 여백을 줬음 -->
+      <div class="col-6 gy-5">
         <div class="box">col</div>
       </div>
-      <div class="">
+      <div class="col-6 gy-5">
         <div class="box">col</div>
       </div>
-      <div class="">
+      <div class="col-6 gy-5">
         <div class="box">col</div>
       </div>
-      <div class="">
+      <div class="col-6 gy-5">
         <div class="box">col</div>
       </div>
     </div>
@@ -107,18 +112,18 @@
   <br>
 
   <h2 class="text-center">Gutters(g-5)</h2>
-  <div class="">
-    <div class="">
-      <div class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-6 g-5">
         <div class="box">col</div>
       </div>
-      <div class="">
+      <div class="col-6 g-5">
         <div class="box">col</div>
       </div>
-      <div class="">
+      <div class="col-6 g-5">
         <div class="box">col</div>
       </div>
-      <div class="">
+      <div class="col-6 g-5">
         <div class="box">col</div>
       </div>
     </div>
