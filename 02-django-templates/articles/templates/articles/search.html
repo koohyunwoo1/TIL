@@ -1,0 +1,12 @@
+{% extends "articles/base.html" %}
+
+{% block content %}
+  <form action="https://search.naver.com/search.naver">
+    <label for="message">검색 : </label>
+    <input type="text" id="message" name="query">
+    <input type="submit">
+  </form>
+
+{% endblock content %}
+
+
