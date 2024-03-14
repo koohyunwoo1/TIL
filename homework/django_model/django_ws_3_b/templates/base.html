@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>할 일 목록 관리 프로젝트</title>
+</head>
+<body>
+  <a href="{% url "todos:index" %}">[MAIN]</a> | 
+  <a href="{% url "todos:create_todo" %}">[CRAETE]</a>
+  <a href="{% url "accounts:login" %}">[LOGIN]</a>
+  {% block content %}
+  {% endblock content %}
+</body>
+</html>
