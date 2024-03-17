@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    input:focus {
+      border: 10px solid blue;
+    }
+    label {
+      background-color: white;
+      transition: 1s;
+    }
+    label:hover {
+      background-color: orange;
+      transition: 1s
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- 
+    form 태그 내부에 작성된 input 태그들에 사용자가 입력한 값들을
+    submit 이라는 event가 발생하면 action에 작성된 경로로
+    해당 데이터들을 input 태그의 name을 키로, value를 벨류로 담아서
+    보내는 역할을 한다.
+  -->
+  <form action="">
+    <!-- 특정 대상 하나를 지목해야한다. -->
+    <label for="user-name">USERNAME : </label>
+    <!-- username이라는 id를 가진 요소는 페이지 내에 단 하나 -->
+    <input type="text" name="username" id="user-name">
+    <!-- 
+      HTML에서는 contents를 제외한 모든 곳에서 
+      소문자만 작성하고, 띄어쓰기가 필요하거나
+      단어간의 구분이 필요한경우에는 kebab-case를 사용한다.
+    -->
+    <label for="pwd">PWD : </label>
+    <!-- 타입을 password로 하면 입력값이 사용자에게 보이지 않는다. -->
+    <input type="password" name="password" id="pwd">
+    <input type="submit" value="로그인">
+  </form>
+</body>
+</html>

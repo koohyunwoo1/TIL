@@ -1,0 +1,126 @@
+body {
+  padding: 70px 0px;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+.title-section {
+  text-align: center;
+}
+
+.page-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.subtitle-section {
+  text-align: center;
+  background-color: #ffc400;
+  padding: 20px;
+}
+
+.subtitle-heading {
+  font-size: 36px;
+  font-weight: bold;
+  color: #121212;
+  margin: 0;
+}
+
+.subtitle-description {
+  color: #454545;
+}
+
+.article-section {
+  margin: 40px;
+}
+
+.card {
+  background-color: #f8f8f8;
+  padding: 20px;
+  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, .2);
+  border-radius: 5px;
+  margin: 30px 0px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.article-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.article-subtitle { 
+  font-size: 18px;
+  font-weight: bold;
+  color: #454545;
+  margin: 0;
+}
+
+.article-description {
+  padding: 15px;
+  background-color: rgba(255, 213, 127, .3);
+}
+
+.main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.nav-menu {
+  display: flex;
+  background-color: #f1f1f1;
+  align-items: center;
+  height: 70px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  margin: 10px 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+}
+
+.main {
+  color: white;
+}
+.home {
+  margin: 0;
+  width: 100px;
+  height: 70px;
+  background-color: orangered;
+  text-align: center;
+  line-height: 70px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: olivedrab;
+  color: white;
+  padding: 20px;
+  margin: 0;
+}
+
+.footer-text {
+  margin: 0;
+}
