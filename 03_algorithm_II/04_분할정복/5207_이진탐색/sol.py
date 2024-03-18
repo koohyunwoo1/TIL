@@ -14,12 +14,12 @@ for tc in range(1, T+1):
     N, M = map(int, input().split())
     a = sorted(list(map(int, input().split())))  # 정렬된 상태의 데이터
     b = list(map(int, input().split()))
-    cnt = 0
+    cnt = 0  # b 리스트가 a리스트 안에 몇번 나타나는지 세워줌.
 
     for num in b:
         start = 0
         end = N - 1
-        found = 0
+        found = 0    # 숫자가 a리스트 안에서 발견됐는지 알려줌.
 
         while start <= end:
             mid = (start + end) // 2
@@ -43,5 +43,31 @@ for tc in range(1, T+1):
                 found = -1
 
     print(f'#{tc} {cnt}')
+'''
+T = int(input())
 
+for tc in range(1, T+1):
+    N, M = map(int, input().split())
+    a = sorted(list(map(int, input().split())))  # 정렬된 상태의 데이터
+    b = list(map(int, input().split()))
+    cnt = 0
 
+    for num in b:
+        start = 0
+        end = N - 1
+
+        while start <= end:
+            mid = (start + end) // 2
+
+            if num == a[mid]:
+                cnt += 1
+                break
+
+            elif num < a[mid]:
+                end = mid - 1
+
+            else:  # num > a[mid]
+                start = mid + 1
+
+    print(f'#{tc} {cnt}')
+'''
