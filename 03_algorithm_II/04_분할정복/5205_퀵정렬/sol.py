@@ -3,29 +3,27 @@ sys.stdin = open('input.txt')
 
 
 def quick_sort(arr):
-    if len(arr) == 1:
+    if len(arr) <= 1:   # 종료 조건 1 이하이면 이미 정렬이 되어있을거임.
         return arr
 
     pivot = arr[len(arr) // 2]
-
-    lesser_arr, equal_arr, greater_arr = [], [], []
+    arr1, arr2, arr3 = [], [], []
 
     for num in arr:
         if num < pivot:
-            lesser_arr.append(num)
-        elif num > pivot:
-            greater_arr.append(num)
+            arr1.append(num)
+        elif num == pivot:
+            arr2.append(num)
         else:
-            equal_arr.append(num)
+            arr3.append(num)
 
-    return quick_sort((lesser_arr)) + quick_sort(equal_arr) + quick_sort(greater_arr)
-
+    return quick_sort(arr1) + arr2 + quick_sort(arr3)
 
 T = int(input())
 
 for tc in range(1, T+1):
     N = int(input())
-    a = sorted(list(map(int, input().split())))
-
-    print(f'#{tc} {a[N//2]}')
-
+    arr = list(map(int, input().split()))
+    s_arr = quick_sort(arr)
+    idx = len(s_arr) // 2
+    print(f'#{tc} {s_arr[idx]}')

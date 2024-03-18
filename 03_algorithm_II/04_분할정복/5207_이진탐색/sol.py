@@ -24,50 +24,22 @@ for tc in range(1, T+1):
         while start <= end:
             mid = (start + end) // 2
 
-            if num == a[mid]:
+            if num == a[mid]:   # 찾을려는 숫자가 그 중앙의 값이랑 같으면 종료
                 cnt += 1
                 break
 
-            elif num < a[mid]:
-                end = mid - 1
+            elif num < a[mid]:   # 중앙의 값보다 작으면
+                end = mid - 1    # 그 중앙값이 end의 값이됨
                 if found == 1:
                     break
 
                 found = 1
 
-            elif num > a[mid]:
-                start = mid + 1
-                if found == -1:
+            elif num > a[mid]:    # 중앙의 값보다 크면
+                start = mid + 1   # 그 중앙값이 start의 값이 됨
+                if found == 2:
                     break
 
-                found = -1
+                found = 2
 
     print(f'#{tc} {cnt}')
-'''
-T = int(input())
-
-for tc in range(1, T+1):
-    N, M = map(int, input().split())
-    a = sorted(list(map(int, input().split())))  # 정렬된 상태의 데이터
-    b = list(map(int, input().split()))
-    cnt = 0
-
-    for num in b:
-        start = 0
-        end = N - 1
-
-        while start <= end:
-            mid = (start + end) // 2
-
-            if num == a[mid]:
-                cnt += 1
-                break
-
-            elif num < a[mid]:
-                end = mid - 1
-
-            else:  # num > a[mid]
-                start = mid + 1
-
-    print(f'#{tc} {cnt}')
-'''
