@@ -37,4 +37,4 @@ const daysOfWeek = [mon , tue , wed , thu , fri , sat , sun];
 
 const nonsense = [1, 2, "hello", false, null, true, undefined, "hyunwoo"];
 
-console.log(daysOfWeek, nonsence);
+console.log(daysOfWeek, nonsense);
