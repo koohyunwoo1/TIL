@@ -14,7 +14,7 @@ for tc in range(1, T+1):
     station = [0 for _ in range(N)]
     for i in range(N):
         station[i] = i + M[i]
-    print(station)
+        # station : 인덱스값 + 충전하면 몇 정류장을 갈 수 있는지
 
     cnt = -1 # 충전횟수
             # 첫 정류장의 충전횟수는 포함시키지 않을려고 -1을 해줌
@@ -34,4 +34,11 @@ for tc in range(1, T+1):
 
     print(f'#{tc} {cnt}')
 
-
+# 0 3 5 4 5
+#    1 2 3 4
+#
+# 0 3 3 6 6 7 11 11 10 10 station
+#    1 2 3 4 5 6   7   8   9 idx
+#
+# 0 2 3 5 5 7 8 8 10 10
+#    1 2 3 4 5 6 7  8  9
