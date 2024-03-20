@@ -1,6 +1,6 @@
 const a = 5;
 const b = 2;
-
+// const : 기본값으로 작성하자
 let myName = "hyunwoo";
 //  let은 const와는 다르게 변할 수 있음
 // 밑에 예시를 보면 let을 붙이지 않고 myName 변수만으로 수정이 가능함
@@ -25,16 +25,39 @@ console.log(something);
 
 
 // 일주일의 요일을 만들어서 그룹화 시키자
-const mon = "mon";
-const tue = "tue";
-const wed = "wed";
-const thu = "thu";
-const fri = "fri";
-const sat = "sat";
-const sun = "sum";
 
-const daysOfWeek = [mon , tue , wed , thu , fri , sat , sun];
+// const mon = "mon";
+// const tue = "tue";
+// const wed = "wed";
+// const thu = "thu";
+// const fri = "fri";
+// const sat = "sat";
+// const sun = "sum";
 
-const nonsense = [1, 2, "hello", false, null, true, undefined, "hyunwoo"];
+// const daysOfWeek = [mon , tue , wed , thu , fri , sat , sun];
 
-console.log(daysOfWeek, nonsense);
+// const nonsense = [1, 2, "hello", false, null, true, undefined, "hyunwoo"];
+
+// console.log(daysOfWeek, nonsense);
+
+
+// array
+
+const daysOfWeek = ["mon" , "tue" , "wed" , "thu" , "fri" , "sat" , "sun"];
+
+// Get Item from Array
+console.log(daysOfWeek[4])  
+// fri
+
+// Add one more day to the array
+daysOfWeek.push('hi')  
+// hi라는 단어 추가해줌
+console.log(daysOfWeek)
+
+// practice
+
+const toBuy = ["potato", "tomato", "pizza"]
+
+toBuy.push("gimbab")
+// gimbab이라는 단어 추가해줌
+console.log(toBuy)
