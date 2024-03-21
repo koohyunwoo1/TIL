@@ -7,6 +7,7 @@ sys.stdin = open('input.txt')
 점원이 2명 이상일 경우, 탑을 만든 모든 점원의 키의 합
 
 '''
+'''
 T = int(input())
 for tc in range(1, T+1):
     N, B = map(int, input().split())
@@ -24,15 +25,17 @@ for tc in range(1, T+1):
     print(f'#{tc} {result}')
 
 
+
+
 '''
-#1 1
-#2 4
-#3 27
-#4 11
-#5 42
-#6 32
-#7 2
-#8 3
-#9 25
-#10 0
-'''
+
+T = int(input())
+
+for tc in range(1, T+1):
+    N, B = map(int, input().split())
+    height = list(map(int, input().split()))
+
+
+
+
+
