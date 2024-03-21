@@ -52,14 +52,14 @@ def prim(start):
 
     return sum_weight
 
-
 V, E = map(int, input().split())
+
 graph = [[0] * (V) for _ in range(V)]
 for _ in range(E):
     u, v, w = map(int, input().split())
     graph[u][v] = w
     graph[v][u] = w  # 가중치가 있는 무방향 그래프
     print(graph)
-#
-# result = prim(0)
-# print(f'최소 비용 = {result}')
+
+    result = prim(0)
+    print(f'최소 비용 = {result}')
