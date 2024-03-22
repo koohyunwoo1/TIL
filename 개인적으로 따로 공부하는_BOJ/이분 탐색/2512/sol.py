@@ -4,7 +4,6 @@ sys.stdin = open('input.txt')
 N = int(input())
 
 lst = list(map(int, input().split()))
-lst.sort()
 M = int(input())
 
 left = 0
