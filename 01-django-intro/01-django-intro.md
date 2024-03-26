@@ -83,4 +83,6 @@
 - pip freeze > requirements.txt (깔려있는 패키지들을 txt파일에 저장)
 - django-admin startproject my_first_pjt . (my_first_pjt 는 프로젝트의 이름 . 은 현재 위치에 만든다)
 - python manage.py startapp articles (articles라는 이름을 가진 app 만들기, 복수형으로 만들어주는게 좋음)
-  
+
+- python manage.py makemigrations
+- python manage.py migrate
