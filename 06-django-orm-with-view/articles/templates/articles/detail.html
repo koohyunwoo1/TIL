@@ -14,6 +14,10 @@
   <p>작성일: {{ article.created_at }}</p>
   <p>수정일: {{ article.updated_at }}</p>
   <hr>
+  <form action="{% url "articles:delete" article.pk %}" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="DELETE">
+  </form>
   <a href="{% url "articles:index" %}">[back]</a>
 </body>
 </html>

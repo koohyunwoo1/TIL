@@ -6,11 +6,11 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>New</h1>
-  <form action="{% url "articles:create" %}", method="POST">
+  <h1>Edit</h1>
+  <form action="{% url "articles:update" article.pk %}", method="POST">
     {% csrf_token %}
-    <input type="text" name="title">
-    <textarea name="content"></textarea>
+    <input type="text" name="title" value="{{ article.title }}">
+    <textarea name="content">{{ article.content }}</textarea>
     <input type="submit">
   </form>
 </body>
