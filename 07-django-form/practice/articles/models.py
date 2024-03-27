@@ -17,4 +17,3 @@ class Article(models.Model):
     def __str__(self):
         return f'{self.pk}번째 게시글 {self.title}'
     
-    
