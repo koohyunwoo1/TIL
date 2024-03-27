@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>메인 페이지</h1>
+  <a href="{% url 'articles:new' %}">[CREATE]</a>
+
+  <ul>
+    {% for article in articles %}
+      <li>{{ article.pk }}번째 글</li>
+      <li>제목 : {{ article.title }}</li>
+      <a href="{% url "articles:detail" article.pk %}">[DETAIL]</a>
+      <hr>
+    {% endfor %}
+  </ul>
+{% endblock content %}

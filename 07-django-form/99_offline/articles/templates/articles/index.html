@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>INDEX PAGE</h1>
+  <a href="{% url "articles:create" %}">[CREATE]</a>
+  <hr>
+  <form action="{% url "articles:index" %}">
+    <input type="hidden" name="is_hidden" value="False">
+    <input type="submit" value="비공개 글 숨기기">
+  </form>
+  
+  <form action="{% url "articles:index" %}">
+    <input type="hidden" name="is_hidden" value="True">
+    <input type="submit" value="비공개 글 보이기">
+  </form>
+  <ul>
+    {% for article in articles %}
+      <li>
+        <p>{{ article.pk }} 번 째 글</p>
+        <p>{{ article.title }}</p>
+        <p>{{ article.is_hidden }}</p>
+        <hr>
+      </li>
+    {% endfor %}
+  </ul>
+
+{% endblock content %}
