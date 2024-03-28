@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>할 일 목록 관리 프로젝트 메인 페이지</h1>
+  <p>이 곳에서 할 일 목록을 관리합니다.</p>
+  <ul>
+    {% for todo in todo_list %}
+      <li>
+        <a href="{% url "todos:detail" todo.pk %}">{{ todo.pk }}번째 할 일</a>
+        <p>완료 여부 : {{ todo.is_completed }}</p>
+      </li>
+    {% empty %}
+      <li>아직 할 일이 없습니다.</li>
+    {% endfor %}
+  </ul>
+{% endblock content %}
