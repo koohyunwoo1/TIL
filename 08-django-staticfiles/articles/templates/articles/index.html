@@ -1,0 +1,30 @@
+{% comment %} {% extends ".html" %} {% endcomment %}
+{% comment %} extends 태그는 무조건 제일 위에 있어야하며,
+              2개 이상은 들어갈 수 없음 {% endcomment %}
+
+{% load static %}
+{% comment %} 무조건 {% extends ".html" %} 태그 밑에 있어야 한다. {% endcomment %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <img src="{% static "articles/sample-1.png" %}" alt="img">
+  <img src="{% static "sample-2.png" %}" alt="img">
+  <h1>Articles</h1>
+  <a href="{% url "articles:create" %}">CREATE</a>
+  <hr>
+  {% for article in articles %}
+    <p>글 번호: {{ article.pk }}</p>
+    <a href="{% url "articles:detail" article.pk %}">
+      <p>글 제목: {{ article.title }}</p>
+    </a>
+    <p>글 내용: {{ article.content }}</p>
+    <hr>
+  {% endfor %}
+</body>
+</html>
