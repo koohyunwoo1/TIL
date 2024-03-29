@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<h1>전체 유저 목록</h1>
+{% for u in user %}
+
+<ul>
+  <li>{{u.username}}</li>
+  <hr>
+</ul>
+
+
+{% empty %}
+
+<h1>없습니다.</h1>
+{% endfor %}
+
+{% endblock content %}
+
+
+
+

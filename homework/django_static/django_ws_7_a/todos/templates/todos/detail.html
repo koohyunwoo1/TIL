@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>할 일 목록 상세 페이지</h1>
+  <hr>
+  <p>{{ todo.pk }}번 째 할 일</p>
+  <p>할 일 : {{ todo.work }}</p>
+  <p>내 용 : {{ todo.content }}</p>
+  <p>일 자 : {{ todo.created_at }}</p>
+  <p>완 료 : {{ todo.is_completed }}</p>
+  <hr>
+  <a href="{% url "todos:update" todo.pk %}">수정</a>
+  <form action="{% url "todos:delete" todo.pk %}" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="삭제">
+  </form>
+{% endblock content %}
