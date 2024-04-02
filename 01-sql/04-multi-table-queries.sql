@@ -39,5 +39,48 @@ VALUES
 
 
 -- INNER JOIN
+SELECT * 
+FROM
+  articles
+INNER JOIN 
+  users
+ON users.id = articles.userId;
+
+SELECT * 
+FROM
+  users
+INNER JOIN 
+  articles
+ON users.id = articles.userId;
+
+SELECT 
+  articles.id, title, Name
+FROM 
+  articles
+INNER JOIN 
+  users
+ON users.id = articles.userId
+WHERE userId = 1;
+
+
 
 -- LEFT JOIN
+
+SELECT * 
+FROM 
+  articles
+LEFT JOIN 
+  users
+ON 
+  users.id = articles.userId;
+
+
+SELECT *
+FROM
+  users
+LEFT JOIN 
+  articles
+ON
+  users.id = articles.userId
+WHERE
+  articles.userId IS NULL;
