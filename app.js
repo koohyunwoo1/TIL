@@ -61,3 +61,47 @@ const toBuy = ["potato", "tomato", "pizza"]
 toBuy.push("gimbab")
 // gimbab이라는 단어 추가해줌
 console.log(toBuy)
+
+// 2.6 Objects
+
+const playerName = 'nico';
+const playerPoints = 121212;
+const playerHandsome = false;
+const playerFat = 'little bit';
+
+// 위에서 하는거는 비효율적이다.
+
+const player = {
+  name : "nico",
+  points : 10,
+  fat : true,
+};
+console.log(player.name);
+console.log(player['name']);
+
+// 위의 2개는 같은 의미를 한다.
+
+
+console.log(player);
+player.lastName = "potato";
+player.points += 15;
+// points가 바뀌는 것을 확인할 수 있음
+console.log(player.points);
+
+
+// 2.7 Functions part One
+function sayHello(nameOfPerson, age){
+  console.log("Hello my name is " + nameOfPerson + "and I am " + age);
+}
+
+sayHello("nico", 10);
+sayHello("dal", 23);
+sayHello("lynn", 21);
+
+
+function plus(a, b){
+  console.log(a + b);
+}
+
+plus(2, 3);
+
