@@ -1,7 +1,9 @@
 // 1000
 
-// const fs = require('fs');
-// const input = fs.readFileSync('input.txt').toString().split(' ')
+const fs = require('fs');
+const input = fs.readFileSync('input.txt').toString().split(' ')
+console.log(typeof input)
+
 // const input = fs.readFileSync('/dev/stdin').toString().split(' ');
 // const A = parseInt(input[0])
 // const B = parseInt(input[1])
@@ -56,8 +58,7 @@
 
 // const fs = require('fs');
 // const input = fs.readFileSync('input.txt').toString().split(' ');
-// const input = fs.readFileSync('/dev/stdin').toString().split(' ');
-
+// // const input = fs.readFileSync('/dev/stdin').toString().split(' ');
 // const A = parseInt(input[0]);
 // const B = parseInt(input[1]);
 
@@ -72,7 +73,7 @@
 // };
 
 
-//  함수로 풀어보기
+// //  함수로 풀어보기
 // const calculator = {
 //   com : function(A, B){
 //     if (A > B) {

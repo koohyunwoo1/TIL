@@ -272,22 +272,23 @@
 // isNaN -> boolean을 반환
 // 숫자이면 false를 반환 아니면 ture를 반환
 
-// const age = parseInt(prompt("How old are you ?"));
+const age = parseInt(prompt("How old are you ?"));
 
-// if (isNaN(age) || age < 0) {
-//   // isNaN : 숫자가 아니면
-//   console.log("Please write a real positive number");
-// } 
-// else if (age < 18 ) {
-//   console.log("You are too young.");
-// } 
-// else if (age >= 18 && age <= 50){
-//   // %% == AND , || == OR
-//   console.log("You can drink");
-// }
-// else if (age > 50 && age <= 80){
-//   console.log("You should exercise.");
-// }
-// else {
-//   console.log("You can't drink");
-// }
+if (isNaN(age) || age < 0) {
+  // isNaN : 숫자가 아니면
+  console.log("Please write a real positive number");
+} 
+else if (age < 18 ) {
+  console.log("You are too young.");
+} 
+else if (age >= 18 && age <= 50){
+  // %% == AND , || == OR
+  console.log("You can drink");
+}
+else if (age > 50 && age <= 80){
+  console.log("You should exercise.");
+}
+else {
+  console.log("You can't drink");
+}
+
