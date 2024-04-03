@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>저자 상세 정보</h1>
+  <p>등록 번호 : {{ author.pk }}</p>
+  <p>이름 : {{ author.name }}</p>
+  <p>나이 : {{ author.age }}</p>
+  <p>생년월일 : {{ author.birth }}</p>
+  <p>국적 : {{ author.nationality }}</p>
+  <hr>
+  <h2>신규 도서 등록</h2>
+  <form action="{% url "libraries:create" author.pk %}" method="POST">
+    {% csrf_token %}
+    {{ form.as_p}}
+   <input type="submit" value ="CREATE">
+  </form>
+
+  <hr>
+  <h3>도서 목록</h3>
+  {% for book in books %}
+  <ul>
+    <li>
+      제목 : {{ book.title }} 
+    </li>
+  </ul>
+  
+  {% endfor %}
+
+
+
+
+
+  <hr>
+  <a href="{% url 'libraries:index' %}">[BACK]</a>
+{% endblock content %}
