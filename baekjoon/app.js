@@ -54,9 +54,9 @@
 
 // 1330
 
-const fs = require('fs');
+// const fs = require('fs');
 // const input = fs.readFileSync('input.txt').toString().split(' ');
-const input = fs.readFileSync('/dev/stdin').toString().split(' ');
+// const input = fs.readFileSync('/dev/stdin').toString().split(' ');
 
 // const A = parseInt(input[0]);
 // const B = parseInt(input[1]);
@@ -73,21 +73,36 @@ const input = fs.readFileSync('/dev/stdin').toString().split(' ');
 
 
 //  함수로 풀어보기
-const calculator = {
-  com : function(A, B){
-    if (A > B) {
-      return '>'
-    }
-    else if (A < B){
-      return '<'
-    }
-    else{
-      return '=='
-    }
-  }
-}
+// const calculator = {
+//   com : function(A, B){
+//     if (A > B) {
+//       return '>'
+//     }
+//     else if (A < B){
+//       return '<'
+//     }
+//     else{
+//       return '=='
+//     }
+//   }
+// }
 
-const comResult = calculator.com(parseInt(input[0]), parseInt(input[1]))
-console.log(comResult)
+// const comResult = calculator.com(parseInt(input[0]), parseInt(input[1]))
+// console.log(comResult)
 
 
+// 2557
+
+// console.log("Hello World!")
+
+// 2475
+
+// const fs = require('fs');
+// const input = fs.readFileSync('input.txt').toString().split(' ');
+// // const input = fs.readFileSync('/dev/stdin').toString().split(' ');
+
+// const calculator = {
+//   sum : function(a, b, c, d, e)
+// }
+
+// const sumResult = calculator.sum(parseInt())
