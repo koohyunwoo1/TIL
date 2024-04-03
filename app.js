@@ -291,11 +291,3 @@
 // else {
 //   console.log("You can't drink");
 // }
-
-const fs = require('fs');
-const inputData = fs.readFileSync(0, 'utf8').toString().split(' ');
-
-const A = parseInt(inputdata[0])
-const B = parseInt(inputdata[1])
-
-console.log(A + B)
