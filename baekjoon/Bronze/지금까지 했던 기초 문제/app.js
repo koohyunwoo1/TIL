@@ -133,3 +133,20 @@
 //   console.log('F')
 // }
 
+
+// 10950
+const fs = require('fs');
+// const input = fs.readFileSync('input.txt').toString().split('\n');
+const input = fs.readFileSync('/dev/stdin').toString().split('\n');
+
+const T = parseInt(input[0]);
+
+for(let i = 1; i < T+1; i++) {
+    const num = input[i].split(' ');
+  const firstNum = parseInt(num[0]);
+  const secondNum = parseInt(num[1]);
+  console.log(firstNum + secondNum);
+}
+
+
+// 10951
