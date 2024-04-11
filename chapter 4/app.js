@@ -169,8 +169,4 @@ if (savedUsername === null) {
 }
 
 
-// 4.7
-// 복습
-
-
 
