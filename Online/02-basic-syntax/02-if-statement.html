@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const name = 'customer'
+    if (name === 'admin') {
+      console.log('관리자님 안녕하세요.')
+    } else if (name === 'customer') {
+      console.log('고객님 안녕하세요.')
+    } else {
+      console.log(`반갑습니다. ${name}님`)
+    }
+
+
+    // 삼항 연산자
+    const age = 20
+
+    const message = (age >= 18) ? '성인' : '미성년자'
+
+    console.log(message)
+    // 나이가 18세 이상일때는 성인이 출력되고
+    // 미만이면 미성년자가 출력된다.
+
+    
+  </script>
+</body>
+
+</html>
