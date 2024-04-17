@@ -5,6 +5,7 @@ n = int(input())
 
 f1, f2 = 0, 0
 
+# 재귀호출
 def fib(n):
     global f1
     if n == 1 or n == 2:
@@ -14,6 +15,9 @@ def fib(n):
         return fib(n-1) + fib(n-2)
 
 f = [0] * (n + 1)
+
+
+# dp
 def fibonacci(n):
     f[1] = 1
     f[2] = 1
