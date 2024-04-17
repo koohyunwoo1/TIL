@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 테스트 케이스 수
+    const T = 3 
+    // 각 TC별 데이터
+    // N : 주어질 정수 개수
+    // ai : N개 만큼의 정수 num 0 <= num <= 1000000
+    const numbers = [
+      {
+        N: 5,
+        ai: [ 477162, 658880, 751280, 927930, 297191 ]
+      },
+      {
+        N: 5,
+        ai: [ 565469, 851600, 460874, 148692, 111090 ]
+      },
+      {
+        N: 10,
+        ai: [ 784386, 279993, 982220, 996285, 614710, 992232, 195265, 359810, 919192, 158175 ]
+      },
+    ]
+
+    for (let i = 0; i < numbers.length; i++) {
+        let max = -Infinity;
+        let min = Infinity;
+        for (let j = 0; j < numbers[i].ai.length; j++) {
+            if (numbers[i].ai[j] > max) {
+                max = numbers[i].ai[j];
+            }
+            if (numbers[i].ai[j] < min) {
+                min = numbers[i].ai[j];
+            }
+        }
+        let difference = max - min;
+        console.log(`#${i + 1} ${difference}`);
+    }
+    // N개의 정수 ai중 최댓값과 최솟값의 차를 출력하시오.
+    // #1 630739
+    // #2 740510
+    // #3 838110
+
+  </script>
+</body>
+</html>
