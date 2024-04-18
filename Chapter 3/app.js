@@ -1,28 +1,33 @@
-// const h1 = document.querySelector("div.hello:first-child h1")
+const h1 = document.querySelector("div.hello:first-child h1")
 // // querySelector -> 오로지 첫번째것만 console에 띄워준다.
 // // querySelectorAll -> 인자에 적합한 모든 것을 console에 출력해준다.
 
-// // title.innerText = "Hello";
+// title.innerText = "Hello";
 
 
-// // 글자를 클릭했을떄
+// 글자를 클릭했을떄
 // function handleTitleClick() {
 //   h1.style.color = "blue";
 //   console.log("title was clicked!");
 // }
 
+// h1.addEventListener("click", handleTitleClick);
 
 // // 마우스가 글자에 다가왔을때
-// function handleMouseEnter() {
-//   h1.style.color = "red";
-//   h1.innerText = "Mouse is here!";
-// }
+function handleMouseEnter() {
+  h1.style.color = "red";
+  h1.innerText = "Mouse is here!";
+}
 
-// // 마우스가 글자에서 나갔을때
-// function handleMouseLeave() {
-//   h1.style.color = "green";
-//   h1.innerText = "Mouse is gone!";
-// }
+h1.addEventListener("mouseenter", handleMouseEnter);
+
+// // // 마우스가 글자에서 나갔을때
+function handleMouseLeave() {
+  h1.style.color = "green";
+  h1.innerText = "Mouse is gone!";
+}
+
+h1.addEventListener("mouseleave", handleMouseLeave);
 
 // // 3.5
 // //  resize
@@ -86,14 +91,14 @@
 // 3.7
 
 // css에서 스타일을 작성하고 함수만 js에서 하는 방식
-const h1 = document.querySelector("div.hello:first-child h1")
+// const h1 = document.querySelector("div.hello:first-child h1")
 
-function handleTitleClick() {
+// function handleTitleClick() {
 
-  h1.classList.toggle("active");
-}
+//   h1.classList.toggle("active");
+// }
 
-h1.addEventListener("click", handleTitleClick);
+// h1.addEventListener("click", handleTitleClick);
 
 
 // 3.8 html에서 class가 지정되어있는 상태에서 자바스크립트에서 어떻게 안 없애고
@@ -101,5 +106,4 @@ h1.addEventListener("click", handleTitleClick);
 // toggle은 h1의 classList에 activ e class가 이미 있는지 확인해서
 // 만약 있다면, toggle이 active를 제거해준다.
 // 만약 없다면, toggle은 active를 추가 해준다.
-
 

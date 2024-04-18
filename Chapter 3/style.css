@@ -1,5 +1,5 @@
 body {
-  background-color: beige;
+  background-color: white;
 }
 
 
@@ -7,7 +7,7 @@ h1 {
   color: cornflowerblue;
   transition: color .5s ease-in-out;
   /* 색 천천히 변하기 */
-}
+} 
 
 .active {
   color: tomato;
@@ -16,4 +16,3 @@ h1 {
 .sexy-font {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
