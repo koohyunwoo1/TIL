@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text" class="input-text">
+  <button id="btn">+</button>
+  <ul></ul>
+
+  <script>
+    // 1. 필요한 태그를 모두 선택
+    const inputTag = document.querySelector('.input-text')
+    const btn = document.querySelector('#btn')
+    const ulTag = document.querySelector('ul')
+
+    // 2. 콜백 함수 addTodo 작성
+    const addTodo = function (event) {
+      // 2. 1 사용자 입력 데이터를 저장
+      const inputData = inputTag.value
+
+      // 3. 빈 문자열은 추가되지 않고 경고장을 띄우도록 처리
+      if (inputData.trim()) {
+        // 2. 2 li 태그 생성
+        const liTag = document.createElement('li')
+  
+        // 2. 3 생성한 li 태그의 텍스트 컨텐츠에 사용자 입력 값을 할당
+        liTag.textContent = inputData
+  
+        // 2. 4 완성한 li 태그를 ul 태그의 자식 요소로 추가
+        ulTag.appendChild(liTag)
+  
+        // 2.5 input의 value를 비우기
+        inputTag.value = ''
+
+      } else {
+        window.alert('할 일을 입력하세요')
+      }
+    }
+
+
+    // 3. btn에 클릭 이벤트, 핸들러 부착
+    btn.addEventListener('click', addTodo)
+  </script>
+</body>
+
+</html>
