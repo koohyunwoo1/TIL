@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .photos img {
+      width: 500px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Mars Rover Photos - Step 1</h1>
+  <div class="photos"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    const API_URL = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos'
+    const API_KEY = 'KUF8YxNNVqTtuW7j1xdTszmvbZzalBahSoiDz77S'
+    const photos = document.querySelector('.photos')  
+      // 아래에 코드 작성
+
+    axios({
+      method : 'GET',
+      url : API_URL,
+      params : {
+        api_key : API_KEY,
+        sol : 3000
+      }
+
+    })
+      .then((response) => {
+        const photo = response.data.photos[0]
+        const imgT = document.createElement('img')
+        imgT.setAttribute('src', photo.img_src)
+        photos.appendChild(imgT)
+      })
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form>
+    <input type="text" name="name">
+    <input type="submit" value="내 나이는?">
+  </form>
+
+  <section>
+    <!-- 여기에 내용 추가 -->
+  </section>
+  <!-- axios CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+  <script>
+    // axios로 get 요청 보내기
+    // axios({
+    //   method: 'get',
+    //   url: 'correct URL',
+    //   params: {
+    //     key: value
+    //   }
+    // });
+
+    // form 태그
+    const form = document.querySelector('form')
+    // name이 "name"인 input 태그
+    const nameInput = document.querySelector('[name="name"]')
+    // api로 받아온 데이터를 보여줄 영역
+    const section = document.querySelector('section')
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault()
+      const name = nameInput.value
+
+      // 입력받은 name 정보를 위한 P 태그 생성
+      const nameP = document.createElement('p')
+      // 내용 입력
+      nameP.textContent = `제 이름은 : ${name} 입니다.`
+      
+      // input tag 초기화
+      nameInput.value = ''
+
+      // 이름 정보 section에 추가
+      section.appendChild(nameP)
+
+      // axios를 사용하여 얻은 값으로 나머지 기능을 완성한다.
+      axios({
+        method : 'GET',
+        url: 'https://api.agify.io/',
+        params : {
+          name : name
+        }
+      })
+        .then((response) => {
+          const age = response.data.age
+          const ageP = document.createElement('p')
+          ageP.textContent = `제 나이는 ${age} 입니다.`
+          section.appendChild(ageP)
+        })
+      
+    })
+  </script>
+</body>
+</html>
