@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    img {
+      max-width: 100%;
+    }
+
+  </style>
+</head>
+
+<body>
+  <button>냥냥펀치</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    const URL = 'https://api.thecatapi.com/v1/images/search'
+    const btn = document.querySelector('button')
+
+    const getCats = function () {
+      axios({
+        method : 'GET',
+        url : URL
+      })
+        .then((response) => {
+          const Imgurl = response.data[0].url
+          return Imgurl
+          
+        })
+        
+        .then((imgUrlData) => {
+          const ImgElem = document.createElement('img')
+          ImgElem.setAttribute('src', imgUrlData)
+          document.body.appendChild(ImgElem)
+          // document.body.insertBefore(ImgElem, btn.nextSibling)
+        })
+        
+        .catch((error) => {
+          console.log(error)
+          console.log('실패')
+        })
+      console.log('야옹야옹')
+    }
+    btn.addEventListener('click', getCats)
+
+    
+  </script>
+</body>
+
+</html>
+
+
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      position: relative; /* container를 relative로 설정하여 내부 요소들을 상대적으로 배치할 수 있습니다. */
+    }
+
+    .cat-img {
+      max-width: 100%; /* 이미지의 최대 너비를 설정하여 이미지가 작아져도 너비는 유지됩니다. */
+      position: absolute; /* 이미지를 절대 위치로 설정합니다. */
+      top: 0; /* container의 맨 위에 위치하도록 설정합니다. */
+      left: 0; /* container의 맨 왼쪽에 위치하도록 설정합니다. */
+    }
+
+    button {
+      position: absolute; /* 버튼을 절대 위치로 설정합니다. */
+      top: 10px; /* 이미지의 위에서 10px 아래에 위치하도록 설정합니다. */
+      left: 50%; /* 이미지의 가운데에 위치하도록 설정합니다. */
+      transform: translateX(-50%); /* 가운데 정렬을 위해 왼쪽으로 50%만큼 이동시킵니다. */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <button>냥냥펀치</button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    const URL = 'https://api.thecatapi.com/v1/images/search'
+    const btn = document.querySelector('button')
+
+    const getCats = function () {
+      axios({
+        method : 'GET',
+        url : URL
+      })
+        .then((response) => {
+          Imgurl = response.data[0].url
+          ImgElem = document.createElement('img')
+          ImgElem.setAttribute('src', Imgurl)
+          document.body.appendChild(ImgElem) // 이미지를 body에 추가
+        })
+        .catch((error) => {
+          console.log(error)
+          console.log('실패')
+        })
+      console.log('야옹야옹')
+    }
+    btn.addEventListener('click', getCats)
+
+  </script>
+</body>
+
+</html> -->
