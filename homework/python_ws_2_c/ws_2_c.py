@@ -55,3 +55,6 @@ data = [{'has_more': False,
   'type': 'page_or_database'}]
 
 # 아래에 코드를 작성하시오.
+print(type(data))
+title = data[0]['results'][0]['properties']['제목']['title'][0]['text']['content']
+print(title)
