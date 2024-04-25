@@ -9,11 +9,43 @@
 
 <body>
   <div id="app">
-    <button></button>
+    <p>{{ cnt }}</p>
+    <p>{{ cnt }}</p>
+    <p>{{ cnt }}</p>
+    <p>{{ cnt }}</p>
+    <!-- 템플릿에서는 value로 할 필요가 없다. -->
+    <button v-on:click="increment">버튼 !!</button>
+
+    <!-- <h1> {{ obj.id }}</h1> -->
   </div>
 
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <script>
+
+    const { createApp, ref } = Vue
+
+    const app = createApp({
+      setup()  {
+
+        const cnt = ref(0)
+        const increment = function () {
+          cnt.value++ 
+          // 반응형 객체이기 때문에 value로 지정해줘야 한다.
+        }
+
+        // const obj = { id : ref(0) }
+
+        return {
+          cnt,
+          increment,
+          // obj
+          // return을 해야지 템플릿에서 적용이 된다.
+        }
+      }
+    }) 
+
+
+    app.mount('#app')
   </script>
 </body>
 
