@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>DETAIL PAGE</h1>
+<hr>
+<div>
+  <p>Name : {{ product.name }}</p>
+  <p>Price : {{ product.price }}</p>
+  <p>Description : {{ product.description }}</p>
+  <hr>
+
+  {% if request.user == product.seller %}
+    <!-- 문제 3. 
+      해당 물건의 판매자만 수정 및 삭제 버튼이 보이도록 수정하기
+    -->
+      <a href="{% url "shops:update" product.pk %}">EDIT</a>
+      <form action="{% url "shops:delete" product.pk %}" method="POST">
+        {% csrf_token %}
+        <input type="submit" value="DELETE">
+      </form>
+  {% endif %}
+
+</div>
+<hr>
+<a href="{% url "shops:index" %}">BACK</a>
+<hr>
+
+<h2>Review List</h2>
+<!-- 
+  문제 1. 로그인한 사용자에게만 리뷰 목록을 보여주기
+  로그인 하지 않은 경우 코드 하단 p tag에 있는 메세지가 출력되어야 한다.
+-->
+{% if request.user.is_authenticated %}
+
+<form action="{% url "shops:create_review" product.pk %}" method="POST">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="CREATE REVIEW">
+</form>
+<hr>
+<ul>
+  {% for review in review_list %}
+  <li>
+    {{ review.content }} - {{ review.customer }}
+    
+    {% if review.customer == request.user %}
+    <form action="{% url "shops:delete_review" product.pk review.pk %}" method="POST">
+          {% csrf_token %}
+          <input type="submit" value="X">
+        </form>
+        {% endif %}
+      </li>
+      {% empty %}
+      <li>등록된 리뷰가 없습니다.</li>
+      {% endfor %}
+    </ul>
+
+  {% else %}
+    <p>리뷰를 보려면 로그인이 필요합니다.</p>
+  {% endif %}
+    {% endblock content %}

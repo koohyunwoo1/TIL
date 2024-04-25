@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>베스트 셀러 목록</h1>
+  {% for item in result %}
+    <p>제목 : {{ item.title }}</p>
+    <p>저자 : {{ item.author }}</p>
+    <p>설명 : {{ item.bestDuration }}</p>
+    <hr>
+  {% endfor %}
+</body>
+</html>

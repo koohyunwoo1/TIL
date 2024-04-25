@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1> {{ person }} PROFILE PAGE</h1>
+<hr>
+<div>
+  <!-- 
+    문제 8. 프로필 이미지가 없는 경우 
+    assets 폴더에 위치한 기본 이미지 (no_user_img.png) 표시하기 
+  -->
+  {% if person.image %}
+    <p><img class="w-25" src="{{ person.image.url }}" alt="{{ person.image }}"></p>
+  {% endif %}
+  <p>Name : {{ person.last_name }} {{ person.first_name }}</p>
+  <p>E-mail : {{ person.email }}</p>
+  <p>Address : {{ person.address }}</p>
+  {% if request.user != person %}
+    <form action="{% url "accounts:add_seller" person.username %}" method="POST">
+      {% csrf_token %}
+      {% if request.user in person.my_customers.all %}
+        <input type="submit" value="REMOVE SELLER">
+      {% else %}
+        <input type="submit" value="ADD SELLER">
+      {% endif %}
+    </form>
+  {% endif %}
+</div>
+{% if request.user == person %}
+  <a href="{% url "accounts:update" %}">EDIT PROFILE</a>
+  <form action="{% url "accounts:resign" %}" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="RESIGN">
+  </form>
+{% endif %}
+<hr>
+<a href="{% url "shops:index" %}">BACK</a>
+{% endblock content %}
