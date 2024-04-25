@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <h1>{{ title }}</h1>
+    <p>평균 점수 : {{ avgScore }} </p>
+    <button v-on:click="avg">평균 점수 계산</button>
+    <hr>
+    <p>전체 점수 목록 : {{ scores }}</p>
+    <p>방학 여부 : {{ is_vacation.status }}</p>
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+  <script>
+    /*
+      - Vue3 CDN을 사용한다. 
+      1. 아이디가 app인 container 요소에 새로운 앱 인스턴스를 mount 하시오.
+      2. 각 변수를 작성한다.
+        - title 변수에 '점수표' 문자열을 할당한다.
+        - avgScore 변수에 null을 할당한다.
+        - scores 변수에, 임의로 작성한 정수를 요소로 하는 배열을 할당한다.
+        - is_vacation 변수에 상태정보를 담고 있는 객체를 할당한다. 
+        - 키는 status 값은 boolean 타입으로 작성한다.
+        - 단, ref 함수를 사용하여 반응성을 가지는 참조 변수로 만들어야 한다.
+      3. 각 데이터는 template을 수정하여 적절하게 표기 될 수 있도록 작성한다.
+      4. cal_average 함수를 정의하고, `평균 점수 계산` 버튼을 클릭하면 함수가 작동하도록 한다.
+        - cal_average 함수는 scores 배열에 담긴 정수의 평균 값을 avgScore에 할당한다.
+    */
+
+    const { createApp, ref} = Vue
+
+    const app = createApp({
+      setup() {
+        const title = ref('점수표')
+        const avgScore = ref(null)
+        const scores = ref([10,20,30,40,50])
+        const is_vacation = { status: ref(false) }
+
+        const avg = function () {
+          let total = 0
+          for (i=0; i<scores.value.length; i++) {
+            total += scores.value[i]
+          }
+          avgScore.value = total / scores.value.length
+        }
+        return {
+          title,
+          avgScore,
+          scores,
+          is_vacation,
+          avg
+        }
+      }
+    })
+
+    app.mount('#app')
+  </script>
+</body>
+</html>
