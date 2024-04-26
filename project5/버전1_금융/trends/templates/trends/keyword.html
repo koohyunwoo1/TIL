@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>키워드 추가</h2>
+<form action="{% url "trends:keyword" %}" method = "POST">
+  {% csrf_token %}
+  {{ form }}
+  <input type="submit" value="생성하기" >
+</form>
+<hr>
+
+<h2>분석을 원하는 키워드 목록</h2>
+
+{% for keyword in keywords %}
+  {{ keyword.pk }}번째 키워드 - {{ keyword.name }}
+  <form action="{% url "trends:keyword_detail" keyword.pk %}" method = 'POST'>
+    {% csrf_token %}
+    <input type="submit" value="삭제하기">
+  </form>
+
+{% endfor %}
+
+{% endblock content %}

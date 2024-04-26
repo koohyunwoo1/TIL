@@ -1,0 +1,39 @@
+<nav class="navbar fixed-top bg-dark" data-bs-theme="dark">
+  <div class="container-fluid" style='justify-content: start;'>
+    <a class="navbar-brand" href="{% url "movies:index" %}">MOVIE</a>
+    {% if request.user.is_authenticated %}
+    <ul class="navbar-nav me-2">
+      <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="{% url 'movies:create' %}">영화 등록</a>
+      </li>
+    </ul>
+      <ul class="navbar-nav me-2">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="{% url 'accounts:update' user.pk %}">회원정보수정</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav me-2">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="{% url 'accounts:profile' user.username %}">프로필</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav me-2">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="{% url 'accounts:logout' %}">로그아웃</a>
+        </li>
+      </ul>
+    {% else %}
+    <ul class="navbar-nav me-2">
+      <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="{% url 'accounts:signup' %}">회원가입</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav me-2">
+      <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="{% url 'accounts:login' %}">로그인</a>
+      </li>
+    </ul>
+    {% endif %}
+  </div>
+</nav>
+

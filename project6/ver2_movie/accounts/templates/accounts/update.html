@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>USER INFO UPDATE PAGE</h1>
+<hr>
+<form action="{% url "accounts:update" user.pk %}" method='POST'>
+  {% csrf_token %}
+  {{ user_form.as_p }}
+  <input type="submit" value="수정">
+</form>
+<form action="{% url "accounts:delete" user.pk %}" method='POST'>
+  {% csrf_token %}
+  <input type="submit" value="회원탈퇴">
+</form>
+{% endblock content %}
