@@ -51,5 +51,13 @@ class MovieSerializers(serializers.ModelSerializer):
         fields = '__all__'
 
 
-# 리뷰 목록 제공
-        
+# 전체 리뷰 목록 제공
+
+class ReviewListSerializers(serializers.ModelSerializer):
+    class Meta:
+        model = Review
+        fields = ('title', 'content',)
+
+# 단일 리뷰 조회 & 수정 & 삭제
+
+

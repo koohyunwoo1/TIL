@@ -2,7 +2,7 @@ from django.shortcuts import render
 from rest_framework.decorators import api_view
 from .models import Actor, Movie, Review
 from django.shortcuts import get_object_or_404 ,get_list_or_404
-from .serializers import ActorListSeiralizers, ActorSeiralizers, MovieListSeiralizers, MovieSerializers
+from .serializers import ActorListSeiralizers, ActorSeiralizers, MovieListSeiralizers, MovieSerializers, ReviewListSerializers
 from rest_framework.response import Response
 
 # Create your views here.
@@ -36,13 +36,22 @@ def movie_detail(request, movie_pk):
     serializer = MovieSerializers(movie)
     return Response(serializer.data)
 
+
 @api_view(['GET'])
 def review_list(request):
-    pass
+    reviews = Review.objects.all()
+    serializer = ReviewListSerializers(reviews, many=True)  # many=True를 사용하여 여러 객체를 직렬화합니다.
+    return Response(serializer.data)
+
 
 @api_view(['GET','PUT','DELETE'])
 def review_detail(request):
-    pass
+    if request.method == 'GET':
+        pass
+    elif request.method == 'PUT':
+        pass
+    else:
+        pass
 
 @api_view(['POST'])
 def create_review(request):
