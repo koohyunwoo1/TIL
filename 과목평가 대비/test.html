@@ -12,19 +12,12 @@
 
 
   <script>
-    function f1 (x, y) {
-      return x + y
-  }
+    const div = 123
+    // div.addEventListener('click', console.log('누르지 마세요')) // 1
+    // div.addEventListener('click', function(){console.log('누르지 마세요')}) //2
+    div.addEventListener('click', ()=>{console.log('누르지 마세요')}) // 3
+
   
-  function f2 (x, y) {
-      return x * y
-  }
-  
-  const f3 = function (x, y) {
-      return x(10, 20) + y(30, 40)
-  }
-  
-  console.log(f3(f1, f2))
   </script>
 </body>
 </html>

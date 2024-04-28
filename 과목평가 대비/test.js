@@ -2,7 +2,7 @@
 
 
 // span태그를 스스로 만들고, 거기에 클래스 ssafy를 부여한다면 ?
-
+craeteElement() -> classList.add('ssafy')
 
 // p태그를 가져 오려면 ?
 querySelector('p')
@@ -135,7 +135,7 @@ const { age } = student // === const age = student.age
 //3번
 
 // JavaScript에서 '===' 연산자의 역할이 무엇인가요?
-
+// 데이터 타입까지 완벽히 일치한지 ?
 // 값 자료형 데이터타입
 
 1 == '1' // true
@@ -144,7 +144,7 @@ const { age } = student // === const age = student.age
 // 4번
 
 div.addEventListener('click', console.log('누르지 마세요')) // 1
-
+// 함수 선언되지 않아서 올바르지 않은 코드
 div.addEventListener('click', function(){console.log('누르지 마세요')}) //2
 
 div.addEventListener('click', ()=>{console.log('누르지 마세요')}) // 3
@@ -176,7 +176,7 @@ addEventListener('click', function (){console.log('누르지 마세요')})
 
 //1 페이지를 새로고침 하지 않고 페이지 일부를 바꿀 수 있도록
 //하는 비동기적인 웹 애플리케이션의 제작을 위한 웹 개발 기법의 이름은?
-
+// AJAX
 
 //2,3
 
@@ -188,6 +188,7 @@ addEventListener('click', function (){console.log('누르지 마세요')})
 // 2 .then에 .catch를 연결해서 바로 사용할 수 있는 이유는 .then의 반환 값이 Promise 객체이기 때문이다.
 
 // 3. Promise 객체를 사용하면 가독성이 떨어지고 유지 보수가 어려워지기 때문에 콜백 함수 형태로 사용하는 것이 바람직하다.
+// 3번이 정답
 
 // 4. Promise 객체의 .catch 메서드를 통해 거부된 경우의 실행할 코드를 작성한다.
 
@@ -261,7 +262,7 @@ const c = {
 // 다음 중, callback 함수 O X.
 
 // 다른 함수에 인자로 전달된 함수를 의미한다.
-// JavaScript만의 독특한 함수이다. 
+// JavaScript만의 독특한 함수이다. x
 // 익명 함수와 기명 함수 둘 다 callback 함수로 사용가능하다.
 // 비동기 작업이 완료된 후 코드 실행을 계속하는데 사용되는 경우를 비동기
 // callback이라고 한다.
@@ -271,6 +272,7 @@ const c = {
 
 // 함수의 정의 방법 중 함수 선언식은 함수의 이름과 함께 정의 하는 방식이다.
 // 함수의 정의 방법 중 함수 표현식은 함수의 이름을 반드시 정의하여야 한다.
+// x
 // 함수를 정의할 때 이름을 생략 할 수 있다.
 // JavaScript의 function은 참조 타입에 속한다.
 
@@ -283,6 +285,7 @@ const c = {
 // 2JSON은 JavaScript Object Notation의 약자이다.
 
 // 3독립된 파일 형태로는 저장 할 수 없다.
+// json 독립된 파일로 사용 가능 
 
 // 4오직 JavaScript에서만 사용 가능하며 다른 언어는 JSON 데이터를 사용 할 수 없다.
 
