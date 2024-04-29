@@ -39,6 +39,7 @@ for (const i = 0; i < 10; i++ ) {
 
 //4.출력결과
 console.log(x)
+
 var x = 1
 // undefined
 
@@ -48,6 +49,7 @@ let x
 const x
 // 에러
 
+console.log(x)
 let x = 1
 x = 2
 // 에러
@@ -188,7 +190,6 @@ addEventListener('click', function (){console.log('누르지 마세요')})
 // 2 .then에 .catch를 연결해서 바로 사용할 수 있는 이유는 .then의 반환 값이 Promise 객체이기 때문이다.
 
 // 3. Promise 객체를 사용하면 가독성이 떨어지고 유지 보수가 어려워지기 때문에 콜백 함수 형태로 사용하는 것이 바람직하다.
-// 3번이 정답
 
 // 4. Promise 객체의 .catch 메서드를 통해 거부된 경우의 실행할 코드를 작성한다.
 
@@ -262,7 +263,7 @@ const c = {
 // 다음 중, callback 함수 O X.
 
 // 다른 함수에 인자로 전달된 함수를 의미한다.
-// JavaScript만의 독특한 함수이다. x
+// JavaScript만의 독특한 함수이다. 
 // 익명 함수와 기명 함수 둘 다 callback 함수로 사용가능하다.
 // 비동기 작업이 완료된 후 코드 실행을 계속하는데 사용되는 경우를 비동기
 // callback이라고 한다.
@@ -272,7 +273,6 @@ const c = {
 
 // 함수의 정의 방법 중 함수 선언식은 함수의 이름과 함께 정의 하는 방식이다.
 // 함수의 정의 방법 중 함수 표현식은 함수의 이름을 반드시 정의하여야 한다.
-// x
 // 함수를 정의할 때 이름을 생략 할 수 있다.
 // JavaScript의 function은 참조 타입에 속한다.
 
