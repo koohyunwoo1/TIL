@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .red {
+      color: red;
+    }
+    .blue {
+      color: blue;
+    }
+    .orange {
+      color: orange;
+    }
+    .green {
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <p :class = "colorClass">입력창에 올바른 색상 명을 입력하면 글자색이 바껴요.</p>
+    <p>색상 목록</p>
+    <ul>
+      <li>red</li>
+      <li>blue</li>
+      <li>orange</li>
+      <li>green</li>
+    </ul>
+    <hr>
+    <p>색상 목록중 하나를 입력 해 보세요.</p>
+    <input type="text">
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+    /*
+      - Vue3 CDN을 사용한다.
+      1. 새로운 app instance를 생성하여 아이디가 app인 container에 mount 하시오.
+      2. 사용자가 입력한 값이 colorClass 변수에 할당 될 수 있도록 양방향 바인딩 directive를 사용하시오.
+      3. colorClass 변수의 값이 첫 번째 p 태그의 class가 될 수 있도록 단방향 바인딩 directive를 사용하시오.
+    */
+
+    const { createApp, ref } = Vue
+
+    const app = createApp({
+      setup() {
+        const colorClass = ref('red')
+        return {
+          colorClass
+        }
+      }
+    })
+
+    app.mount('#app')
+  </script>
+</body>
+</html>
