@@ -242,13 +242,13 @@
         }
 
         const userPassError = ref({
-          text: '',
+          password: '',
           isValid: true
         })
 
         const userPasswordValidator = function () {
         
-          if (passWord.value.length < 8) {
+          if (password.value.length < 8) {
             userPassError.value.isValid = false
             userPassError.value.text = '비밀번호는 최소 8글자 이상입니다.'
           } else {
