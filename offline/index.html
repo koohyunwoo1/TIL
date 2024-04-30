@@ -6,27 +6,54 @@
   <title>Document</title>
   <!-- <link rel="stylesheet" href="style.css"> -->
   <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #201f1d !important;
+      color: #fff !important;
+    }
+
+
     .done {
-      text-decoration: line-through;
+    text-decoration: line-through;
     }
 
     .detail {
       position: fixed;
       top: 30%;
       left: 70%;
-      border: 1px solid #d9bfda;
+      border: 1px solid beige;
       width: 300px;
       background-color: #c3beb3;
       border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 
     }
+
+    .h1 {
+      margin-left: 250px;
+      color : #db111f;
+      /* font-size: 80px; */
+    }
+
+    .hr {
+      background : #db111f;
+      height : 1px;
+      border: 0;
+    }
+
   </style>
 </head>
 <body>
-  
-  
+
 <div id="app">
-    
+    <h1 class="h1">현재 작성된 할 일 목록 : {{ countOfTodos }}</h1>
+    <!-- <h1 class="h1">현재 작성된 할 일 목록 : {{ countOfTodos }}</h1>
+    <h1 class="h1">현재 작성된 할 일 목록 : {{ countOfTodos }}</h1>
+    <h1 class="h1">현재 작성된 할 일 목록 : {{ countOfTodosMethod() }}</h1>
+    <h1 class="h1">현재 작성된 할 일 목록 : {{ countOfTodosMethod() }}</h1>
+    <h1 class="h1">현재 작성된 할 일 목록 : {{ countOfTodosMethod() }}</h1> -->
     <article>
       <!-- todos를 반복해서 카드 하나하나를 만든다. -->
       <div v-for="todo in todos" :key="todo.id">
@@ -35,7 +62,7 @@
           <!-- todo의 completed값이 true인 경우에만 done클래수 부여 -->
           <p :class="{ done:todo.completed }">{{ todo.title }}</p>
           <p>{{ todo.completed }}</p>
-          <hr>
+          <hr class="hr">
         </div>
       </div>
     </article>
@@ -49,12 +76,12 @@
       <!-- detail page , 종료버튼, pk, title, completed, usreId, comments -->
       <button @click="closeDetail">X</button>
       <h1>{{ todo.id }} | {{ todo.title }}</h1>
-      <p>userId : {{ todo.userId }}</p>
+      <p>userId : {{ todo.id }}</p>
       <p>isCompleted : {{ todo.completed }}</p>
 
       <!-- 댓글 영역 -->
-      <div>
-        <p>댓글 본문</p>
+      <div v-for="comment in comments" :key="comment.id">
+        <p>{{ comment.body }}</p>
       </div>
     </section>
 </div>
@@ -68,7 +95,7 @@
   <script>
     // 객체 구조 분해 할당으로, Vue.createAPP을 createApp 변수에 할당한다.
     // Vue가 가지고 있는 메서드 onMounted 가져온다.
-    const { createApp, ref, onMounted } = Vue
+    const { createApp, ref, onMounted, computed, watch } = Vue
     const app = createApp({
       setup() {
         const todos = ref([
@@ -87,9 +114,37 @@
           },
         ])
           const todo = ref(false)
+          const comments = ref([])
 
-          const goDetail = function (hyunwoo) {
-            todo.value = hyunwoo
+          const countOfTodos = computed(() => {
+            return todos.value.length
+          })
+
+          const countOfTodosMethod = function() {
+            console.log('메서드 호출')
+            return todos.value.length
+          }
+
+          // const detailComments = computed(() => {
+          //   const result = comments.value.filter(comment => {
+          //     return comment.postId === todo.value.id
+          //   })
+          //   return result
+          // })
+          
+          const detailComments = ref([])
+
+          watch(todo, (newV, oldV) => {
+            // console.log(oldV) // false
+            // console.log(newV)
+            detailComments.value = comments.value.filter(comment => {
+              return comment.postId === newV.id
+            })
+          })
+
+
+          const goDetail = function (item) {
+            todo.value = item
           }
           
           const closeDetail = function () {
@@ -102,16 +157,31 @@
             methods : 'get',
             url : 'https://jsonplaceholder.typicode.com/todos/'
           })
-
+            
             .then(res => todos.value = res.data.slice(0, 100))
             .catch(err => console.log(err.data))
+
+
+          axios({
+            methods : 'get',
+            url : 'https://jsonplaceholder.typicode.com/comments/'
+          })
+            
+            .then(res => comments.value = res.data)
+            .catch(err => console.log(err))
+            
         }) 
+
 
         return {
           todos,
           todo,
           goDetail,
-          closeDetail
+          closeDetail,
+          comments,
+          detailComments,
+          countOfTodos,
+          countOfTodosMethod
         }
       }
     })
