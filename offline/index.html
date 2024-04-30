@@ -31,10 +31,15 @@
 
     }
 
-    .h1 {
+    .h1_2 {
       margin-left: 250px;
       color : #db111f;
-      /* font-size: 80px; */
+    }
+
+    .h1 {
+      margin-left: 300px;
+      color : #db111f;
+      font-size: 70px;
     }
 
     .hr {
@@ -48,13 +53,14 @@
 <body>
 
 <div id="app">
-    <h1 class="h1">현재 작성된 할 일 목록 : {{ countOfTodos }}</h1>
+  <h1 v-if ="!isLogin" class="h1">NETFLIX</h1>
+    <h1 v-if ="isLogin" class="h1_2">현재 작성된 할 일 목록 : {{ countOfTodos }}</h1>
     <!-- <h1 class="h1">현재 작성된 할 일 목록 : {{ countOfTodos }}</h1>
     <h1 class="h1">현재 작성된 할 일 목록 : {{ countOfTodos }}</h1>
     <h1 class="h1">현재 작성된 할 일 목록 : {{ countOfTodosMethod() }}</h1>
     <h1 class="h1">현재 작성된 할 일 목록 : {{ countOfTodosMethod() }}</h1>
     <h1 class="h1">현재 작성된 할 일 목록 : {{ countOfTodosMethod() }}</h1> -->
-    <article>
+    <article v-if="isLogin">
       <!-- todos를 반복해서 카드 하나하나를 만든다. -->
       <div v-for="todo in todos" :key="todo.id">
         <div class="card" v-on:click="goDetail(todo)">
@@ -65,6 +71,35 @@
           <hr class="hr">
         </div>
       </div>
+    </article>
+    <article v-if="!isLogin">
+      <form @submit.prevent="login">
+        <label for="username">username : </label>
+        <input type="text" name="username" id="username"  
+          v-model="username"
+          @input = "userNameValidator"
+          >
+        <p 
+          v-show= "!userNameError.isvalid"
+        >
+          {{ userNameError.text }}
+      </p>
+
+        <label for="password">password : </label>
+        <input type="password" name="password" id="password" 
+          v-model="password"
+          @input = "userPasswordValidator"
+          >
+        <p 
+          v-show= "!userPassError.isvalid"
+        >
+          {{ userPassError.text }}
+      </p>
+
+
+        <input type="submit" value="login">
+
+      </form>
     </article>
 
     <!-- 
@@ -98,6 +133,8 @@
     const { createApp, ref, onMounted, computed, watch } = Vue
     const app = createApp({
       setup() {
+        const isLogin = ref(false)
+
         const todos = ref([
           { 
             id : 1,
@@ -172,7 +209,54 @@
             
         }) 
 
+        const login = function() {
+          if (!userNameError.value.isValid) {
+            console.log('유효성 통과 못함')
+            // p 태그 show로 조건 만들고,
+            // loginValidator 객체 만들어서
+          } else {
+            if (username.value.trim() && password.value.trim()) {
+              isLogin.value = true
+            }
+          }
+        }
 
+        const userNameError = ref({
+          text: '',
+          isValid: true
+        })
+
+        const userName = ref('')
+        const passWord = ref('')
+
+        const userNameValidator = function () {
+          // username 입력 값이 12 초과하는 경우, userNameError 객체 값 변경
+          if (username.value.length > 12) {
+            userNameError.value.isValid = false
+            userNameError.value.text = '이름은 12글자 까지만 작성할 수 있습니다.'
+          } else {
+            userNameError.value.isValid = true
+            userNameError.value.text = ''
+          }
+
+        }
+
+        const userPassError = ref({
+          text: '',
+          isValid: true
+        })
+
+        const userPasswordValidator = function () {
+        
+          if (passWord.value.length < 8) {
+            userPassError.value.isValid = false
+            userPassError.value.text = '비밀번호는 최소 8글자 이상입니다.'
+          } else {
+            userPassError.value.isValid = true
+            userPassError.value.text = ''
+          }
+        }
+  
         return {
           todos,
           todo,
@@ -181,7 +265,15 @@
           comments,
           detailComments,
           countOfTodos,
-          countOfTodosMethod
+          countOfTodosMethod,
+          isLogin,
+          login,
+          userNameError,
+          userName,
+          userNameValidator,
+          passWord,
+          userPassError,
+          userPasswordValidator
         }
       }
     })
