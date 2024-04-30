@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <style>
+    .done {
+      text-decoration: line-through;
+    }
+
+    .detail {
+      position: fixed;
+      top: 30%;
+      left: 70%;
+      border: 1px solid #d9bfda;
+      width: 300px;
+      background-color: #c3beb3;
+      border-radius: 10px;
+
+    }
+  </style>
+</head>
+<body>
+  
+  
+<div id="app">
+    
+    <article>
+      <!-- todos를 반복해서 카드 하나하나를 만든다. -->
+      <div v-for="todo in todos" :key="todo.id">
+        <div class="card" v-on:click="goDetail(todo)">
+          <!-- 조건부 class binding -->
+          <!-- todo의 completed값이 true인 경우에만 done클래수 부여 -->
+          <p :class="{ done:todo.completed }">{{ todo.title }}</p>
+          <p>{{ todo.completed }}</p>
+          <hr>
+        </div>
+      </div>
+    </article>
+
+    <!-- 
+      v-if => 조건 불만족시 화면에 렌더링조차 되지 않음
+      v-show => 조건 불만족시 display:none으로 설정하고 렌더링함
+     -->
+      
+    <section v-show ="todo" class="detail">
+      <!-- detail page , 종료버튼, pk, title, completed, usreId, comments -->
+      <button @click="closeDetail">X</button>
+      <h1>{{ todo.id }} | {{ todo.title }}</h1>
+      <p>userId : {{ todo.userId }}</p>
+      <p>isCompleted : {{ todo.completed }}</p>
+
+      <!-- 댓글 영역 -->
+      <div>
+        <p>댓글 본문</p>
+      </div>
+    </section>
+</div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <!-- Vue CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+  <!-- axios CDN -->
+
+  <!-- Vue 객체 작성 -->
+  <script>
+    // 객체 구조 분해 할당으로, Vue.createAPP을 createApp 변수에 할당한다.
+    // Vue가 가지고 있는 메서드 onMounted 가져온다.
+    const { createApp, ref, onMounted } = Vue
+    const app = createApp({
+      setup() {
+        const todos = ref([
+          { 
+            id : 1,
+            title : '뭐하누 하하하하하',
+            complted : false,
+
+          },
+
+          {
+            i : 2,
+            title : '뭐하노 하하하하하',
+            complted : true
+
+          },
+        ])
+          const todo = ref(false)
+
+          const goDetail = function (hyunwoo) {
+            todo.value = hyunwoo
+          }
+          
+          const closeDetail = function () {
+            todo.value = false
+          }
+
+        // onMounted 함수 호출 시, callBack function
+        onMounted(() => {
+          axios({
+            methods : 'get',
+            url : 'https://jsonplaceholder.typicode.com/todos/'
+          })
+
+            .then(res => todos.value = res.data.slice(0, 100))
+            .catch(err => console.log(err.data))
+        }) 
+
+        return {
+          todos,
+          todo,
+          goDetail,
+          closeDetail
+        }
+      }
+    })
+
+    app.mount('#app')
+  </script>
+</body>
+</html>
