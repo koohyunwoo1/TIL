@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .card {
+      margin-top: 20px;
+      padding: 10px;
+      border-radius: 5px;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <h1>카드 생성기</h1>
+
+    <form @submit.prevent="createCard">
+      <div>
+        <label for="title">제목: </label>
+        <input type="text" v-model="inputTitle" id="title" required>
+      </div>
+      <div>
+        <label for="content">내용: </label>
+        <textarea v-model="inputContent" id="content" required></textarea>
+      </div>
+      <div>
+        <label for="color">배경색: </label>
+        <select v-model="inputColor" id="color" required>
+          <option value="" disabled selected>색상을 선택하시오.</option>
+          <option value="red">Red</option>
+          <option value="green">Green</option>
+          <option value="blue">Blue</option>
+        </select>
+      </div>
+      <input type="submit" value="생성">
+    </form>
+
+    <div v-show="isCreatedCard" :style="{ backgroundColor : cardColor}"class="card">
+      <h2>{{ cardTitle }}</h2>
+      <p>{{ cardContent }}</p>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+    const { createApp, ref } = Vue
+
+    const app = createApp({
+      setup() {
+        const inputTitle = ref('')
+        const inputContent = ref('')
+        const inputColor = ref('')
+        const cardTitle = ref('')
+        const cardContent = ref('')
+        const cardColor = ref('')
+        const isCreatedCard = ref(false)
+        const createCard = function () {
+          isCreatedCard.value = true
+          cardTitle.value = inputTitle.value
+          cardContent.value = inputContent.value
+          cardColor.value = inputColor.value
+          inputTitle = ''
+          inputContent = ''
+          inputColor = ''
+        }
+        return {
+          inputTitle,
+          inputContent,
+          inputColor,
+          cardTitle,
+          cardContent,
+          cardColor,
+          isCreatedCard,
+          createCard
+        }
+      }
+    })
+
+    app.mount('#app')
+  </script>
+</body>
+
+</html>
