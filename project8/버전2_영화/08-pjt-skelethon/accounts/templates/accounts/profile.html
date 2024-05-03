@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>{{ person.username }}의 프로필 페이지</h1>
+  <div>
+    <div>
+      팔로잉 : <span id="followings-count">{{ person.followings.all|length }}</span> / 
+      팔로워 : <span id="followers-count">{{ person.followers.all|length }}</span>
+    </div>
+    {% if request.user != person %}
+      <div>
+        {% comment %} <form id="follow-form" data-user-id="{{ person.pk }}"> {% endcomment %}
+        <form id="follow-form" data-user-id="{{ person.pk }}" action="{% url 'accounts:follow' person.pk %}" method="POST">
+          {% csrf_token %}
+          {% if request.user in person.followers.all %}
+            <input type="submit" value="Unfollow">
+          {% else %}
+            <input type="submit" value="Follow">
+          {% endif %}
+        </form>
+      </div>
+      {% endif %}
+    </div>
+    
+    {% endblock content %}
+
+    
+    {% block script %}
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+      const formTag = document.querySelector('#follow-form')
+      const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value
+      
+      formTag.addEventListener('submit', function (event) {
+        event.preventDefault()
+        const userId = formTag.dataset.userId
+        
+        axios({
+          method:'post',
+          // url : `/accounts/profile/${username}/`,
+          url: `/accounts/${userId}/follow/`,
+          headers : {'X-CSRFToken' : csrftoken},
+        })
+        
+        .then((response) => {
+          console.log(response.data)
+          const isFollowed = response.data.is_followed
+          const followBtn = document.querySelector('input[type=submit]')
+          if (isFollowed === true ){
+            followBtn.value = 'Unfollow'
+          } else {
+            followBtn.value = 'follow'
+          }
+          
+          const followingsCountTag = document.querySelector('#followings-count')
+          const followersCountTag = document.querySelector('#followers-count')
+          
+          followingsCountTag.textContent = response.data.followings_count
+          followersCountTag.textContent = response.data.followers_count
+        })
+        .catch((error) => {
+          console.log(error)
+        })
+      })
+    </script> 
+    
+    {% endblock script %}
