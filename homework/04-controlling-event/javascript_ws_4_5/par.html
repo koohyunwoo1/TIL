@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <style>
+    .container {
+      text-align: center;
+      margin-top: 50px;
+    }
+    #player1_choice, #player2_choice {
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Rock Paper Scissors</h1>
+    <button id="rockBtn">Rock</button>
+    <button id="paperBtn">Paper</button>
+    <button id="scissorsBtn">Scissors</button>
+    <div>
+      <h2>You:</h2>
+      <img id="player1_choice" src="" alt="Your choice">
+    </div>
+    <div>
+      <h2>Opponent:</h2>
+      <img id="player2_choice" src="" alt="Opponent's choice">
+    </div>
+    <h2 id="result"></h2>
+    <h2>Score:</h2>
+    <p id="score"></p>
+  </div>
+
+  <script>
+    const rockBtn = document.getElementById('rockBtn');
+    const paperBtn = document.getElementById('paperBtn');
+    const scissorsBtn = document.getElementById('scissorsBtn');
+    const player1ChoiceImg = document.getElementById('player1_choice');
+    const player2ChoiceImg = document.getElementById('player2_choice');
+    const resultText = document.getElementById('result');
+    const scoreText = document.getElementById('score');
+
+    let count1 = 0;
+    let count2 = 0;
+
+    function playGame(player1, player2) {
+      if (player1 === player2) {
+        return 0; // Draw
+      } else if (
+        (player1 === 'rock' && player2 === 'scissors') ||
+        (player1 === 'paper' && player2 === 'rock') ||
+        (player1 === 'scissors' && player2 === 'paper')
+      ) {
+        count1++;
+        return 1; // Player 1 wins
+      } else {
+        count2++;
+        return 2; // Player 2 wins
+      }
+    }
+
+    function buttonClickHandler(choice) {
+      rockBtn.disabled = true;
+      paperBtn.disabled = true;
+      scissorsBtn.disabled = true;
+
+      const choices = ['rock', 'paper', 'scissors'];
+      const randomIndex = Math.floor(Math.random() * choices.length);
+      const opponentChoice = choices[randomIndex];
+
+      let countDown = 3;
+      const intervalId = setInterval(() => {
+        player2ChoiceImg.src = `https://dummyimage.com/100x100/000/fff&text=${choices[randomIndex]}`
+        countDown--;
+        if (countDown === 0) {
+          clearInterval(intervalId);
+
+          const result = playGame(choice, opponentChoice);
+          if (result === 0) {
+            resultText.textContent = "It's a draw!";
+          } else if (result === 1) {
+            resultText.textContent = "You win!";
+          } else {
+            resultText.textContent = "Opponent wins!";
+          }
+
+          scoreText.textContent = `Player 1: ${count1}  Player 2: ${count2}`;
+
+          rockBtn.disabled = false;
+          paperBtn.disabled = false;
+          scissorsBtn.disabled = false;
+        }
+      }, 1000);
+    }
+
+    rockBtn.addEventListener('click', () => buttonClickHandler('rock'));
+    paperBtn.addEventListener('click', () => buttonClickHandler('paper'));
+    scissorsBtn.addEventListener('click', () => buttonClickHandler('scissors'));
+  </script>
+</body>
+</html>
