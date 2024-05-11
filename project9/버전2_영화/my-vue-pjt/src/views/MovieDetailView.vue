@@ -63,7 +63,8 @@ axios({
     console.log(error)
     })
 
-
+// Detail Page 같은 경우에는 axios를 Detail 페이지 자체에다가 작성을 해줘야 한다.
+// axios와 Mounted는 무슨 차이가 있을까 ?
 
 </script>
 
