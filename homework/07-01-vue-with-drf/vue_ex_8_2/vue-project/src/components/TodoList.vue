@@ -1,0 +1,23 @@
+<template>
+  <div>
+    <TodoListItem
+    v-for="todo in todos"
+    :key="todo.id"
+    :todo="todo"
+    />
+  </div>
+</template>
+
+<script setup>
+import { ref } from 'vue'
+import { defineProps } from 'vue'
+import TodoListItem from '@/components/TodoListItem.vue';
+defineProps({
+  todos: Object
+})
+</script>
+
+
+<style scoped>
+
+</style>
