@@ -1,14 +1,10 @@
 import sys
 sys.stdin = open('input.txt')
 
-def fibonaccin(n):
-    cnt_zero = []
-    cnt_one = []
-    return
-
-
-
 T = int(input())
-
-for tc in range(T):
+for _ in range(T):
     N = int(input())
+    a, b = 1, 0 
+    for i in range(N):
+        a,b = b, a+b
+    print(a,b)
