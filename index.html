@@ -1,12 +1,36 @@
 <!DOCTYPE html>
 <html>
   <body>
-
+    <div id="root"></div>
   </body>
   <script src="https://www.unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
   <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
   <!-- react연결 방법 -->
   <script>
-    
+    // vanilla.html에 있는 코드를 React JS로 다시 구현
+    // 지금 사용하는 방법은 개발자가 사용하는 방식은 아님
+    const root = document.getElementById("root")
+    const h3 = React.createElement(
+      "h3", 
+      {
+        onMouseEnter: () => console.log('mouse enter')
+      },
+      // {id:"sexy-span", style: {color: "red"} }, 
+      "Hello I'm Hyunwoo"
+      )
+
+    const btn = React.createElement(
+      "button", 
+      {
+        onClick: () => console.log("im clicked"),
+        style: {
+          backgroundColor: "tomato"
+        }
+      }, 
+      "Click me")
+
+    const container = React.createElement("div", null, [h3, btn])
+    // ReactDOM.render(span, root)
+    ReactDOM.render(container, root)
   </script>
 </html>
