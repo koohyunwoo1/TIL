@@ -6,10 +6,26 @@
   <script src="https://www.unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
   <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
   <!-- react연결 방법 -->
-  <script>
+
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <!-- JSX를 쓰기위한 방법 -->
+   
+  <script type="text/babel">
     // vanilla.html에 있는 코드를 React JS로 다시 구현
     // 지금 사용하는 방법은 개발자가 사용하는 방식은 아님
     const root = document.getElementById("root")
+
+    // JSX
+
+    const Title = (
+      <h3 id="title" onMouseEnter={() => console.log("mouse enter")}>
+        Hello I'm a title
+      </h3>
+    )
+    
+    
+    /*  위의 코드랑 밑의 코드랑 같은 코드
+
     const h3 = React.createElement(
       "h3", 
       {
@@ -18,6 +34,21 @@
       // {id:"sexy-span", style: {color: "red"} }, 
       "Hello I'm Hyunwoo"
       )
+    */
+
+    // JSX
+    const Button = (
+      <button 
+      style={{
+        backgroundColor: 'tomato',
+      }}
+     onClick={() => console.log("im clicked")}
+     >
+      Click me 
+    </button>
+    )
+
+    /* 위의 코드랑 밑의 코드랑 같은 코드
 
     const btn = React.createElement(
       "button", 
@@ -28,8 +59,9 @@
         }
       }, 
       "Click me")
+    */
 
-    const container = React.createElement("div", null, [h3, btn])
+    const container = React.createElement("div", null, [Title, Button])
     // ReactDOM.render(span, root)
     ReactDOM.render(container, root)
   </script>
