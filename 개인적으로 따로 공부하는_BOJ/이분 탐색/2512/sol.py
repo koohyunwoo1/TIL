@@ -1,29 +1,22 @@
 import sys
-sys.stdin = open('input.txt')
+input = sys.stdin.readline
 
 N = int(input())
+cities = list(map(int, input().split()))
+budgets = int(input()) 
+start, end = 0, max(cities)
 
-lst = list(map(int, input().split()))
-M = int(input())
 
-left = 0
-right = max(lst)
-
-while left <= right:
-    mid = (left + right) // 2
-    cnt = 0
-
-    for i in lst:
+while start <= end:
+    mid = (start+end) // 2
+    total = 0 
+    for i in cities:
         if i > mid:
-            cnt += mid
+            total += mid
         else:
-            cnt += i
-
-    if cnt < M:
-        left = mid + 1
-    else:
-        right = mid - 1
-
-print(right)
-
-
+            total += i
+    if total <= budgets: 
+        start = mid + 1
+    else: 
+        end = mid - 1
+print(end)
