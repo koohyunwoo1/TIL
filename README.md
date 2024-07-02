@@ -8,6 +8,7 @@
 
 - 확장프로그램
 - ESLint 설치
+- .eslintrc.cjs
 - "no-unused-vars": "off",
   "react/prop-types" : "off",
 
