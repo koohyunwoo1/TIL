@@ -1,0 +1,26 @@
+.List {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.List > input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgb(220, 220, 220);
+  padding: 15px 0px;
+}
+
+.List > input:focus {
+  outline: none;
+  border-bottom: 1px solid rgb(37 147 255);
+}
+
+.List .todos_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* 첫 번째 규칙은 input 요소에만 적용되며, .List 클래스의 직계 자식만 스타일을 받습니다.
+두 번째 규칙은 .todos_wrapper 클래스를 가진 요소에 적용되며, .List 클래스의 모든 자손이 해당 클래스일 경우 스타일을 받습니다. */
