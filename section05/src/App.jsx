@@ -1,7 +1,6 @@
 import "./App.css";
-import { useState } from "react";
 import Register from "./components/Register";
-
+import HookExam from "./components/HookExam";
 // 확장자는 굳이 안써도됨.
 
 // 부모 컴포넌트
@@ -9,7 +8,7 @@ import Register from "./components/Register";
 function App() {
   return (
     <>
-      <Register />
+      <HookExam />
     </>
   );
 }

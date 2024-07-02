@@ -10,3 +10,16 @@
 - ESLint 설치
 - "no-unused-vars": "off",
   "react/prop-types" : "off",
+
+- useRef
+- Reference 객체를 생성
+- 컴포넌트 내부의 변수로 활용 가능
+- 어떤 경우에도 리렌더링을 유발하지 않음
+
+- useState
+- State를 생성
+- 컴포넌트 내부의 변수로 활용 가능
+- 값이 변경되면 컴포넌트 리렌더링
+
+- ReactHooks
+- 클래스 컴포넌트의 기능을 함수 컴포넌트에서도 이용할 수 있도록 도와주는 메서드들
