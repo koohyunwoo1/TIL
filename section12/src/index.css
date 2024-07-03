@@ -4,6 +4,7 @@
 }
 html,
 body {
+  display: flex;
   margin: 0px;
   width: 100%;
   background-color: rgb(246, 246, 246);
