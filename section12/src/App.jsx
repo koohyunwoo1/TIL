@@ -82,28 +82,6 @@ function App() {
 
   return (
     <>
-      <button
-        onClick={() => {
-          onCreate(new Date().getTime(), 1, "Hello");
-        }}
-      >
-        일기 추가 테스트
-      </button>
-
-      <button
-        onClick={() => {
-          onUpdate(1, new Date().getTime(), 3, "수정된 일기입니다.");
-        }}
-      >
-        일기 수정 테스트
-      </button>
-      <button
-        onClick={() => {
-          onDelete(1);
-        }}
-      >
-        일기 삭제 테스트
-      </button>
       {/* // Routes 컴포넌트 바깥에 작성할시 모든 페이지에서 렌더링이된다. */}
       <DiaryStateContext.Provider value={data}>
         <DiaryDispatchContext.Provider
