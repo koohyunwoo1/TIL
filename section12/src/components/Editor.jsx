@@ -54,7 +54,7 @@ const Editor = ({ onSubmit }) => {
     let name = e.target.name;
     let value = e.target.value;
 
-    if (name === "createDate") {
+    if (name === "createdDate") {
       value = new Date(value);
     }
 
@@ -74,7 +74,7 @@ const Editor = ({ onSubmit }) => {
       <section className="date_section">
         <h4>오늘의 날짜</h4>
         <input
-          name="createDate"
+          name="createdDate"
           onChange={onChangeInput}
           value={getStringDate(input.createdDate)}
           type="date"
