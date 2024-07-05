@@ -9,3 +9,15 @@ import { BrowserRouter } from "react-router-dom";
   <App />
 </BrowserRouter>;
 ```
+
+### vercel로 배포하는 법
+
+- npm install -g vercel
+
+- vercel login
+
+- vercel
+
+#### vercel로 이미 배포를 했는데 다시 배포할 경우
+
+- vercel --prod
