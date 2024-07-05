@@ -1,0 +1,21 @@
+/* src/components/Categories.css */
+.categories {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.category {
+  font-size: 1.25rem;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.category.active {
+  font-weight: bold;
+  border-bottom: 2px solid #22b8cf;
+}
+
+.category:hover {
+  color: #22b8cf;
+}
