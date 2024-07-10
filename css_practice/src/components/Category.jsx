@@ -1,11 +1,12 @@
 import "../styles/Category.css";
 import Button from "../components/Button";
+import logo from "../assets/logo.png";
 
 const Category = () => {
   return (
     <div className="Category">
       <div className="left">
-        <h1>FitCunnect</h1>
+        <img src={logo} alt="logo" className="logo" />
       </div>
       <div className="right">
         <div>

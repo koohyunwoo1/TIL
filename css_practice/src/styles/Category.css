@@ -20,3 +20,8 @@
 .Category .right > div {
   margin-left: 15px;
 }
+
+.logo {
+  width: 150px;
+  height: auto;
+}
