@@ -1,0 +1,12 @@
+.Header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #232323;
+  color: white;
+  height: 100px;
+}
+
+.body {
+  background-color: #232323;
+}
