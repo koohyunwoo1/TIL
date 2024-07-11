@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+  padding-top: 20px;
+  cursor: pointer;
+}
+
+.title-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  padding-right: 200px;
+}
+
+.category-item {
+  margin: 0 35px;
+  font-size: 18px;
+  color: #999;
+  font-family: "Malgun Gothic", sans-serif;
+  cursor: pointer;
+  transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+.category-item:hover {
+  color: black;
+  font-weight: bold;
+}
