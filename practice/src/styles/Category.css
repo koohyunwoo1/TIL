@@ -1,28 +1,93 @@
+/* 고정된 헤더 스타일 */
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 80px;
   display: flex;
   align-items: center;
-  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  z-index: 1000; 
+  transition: background-color 0.3s ease; 
+  background-color: white;
 }
 
+/* 사이드바가 열렸을 때 헤더를 투명하게 */
+.header.transparent {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* 로고 스타일 */
 .logo {
-  width: 200px;
+  width: 180px;
   height: auto;
   padding-top: 20px;
   cursor: pointer;
 }
 
-.title-container {
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-  padding-right: 200px;
+/* 메뉴 버튼 스타일 */
+.menu-button {
+  font-size: 50px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 60px;
+  padding-right: 20px;
 }
 
+/* 사이드바 스타일 */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+/* 사이드바 닫기 버튼 스타일 */
+.close-button {
+  z-index: 2;
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* 사이드바 내용 스타일 */
+.sidebar-content {
+  padding: 20px;
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar.open .sidebar-content {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* 카테고리 아이템 스타일 */
 .category-item {
-  margin: 0 35px;
+  z-index: 1;
+  padding-top: 30px;
+  margin: 15px 0;
   font-size: 18px;
   color: #999;
-  font-family: "Malgun Gothic", sans-serif;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 300;
   cursor: pointer;
   transition: color 0.3s ease, font-weight 0.3s ease;
 }
@@ -30,4 +95,28 @@
 .category-item:hover {
   color: black;
   font-weight: bold;
+}
+
+/* 오버레이 스타일 */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+}
+
+.overlay.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* divC 스타일 */
+.divC {
+  margin-top: 40px;
 }

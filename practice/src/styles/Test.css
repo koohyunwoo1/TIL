@@ -1,0 +1,22 @@
+.test {
+  width: 800px;
+  height: 800px;
+  overflow: hidden;
+}
+
+.test img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  object-fit: cover;
+  animation: slideIn 2s ease; 
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

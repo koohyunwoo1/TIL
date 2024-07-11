@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+}
+
+.title2 {
+  text-align: center;
+  font-size: 25px;
+  padding: 20px;
+}
+
+.content {
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  margin-top: 20px; 
+}
+
+.image {
+  width: 500px; 
+  height: auto; 
+  padding: 10px 0;
+}
+
+.title2 h1 {
+  color: black;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  margin: 0; 
+}
