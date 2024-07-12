@@ -1,13 +1,14 @@
 .container {
   display: flex;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
   height: 100vh;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .title-container {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
 }
 
@@ -18,20 +19,28 @@
 }
 
 .content {
-  display: flex; 
-  justify-content: center; 
+  display: flex;
+  justify-content: center;
   align-items: center;
-  margin-top: 20px; 
+  margin-top: 20px;
 }
 
 .image {
-  width: 500px; 
-  height: auto; 
-  padding: 10px 0;
+  width: 300px;
+  height: auto;
+  padding: 10px 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.image.animate {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .title2 h1 {
   color: black;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  margin: 0; 
+  margin: 0;
 }
