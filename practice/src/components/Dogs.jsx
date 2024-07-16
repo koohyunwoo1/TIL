@@ -1,5 +1,5 @@
 // 무한 스크롤
-
+// npm install axios
 import React, { useEffect, useState, useRef, useCallback } from "react";
 import axios from "axios";
 
