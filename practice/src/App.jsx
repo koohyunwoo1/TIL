@@ -8,8 +8,8 @@ function App() {
   return (
     <>
       <div>
-        {/*<Home />*/}
-        <CountDown />
+        <Home />
+        {/* <CountDown /> */}
         {/* <Dogs /> */}
       </div>
     </>

@@ -3,15 +3,24 @@ import "../styles/CountDown.css";
 
 const CountDown = () => {
   const [countdown, setCountdown] = useState(0);
+  const [key, setKey] = useState(0);
 
   const handleClick = () => {
     setCountdown(3);
+    setKey((prevKey) => prevKey + 1);
   };
 
   useEffect(() => {
     if (countdown === 0) return;
     const timer = setInterval(() => {
-      setCountdown((prevCount) => prevCount - 1);
+      setCountdown((prevCount) => {
+        if (prevCount === 1) {
+          clearInterval(timer);
+          return 0;
+        }
+        setKey((prevKey) => prevKey + 1);
+        return prevCount - 1;
+      });
     }, 1000);
 
     return () => clearInterval(timer);
@@ -22,7 +31,11 @@ const CountDown = () => {
       {countdown === 0 && (
         <button onClick={handleClick}>Start Countdown</button>
       )}
-      {countdown > 0 && <div className="countdown">{countdown}</div>}
+      {countdown > 0 && (
+        <div className="countdown" key={key}>
+          {countdown}
+        </div>
+      )}
     </div>
   );
 };
