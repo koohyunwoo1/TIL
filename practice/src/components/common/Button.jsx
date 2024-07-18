@@ -1,7 +1,14 @@
-import "../../styles/Header.css";
+import "../../styles/Button.css";
 
-const Button = () => {
-  return <div>Button</div>;
+const Button = ({text, onClick}) => {
+  return (
+    <button
+      className="Button"
+      onClick={onClick}
+    >
+      {text}
+    </button>
+  )
 };
 
 export default Button;
