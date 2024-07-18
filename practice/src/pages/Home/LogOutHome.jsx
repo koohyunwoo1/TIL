@@ -49,7 +49,8 @@ const LogOutHome = () => {
         </h3>
         <div className="image" ref={ref1}>
           <img
-            src="src/assets/RunningPhone.png"
+            src="src/assets/Running(2).gif"
+            // src="src/assets/RunningPhone.png"
             alt=""
             className={inView1 ? "imageItem animate" : "imageItem"}
           />

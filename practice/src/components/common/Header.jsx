@@ -1,44 +1,41 @@
+import React, { useState } from "react";
 import "../../styles/Header.css";
-import { Link } from "react-router-dom";
 import logo from "../../assets/Logo.png";
-import { useState } from "react";
 
-const Header = ({ onLogout }) => {
-  const [ dropdownOpen, setDropdownOpen ] = useState(false)
+const Header = () => {
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
-    setDropdownOpen(!dropdownOpen)
-  }
+    setDropdownOpen((prevState) => !prevState);
+  };
+
   return (
-    <header>
-      <nav>
-        <div className="navbar">
-          <div className="nav-left">
-            <img 
-              onClick={<Link to="/home" />} 
-              src={logo}
-              className="logo" 
-            />
-          </div>
-          <div className="nav-right">
-            <button 
-              className="nav-button"
-             onClick={toggleDropdown}
-             >
-              ≡
-            </button>
-            {dropdownOpen && (
-              <ul className="dropdown">
-                <li><Link to="/mypage">마이페이지</Link></li>
-                <li><Link to="/report">리포트</Link></li>
-                <li><Link to="/community">커뮤니티</Link></li>
-                <li><Link to="/" onClick={onLogout}>로그아웃</Link></li>
-              </ul>
-            )}
-          </div>
+    <>
+      <div className={`header2 ${isDropdownOpen ? "transparent" : ""}`}>
+        <img src={logo} alt="Logo" className="Header-logo" />
+        <button className="menu-button" onClick={toggleDropdown}>
+          ≡
+        </button>
+      </div>
+
+      <div className={`dropdown ${isDropdownOpen ? "open" : ""}`}>
+        <button className="close-button" onClick={toggleDropdown}>
+          X
+        </button>
+        <div className="dropdown-content">
+          <h1 className="category-item">LogOut</h1>
+          <h1 className="category-item">Report</h1>
+          <h1 className="category-item">Run</h1>
+          <h1 className="category-item">Community</h1>
+          <h1 className="category-item">My Page</h1>
         </div>
-      </nav>
-    </header>
+      </div>
+
+      <div
+        className={`overlay ${isDropdownOpen ? "visible" : ""}`}
+        onClick={toggleDropdown}
+      ></div>
+    </>
   );
 };
 

@@ -5,71 +5,117 @@ body {
   height: 100%;
 }
 
-header {
+.Header-logo {
+  padding-left: 5px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.header2 {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  color: white;
+  height: 60px;
+  display: flex;
+  align-items: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+  background-color: white;
 }
 
-.nav-button {
-  text-decoration: none;
-  background-color: white;
-  border-color: white;
-  font-size: xx-large;
+/* 사이드바가 열렸을 때 헤더를 투명하게 */
+.header.transparent {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* 메뉴 버튼 스타일 */
+.menu-button {
+  font-size: 40px;
+  background: none;
   border: none;
-  white-space: nowrap;
+  cursor: pointer;
+  padding-left: 300px;
+  margin-left: auto;
+  margin-right: 60px;
 }
 
-.navbar {
-  display: flex;
-}
-
-.nav-left {
-  width: 50%;
-  display: flex;
-  justify-content: flex-start;
-}
-
-.nav-right {
-  width: 50%;
-  display: flex;
-  justify-content: flex-end;
-}
-
+/* 드롭다운 스타일 */
 .dropdown {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  transition: top 0.3s ease;
+  z-index: 1000;
+}
+
+.dropdown.open {
+  top: 60px;
+}
+
+/* 드롭다운 닫기 버튼 스타일 */
+.close-button {
+  z-index: 2;
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
   position: absolute;
-  background-color: white;
-  color: black;
-  list-style: none;
-  padding: 0;
-  margin-top: 58px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  top: 10px;
+  right: 10px;
 }
 
-.dropdown li {
-  padding: 0.5rem 1rem;
+/* 드롭다운 내용 스타일 */
+.dropdown-content {
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.dropdown li a {
+.dropdown.open .dropdown-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 카테고리 아이템 스타일 */
+.category-item {
+  z-index: 1;
+  padding-top: 20px;
+  margin: 15px 0;
+  font-size: 18px;
+  color: #999;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 300;
+  cursor: pointer;
+  transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+.category-item:hover {
   color: black;
-  text-decoration: none;
-  display: block;
+  font-weight: bold;
+}
+
+/* 오버레이 스타일 */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  text-align: left;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 999;
 }
 
-.dropdown li button {
-  color: black;
-  text-decoration: none;
-  display: block;
-  width: 100%;
-  text-align: left;
-  background-color: white;
-  border-color: white;
-}
-
-.dropdown li a:hover,
-.dropdown li button:hover {
-  background-color: #eee;
+.overlay.visible {
+  opacity: 1;
+  visibility: visible;
 }
