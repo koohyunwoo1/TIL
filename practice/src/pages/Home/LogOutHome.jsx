@@ -45,7 +45,7 @@ const LogOutHome = () => {
           RunUs와 즐겁게 달릴 수 있도록
         </h1>
         <h3 className="subtitle">
-          건강하고 강한 당신을 위한 러닝 웹사이트로 걸어보세요.
+          건강하고 강한 당신을 위한 러닝 웹사이트로 뛰어보세요.
         </h3>
         <div className="image" ref={ref1}>
           <img

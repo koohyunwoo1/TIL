@@ -8,7 +8,7 @@ import LogInHome from "./pages/Home/LogInHome";
 import Header from "./components/common/Header";
 
 const App = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
     <div>
