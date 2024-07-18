@@ -1,12 +1,7 @@
 import "../../styles/LogInHome.css";
-import LogOutHeader from "./LogOutHeader";
 
 const LogInHome = () => {
-  return (
-    <div>
-      <LogOutHeader />
-    </div>
-  );
+  return <div> </div>;
 };
 
 export default LogInHome;

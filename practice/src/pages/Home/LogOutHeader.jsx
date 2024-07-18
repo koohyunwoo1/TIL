@@ -10,10 +10,10 @@ const LogOutHeader = () => {
         <img src={logo} alt="logo" className="logo" />
         <div className="auth-links">
           <Link to="/signin">
-            <h1>로그인</h1>
+            <h3>로그인</h3>
           </Link>
           <Link to="/signup">
-            <h1>회원가입</h1>
+            <h3>회원가입</h3>
           </Link>
         </div>
       </div>
