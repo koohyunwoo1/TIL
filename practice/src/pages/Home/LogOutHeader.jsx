@@ -7,7 +7,9 @@ const LogOutHeader = () => {
   return (
     <div className="header-container">
       <div className="header">
-        <img src={logo} alt="logo" className="logo" />
+        <Link to="/">
+          <img src={logo} alt="logo" className="logo" />
+        </Link>
         <div className="auth-links">
           <Link to="/signin">
             <h3>로그인</h3>
