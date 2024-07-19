@@ -1,3 +1,58 @@
 .SignIn {
   margin-top: 100px;
 }
+
+/* .login_container {
+  width: 300px;
+  margin: 100px auto;
+  padding: 30px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} */
+
+.login_container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login_container .error {
+  color: red;
+  text-align: center;
+}
+
+.login_container form div {
+  margin-bottom: 15px;
+}
+
+.login_container label {
+  display: block;
+  margin-bottom: 5px;
+  margin-left: 20px;
+}
+
+.login_container input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #EAEAEA;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin-top: 10px;
+}
+  
+.login_container button {
+  width: 50%;
+  padding: 10px;
+  background-color: #98BAE3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  ;
+}
+
+.login-container button:hover {
+  background-color: #0056b3;
+}
