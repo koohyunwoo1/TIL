@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "../../styles/LogOutHome.css";
 import { useInView } from "react-intersection-observer";
+import LogOutHeader from "../../components/Home/LogOutHeader";
 
 const LogOutHome = () => {
   const { ref: ref1, inView: inView1 } = useInView({
@@ -39,6 +40,7 @@ const LogOutHome = () => {
 
   return (
     <div>
+      <LogOutHeader />
       <div className="LogOut-container">
         <h1 className="title">
           언제 어디서나 <br />

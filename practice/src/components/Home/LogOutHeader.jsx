@@ -1,31 +1,29 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import logo from "../../assets/Logo.png";
-import "../../styles/LogOutHeader.css";
+// import React from "react";
+// import { Link } from "react-router-dom";
+// import logo from "../../assets/Logo.png";
+// import "../../styles/LogOutHeader.css";
 
-const LogOutHeader = () => {
-  return (
-    <div className="header-container">
-      <div className="header">
-        <Link to="/">
-          <img src={logo} alt="logo" className="logo" />
-        </Link>
-        <div className="auth-links">
-          <Link to="/signin">
-            <h3>로그인</h3>
-          </Link>
-          <Link to="/signup">
-            <h3>회원가입</h3>
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
-};
+// const LogOutHeader = () => {
+//   return (
+//     <div className="header-container">
+//       <div className="header">
+//         <Link to="/">
+//           <img src={logo} alt="logo" className="logo" />
+//         </Link>
+//         <div className="auth-links">
+//           <Link to="/signin">
+//             <h3>로그인</h3>
+//           </Link>
+//           <Link to="/signup">
+//             <h3>회원가입</h3>
+//           </Link>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
 
-export default LogOutHeader;
-
-/*
+// export default LogOutHeader;
 
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -71,5 +69,3 @@ const LogOutHeader = () => {
 };
 
 export default LogOutHeader;
-
-*/
