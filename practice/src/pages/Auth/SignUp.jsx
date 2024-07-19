@@ -53,32 +53,32 @@ const SignUp = () => {
         <h1>회원 가입</h1>
         <div>
           <label className="SignUpLabel">이메일</label>
-          <input type="email" className="SignUpInput" value={form.email} onChange={handleChange} />
+          <input type="email" name="email" className="SignUpInput" value={form.email} onChange={handleChange} />
           {errors.email && <p className="SignUpError">{errors.email}</p>}
         </div>
         <div>
           <label className="SignUpLabel">닉네임</label>
-          <input type="text" className="SignUpInput" value={form.nickname} onChange={handleChange} />
+          <input type="text" name="nickname" className="SignUpInput" value={form.nickname} onChange={handleChange} />
           {errors.nickname && <p className="SignUpError">{errors.nickname}</p>}
         </div>
         <div>
           <label className="SignUpLabel">비밀번호</label>
-          <input type="password" className="SignUpInput" value={form.password} onChange={handleChange} />
+          <input type="password" name="password" className="SignUpInput" value={form.password} onChange={handleChange} />
           {errors.password && <p className="SignUpError">{errors.password}</p>}
         </div>
         <div>
           <label className="SignUpLabel">비밀번호 확인</label>
-          <input type="password" className="SignUpInput" value={form.confirmPassword} onChange={handleChange} />
+          <input type="password" name="confirmPassword" className="SignUpInput" value={form.confirmPassword} onChange={handleChange} />
           {errors.confirmPassword && <p className="SignUpError">{errors.confirmPassword}</p>}
         </div>
         <div>
           <label className="SignUpLabel">체중</label>
-          <input type="number" className="SignUpInput" value={form.weight} onChange={handleChange} />
+          <input type="number" name="weight" className="SignUpInput" value={form.weight} onChange={handleChange} />
           {errors.weight && <p className="SignUpError">{errors.weight}</p>}
         </div>
         <div>
           <label className="SignUpLabel">사는 지역</label>
-          <input type="text" className="SignUpInput" value={form.region} onChange={handleChange} />
+          <input type="text" name="region" className="SignUpInput" value={form.region} onChange={handleChange} />
           {errors.region && <p className="SignUpError">{errors.region}</p>}
         </div>
         <Button text={"회원 가입"} />
