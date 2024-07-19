@@ -37,3 +37,46 @@
 .modal-close:hover {
   color: red;
 }
+
+.modal-label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.modal-button {
+  background-color: #98bae3;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  white-space: nowrap;
+  color: white;
+}
+
+.modal-input {
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 30px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+
+.submit-button {
+  background-color: #98bae3;
+  color: white;
+  width: 140px;
+}
+
+.cancel-button {
+  background-color: white;
+  color: black;
+  border: 1px solid #98bae3;
+  width: 140px;
+}
