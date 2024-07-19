@@ -22,7 +22,9 @@ const FindPhoneNumberModalContent = ({ onClose }) => {
           onChange={(e) => setPhoneNumber(e.target.value)}
           required
         />
-        <button type="submit">제출</button>
+        <button type="submit" className="Button">
+          제출
+        </button>
       </form>
     </div>
   );
