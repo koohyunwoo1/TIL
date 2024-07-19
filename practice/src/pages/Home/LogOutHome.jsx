@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "../../styles/LogOutHome.css";
+import "../../styles/Home/LogOutHome.css";
 import { useInView } from "react-intersection-observer";
 import LogOutHeader from "../../components/Home/LogOutHeader";
 

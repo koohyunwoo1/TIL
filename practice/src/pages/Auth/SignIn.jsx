@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/SignIn.css";
+import "../../styles/Auth/SignIn.css";
 import LogOutHeader from "../../components/Home/LogOutHeader";
 import Login from "../../components/Home/Login";
 const SignIn = () => {

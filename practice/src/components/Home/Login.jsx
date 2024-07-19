@@ -1,27 +1,26 @@
-import { useState } from "react"
-
+import { useState } from "react";
 
 const Login = () => {
-  const [ email, setEmail ] = useState("")
-  const [ password, setPassword ] = useState("")
-  const [ error, setError ] = useState("")
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
   const handleEmailChange = (e) => {
-    setEmail(e.target.value)
-  }
+    setEmail(e.target.value);
+  };
 
   const handlePasswordChange = (e) => {
-    setPassword(e.target.value)
-  }
+    setPassword(e.target.value);
+  };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
     if (!email || !password) {
-      setError("이메일과 비밀번호를 입력하세요")
-      return
+      setError("이메일과 비밀번호를 입력하세요");
+      return;
     }
-  }
+  };
 
   return (
     <div className="login_container">
@@ -51,7 +50,7 @@ const Login = () => {
         <button type="submit">로그인</button>
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;
