@@ -31,23 +31,19 @@ import logo from "../../assets/Logo.png";
 import "../../styles/Home/LogOutHeader.css";
 const LogOutHeader = () => {
   const [scrolled, setScrolled] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 1000) {
         setScrolled(true);
       } else {
         setScrolled(false);
       }
     };
-
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
   return (
     <div className={`header-container ${scrolled ? "scrolled" : ""}`}>
       <div className="header">
@@ -66,5 +62,4 @@ const LogOutHeader = () => {
     </div>
   );
 };
-
 export default LogOutHeader;

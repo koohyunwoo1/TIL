@@ -50,12 +50,12 @@ const LogOutHome = () => {
           건강하고 강한 당신을 위한 러닝 웹사이트로 뛰어보세요.
         </h3>
         <div className="image" ref={ref1}>
-          <img
+          {/* <img
             src="src/assets/Running(2).gif"
             // src="src/assets/RunningPhone.png"
             alt=""
             className={inView1 ? "imageItem animate" : "imageItem"}
-          />
+          /> */}
         </div>
       </div>
 

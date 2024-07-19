@@ -1,4 +1,4 @@
-html,
+/* html,
 body {
   margin: 0;
   padding: 0;
@@ -46,8 +46,8 @@ body {
 
 .auth-links h1:hover {
   text-decoration: underline;
-}
-/* 
+} */
+
 html,
 body {
   margin: 0;
@@ -71,7 +71,7 @@ body {
   align-items: center;
   z-index: 10000;
   background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(50px);
+  backdrop-filter: blur(1px);
   transition: background-color 0.3s ease, color 0.3s ease,
     backdrop-filter 0.3s ease;
 }
@@ -97,7 +97,7 @@ body {
   font-size: 12px;
   padding-right: 10px;
   cursor: pointer;
-  color: white;
+  color: black;
   text-decoration: none;
 }
 
@@ -107,4 +107,4 @@ body {
 
 .auth-links h3:hover {
   text-decoration: underline;
-} */
+}
