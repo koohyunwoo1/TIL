@@ -3,16 +3,16 @@
 }
 
 .login_container {
-  padding-top: 100px;
+  margin-top: 300px;
+}
+
+.login_container .LoginText {
+  font-weight: bold;
 }
 
 .login_container h2 {
   text-align: center;
   margin-bottom: 20px;
-}
-
-.login_container .LoginText {
-  font-weight: bold;
 }
 
 .login_container .error {
@@ -22,7 +22,6 @@
 
 .login_container form div {
   margin-bottom: 15px;
-  margin-left: 10px;
 }
 
 .login_container label {
@@ -50,10 +49,16 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 40px;
   margin-left: 100px;
 }
 
 .login-container button:hover {
   background-color: #0056b3;
+}
+
+.login_container .SignInDiv1 {
+  width: 400px;
+}
+.login_container .SignInDiv2 {
+  width: 400px;
 }

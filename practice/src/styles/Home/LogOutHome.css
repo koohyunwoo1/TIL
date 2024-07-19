@@ -166,7 +166,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3); /* 녹색 배경색과 투명도 설정 */
+  background-color: rgba(0, 0, 0, 0.1); /* 녹색 배경색과 투명도 설정 */
   pointer-events: none;
 }
 
@@ -225,7 +225,6 @@
 
 .LogOut-container2 {
   margin-top: 50px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .tag {

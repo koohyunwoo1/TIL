@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/Auth/Modal.css"; // Create this CSS file for modal styles
+import "../../styles/Auth/Modal.css";
 
 const Modal = ({ isOpen, onClose, children }) => {
   if (!isOpen) return null;

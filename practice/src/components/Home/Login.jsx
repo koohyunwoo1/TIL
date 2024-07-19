@@ -27,7 +27,7 @@ const Login = () => {
       <h2>로그인</h2>
       {error && <p className="error">{error}</p>}
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="SignInDiv1">
           <label htmlFor="email" className="LoginText">
             이메일 주소{" "}
           </label>
@@ -39,7 +39,7 @@ const Login = () => {
             placeholder="이메일을 입력해 주세요"
           />
         </div>
-        <div>
+        <div className="SignInDiv2">
           <label htmlFor="password" className="LoginText">
             비밀번호{" "}
           </label>

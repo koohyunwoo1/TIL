@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "../../styles/Common/Button.css";
 const FindEmailModalContent = ({ onClose }) => {
   const [email, setEmail] = useState("");
 
@@ -12,7 +12,7 @@ const FindEmailModalContent = ({ onClose }) => {
 
   return (
     <div>
-      <h2>비밀번호 찾기</h2>
+      <h2>비밀번호</h2>
       <form onSubmit={handleSubmit}>
         <label htmlFor="email">이메일을 입력해주세요:</label>
         <input
@@ -22,7 +22,9 @@ const FindEmailModalContent = ({ onClose }) => {
           onChange={(e) => setEmail(e.target.value)}
           required
         />
-        <button type="submit">제출</button>
+        <button type="submit" className="Button">
+          제출
+        </button>
       </form>
     </div>
   );
