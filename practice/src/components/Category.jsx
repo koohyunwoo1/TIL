@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import "../styles/Category.css";
-import logo from "../assets/logo.png";
+import "../../styles/Header.css";
+import logo from "../../assets/Logo.png";
 
-const Category = () => {
+const Header = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
 
   const toggleSidebar = () => {
@@ -12,9 +12,9 @@ const Category = () => {
   return (
     <>
       <div className={`header ${isSidebarOpen ? "transparent" : ""}`}>
-        <img src={logo} alt="Logo" className="logo" />
+        <img src={logo} alt="Logo" className="Header-logo" />
         <button className="menu-button" onClick={toggleSidebar}>
-          =
+          ≡
         </button>
       </div>
 
@@ -40,4 +40,4 @@ const Category = () => {
   );
 };
 
-export default Category;
+export default Header;

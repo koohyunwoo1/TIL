@@ -20,12 +20,14 @@ const Home = () => {
             <div className="component">
               <Test />
             </div>
+
             <div className="component">
               <Test2 />
             </div>
           </div>
         </div>
       </div>
+
       <div className="component-test3">
         <Test3 />
       </div>

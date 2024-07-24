@@ -6,6 +6,28 @@
 
 - npm run dev
 
+### Proxy
+
+```
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    proxy: {
+      "/api": "http://localhost:8080",
+    },
+  },
+});
+
+```
+
+- 편의성을 위해서 proxy를 설정해준다.
+- axios를 호출 할때 localhost:8080 도메인을 넣을 필요가없고
+- /api로 받는 url은 자동으로 localhost:8080 도메인이 앞에 붙게 된다.
+
 ### 확장프로그램 설치
 
 - ESLint 설치
