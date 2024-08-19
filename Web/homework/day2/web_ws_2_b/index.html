@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flexbox Example</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+      .flex-container {
+          margin: 0 auto;
+          height: 200px; /* 컨테이너의 높이 */
+          width: 500px; /*컨테이너의 너비*/
+          background-color: lightgrey; /* 배경색 */
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+  
+      .flex-item {
+          background-color: cornflowerblue; /* 아이템의 배경색 */
+          padding: 10px; /* 패딩 */
+          margin: 5px; /* 마진 */
+          color: white; /* 글자색 */
+          font-size: 30px; /* 글자 크기 */
+          text-align: center; /* 텍스트 중앙 정렬 */
+          line-height: 50px; /* 줄 높이 */
+      }
+  
+  </style>
+</head>
+<body>
+  <div class="flex-container">
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+      <div class="flex-item">4</div>
+  </div>
+</body>
+</html>

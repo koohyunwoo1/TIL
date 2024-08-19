@@ -1,0 +1,22 @@
+h2 {
+  color: darkviolet !important;
+}
+
+p {
+  color: orange;
+}
+
+.blue {
+  color: blue;
+}
+/* .blue.green {
+  color: skyblue
+} */
+
+.green {
+  color: green;
+}
+
+#red {
+  color: red;
+}

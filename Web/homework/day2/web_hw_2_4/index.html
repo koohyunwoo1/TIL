@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    div p {
+      color: blue;
+      margin-left: 30px;
+    }
+    div > p {
+      color: crimson;
+      margin-left: 0px;
+    }
+
+  </style>
+</head>
+<body>
+  <div>
+    <p> 자식 </p>
+    <a>
+      <p> 손자 </p>
+    </a>
+    <p> 자식 </p>
+  </div>
+</body>
+</html>
+
+
+
+<!-- 자손결합자와 자식 결합자의 차이 -->
+<!-- 자손 결합자는 안에 있는 모든 어떤 클래스를 가진 요소에 적용되고,
+     자식 결합자는 바로 아래에 있는 어떤 클래스를 가진 요소에만 적용된다.-->

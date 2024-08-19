@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 자손 결합자 */
+    /* 
+      앞쪽 요소의 모든 상속관계의
+      자식 태그들에 대해서 적용
+    */
+    div p {
+      color: blue;
+    }
+    /* 내 직계 자식에 대해서만 */
+    div > p {
+      color: crimson;
+    }
+
+  </style>
+</head>
+<body>
+  <div>
+    <p>자식</p>
+    <ul>
+      <li>
+        <p>자손</p>
+      </li>
+    </ul>
+    <p>자식</p>
+  </div>
+</body>
+</html>
