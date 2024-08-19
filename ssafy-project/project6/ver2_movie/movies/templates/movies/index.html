@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>INDEX PAGE</h1>
+
+<div>
+  {% for movie in movies %}
+    <div>
+      <p>{{ movie.title }}</p>
+      <a href="{% url "movies:detail" movie.pk %}">DETAIL</a>
+      <form action="{% url "movies:likes" movie.pk %}" method='POST'>
+        {% csrf_token %}
+        {% if request.user in movie.like_user.all %}
+          <input type="submit" value="♥">
+        {% else %}
+          <input type="submit" value="♡">
+        {% endif %}
+      </form>
+    </div>
+    <hr>
+  {% endfor %}
+</div>
+
+{% endblock content %}
+
+

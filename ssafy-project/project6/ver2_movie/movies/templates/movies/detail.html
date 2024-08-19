@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>DETAIL PAGE</h1>
+<div>
+  <p>{{ movie.title }}</p>
+  <p>{{ movie.content }}</p>
+</div>
+<hr>
+<div>
+  <p><h3>댓글 목록</h3></p>
+  <ul>
+  {% for comment in comments %}
+    <li>
+      <p>{{ comment.content }}</p>
+      <p>
+        작성자 : <a href="{% url "accounts:profile" comment.user.username %}">{{ comment.user.username }}</a>
+      </p>
+    </li>
+  {% empty %}
+  </ul>
+  <p>아직 댓글이 없네요..</p>
+  {% endfor %}
+  </ul>
+  <hr>
+  <form action="{% url "movies:comment_create" movie.pk %}" method='POST'>
+    {% csrf_token %}
+    {{ comment_form }}
+    <input type="submit" value="Submit">
+  </form>
+  <a href="{% url "movies:update" movie.pk %}">UPDATE</a>
+  <form action="{% url "movies:delete" movie.pk %}" method='POST'>
+    {% csrf_token %}
+    <input type="submit" value="DELETE">
+  </form>
+  <a href="{% url "movies:index" %}">BACK</a>
+</div>
+
+
+
+{% endblock content %}

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Update</h1>
+<form action="{% url "movies:update" movie.pk %}" method='POST'>
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="제출">
+</form>
+
+{% endblock content %}
