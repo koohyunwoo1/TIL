@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>ORDER LIST</h1>
+<hr>
+<ul>
+  {% for item in order_list %}
+    <li>
+      <span>{{ item.name }} - {{ item.price }}</span>
+    </li>
+    {% empty %}
+    <li>아이템이 없습니다.</li>
+    
+    {% endfor %}
+  </ul>
+  <div> 총합 : $ {{ item.total }}</div>
+<hr>
+<a href="{% url "shops:index" %}">INDEX</a>
+{% endblock content %}

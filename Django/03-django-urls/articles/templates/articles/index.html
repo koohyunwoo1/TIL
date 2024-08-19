@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>안녕하세요, {{ name }}</h1>
+  <a href="{% url "articles:dinner" %}">dinner</a>
+  <a href="{% url "articles:search" %}">search</a>
+  <a href="{% url "articles:throw" %}">throw</a>
+{% endblock content %}

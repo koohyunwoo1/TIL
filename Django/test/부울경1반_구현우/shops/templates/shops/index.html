@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Index Page</h1>
+<form action="">
+  <label for="sort">Sort : </label>
+  <select id="sort" name="sort">
+      <option value="id">아이디순</option>
+      <option value="price_asc">가격 오름차순</option>
+      <option value="price_desc">가격 내림차순</option>
+  </select>
+  <input type="submit" value="Sort">
+</form>
+<hr>
+<ul>
+  {% for item in product_list %}
+    <li>
+      ID: {{ item.pk }} - 
+      <a href="{% url "shops:detail" item.pk %}">{{ item.name }}</a> 
+      - $ {{ item.price }}
+      <div>
+        Seller : <a href="{% url "accounts:profile" item.seller %}">{{ item.seller }}</a>
+      </div>
+      {% if request.user.is_authenticated %}
+        <form action="{% url "shops:order" item.pk %}" method="POST">
+          {% csrf_token %}
+          {% if item in request.user.order_list.all %}
+            <input type="submit" value="REMOVE ITEM">
+          {% else %}
+            <input type="submit" value="ADD ORDER LIST">
+          {% endif %}
+        </form>
+      {% endif %}
+      <hr>
+    </li>
+  {% endfor %}
+</ul>
+{% endblock content %}

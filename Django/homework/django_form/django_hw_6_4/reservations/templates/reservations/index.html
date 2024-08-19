@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>예약 서비스</h1>
+  <a href="{% url "reservations:create" %}">[예약 하기]</a>
+  <hr>
+  <ul>
+    {% for reservation in reservations %}
+      <li>
+        <p>예약자명 : {{ reservation.name }}</p>
+        <p>예약일자 : {{ reservation.date }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock content %}

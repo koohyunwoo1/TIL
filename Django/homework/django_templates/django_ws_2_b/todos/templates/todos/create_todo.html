@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>이 곳에서 할 일을 생성합니다.</h1>
+  <p>추후 기능 추가 예정</p>
+
+  <form action="/todos/">
+    <input type="text" name="work">
+    <input type="submit" value="제출">
+  </form>
+{% endblock content %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>LOG IN</h1>
+<hr>
+<!--
+  문제 2. 로그인 입력 폼 수정
+  form 필드를 p 태그로 감싸서 렌더링
+-->
+<form action="" method="POST">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="LOG IN">
+</form>
+{% endblock content %}

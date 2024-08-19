@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>게시글 상세 페이지</h1>
+
+  <p>
+    <span>
+      {{ pk }}번 게시글 | 
+    </span>
+    {{ article.title }}
+  </p>
+
+  <p>작성 시간 : {{ article.created_at }}</p>
+  <hr>
+  {% if article.image %}
+    <img src="{{ article.image.url }}" alt="{{article.image_description}}">
+
+  {% endif %}
+  <p>{{ article.content }}</p>
+  <hr>
+  <a href="{% url "articles:index" %}">BACK</a>
+{% endblock content %}
+
+
+
