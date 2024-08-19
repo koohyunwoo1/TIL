@@ -1,1 +1,3 @@
-# 레포지토리 병합
+# 2024.08.19
+
+- Repositories merge
