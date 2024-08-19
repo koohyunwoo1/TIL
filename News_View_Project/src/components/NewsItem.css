@@ -1,0 +1,25 @@
+/* src/components/NewsItem.css */
+.news-item {
+  display: flex;
+  margin-bottom: 1rem;
+  padding-bottom: 10px;
+}
+
+.thumbnail img {
+  width: 160px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.contents {
+  margin-left: 1rem;
+}
+
+.contents h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.contents p {
+  margin: 0.5rem 0 0;
+}
