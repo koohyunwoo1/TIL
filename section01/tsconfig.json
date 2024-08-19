@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    // "target": "ES5"
+    // 컴파일 할때 자바스크립의 버전은 ES5로 되게 하라
+    // 화살표 함수 같은 경우는 ES6여서 컴파일 할때 화살표 함수가 아닌
+    // 기본 함수로 바뀌게 된다.
+    "module": "ESNext",
+    // module도 ESNext 최선버전으로 정의하겠다
+    "skipLibCheck": true,
+    // 위 옵션은 타입 정의 파일(.d.ts 확장자를 갖는 파일을 의미합니다 우리 수업에서는 나중에 배웁니다)의 타입 검사를 생략하는 옵션입니다.
+    "outDir": "dist",
+    // 컴파일 결과를 dist 폴더에 생성하겠다.
+    "strict": true,
+    // true로 설정해놓았기 때문에 typeScript가 코드를 아주 엄격하게 검사를 해준다.
+    "moduleDetection": "force"
+    // 같은 변수를 다른 파일에서도 쓸 수 있게 해준다.
+  },
+  "ts-node": {
+    "esm": true
+  },
+  "include": ["src"]
+  // src 경로 밑에 포함된 모든 ts파일은 컴파일 할때 tsc로 입력해도  컴파일이 된다.
+}
