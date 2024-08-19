@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button id="btn">버튼</button>
+
+  <script>
+    // 1. 버튼 선택
+    const btn = document.querySelector('#btn')
+
+    // 2. 콜백 함수
+    const detectClick = function(event) {
+      console.log(event)
+      console.log(this)
+      console.log(event.currentTarget)
+    }
+
+    // 3. 버튼에 이벤트 핸들러를 부착
+    // btn.addEventListener('click', function(event) {
+    //   console.log(event)
+    //   console.log(this)
+    //   console.log(event.currentTarget)
+    // })
+
+    btn.addEventListener('click', detectClick)
+  </script>
+</body>
+
+</html>

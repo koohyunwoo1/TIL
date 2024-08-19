@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .blue {
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <h1></h1>
+  <button id="btn">클릭</button>
+  <input type="text" id="text-input">
+
+  <script>
+    // 1. input , h1 및 버튼 태그 선택
+    const inputTag = document.querySelector('#text-input')
+    const h1Tag = document.querySelector('h1')
+    const btn = document.querySelector('#btn')
+
+    // 2. input 이벤트에 반응하는 콜백함수
+    const inputhandler = function(event) {
+      h1Tag.textContent= event.currentTarget.value
+    }
+    // 4. 버튼에 클릭 이벤트에 반응하는 콜백함수
+    const clickHandler = function(event) {
+      // 4.1 선택해둔 h1 태그의 클래스 목록에 blue 클래스를 추가
+      // h1Tag.classList.add('blue')
+
+      // toggle 방법
+      h1Tag.classList.toggle('blue')
+    }
+
+
+    // 3. input 태그에 이벤트 핸들러 부착
+    inputTag.addEventListener('input', inputhandler)
+
+    // 5. 버튼 태그에 이벤트 핸들러 부착
+    btn.addEventListener('click', clickHandler)
+  </script>
+</body>
+
+</html>

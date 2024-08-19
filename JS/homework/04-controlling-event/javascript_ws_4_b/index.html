@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .font-crimson {
+      color: crimson;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="heading">Hover me!</h1>
+  <h2 class="sub-heading">Double Click me!</h2>
+  <p class="contents">Lorem ipsum dolor sit amet consectetur</p>
+
+  <script>
+    const randomTexts = [
+      'Lorem ipsum dolor sit amet consectetu',
+      'adipisicing elit. Repellendus delectus quam',
+      'similique quo ipsam maxime totam alias',
+      'quibusdam repudiandae voluptas dicta',
+      'voluptas voluptatibus exercitationem officiis'
+    ]
+
+    // 아래에 코드 작성
+
+    const h1 = document.querySelector('h1')
+
+    function handleMouseEnter() {
+      h1.innerText = "잡았다 !"
+    }
+
+    h1.addEventListener("mouseenter", handleMouseEnter)
+
+
+    function handleMouseLeave() {
+      h1.innerText = "Hover me!"
+    }
+    
+    h1.addEventListener("mouseleave", handleMouseLeave)
+
+
+    const h2 = document.querySelector('h2')
+
+    function change() {
+      h2.classList.add('font-crimson')
+    }
+
+    function remove() {
+      h2.classList.remove('font-crimson')
+    }
+
+    function dubbleClick() {
+      if (h2.classList.contains('font-crimson')) {
+        // contains 포함되어있는지 
+        remove()
+      } else {
+        change()
+      }
+    }
+
+
+    h2.addEventListener("dblclick", dubbleClick)
+
+
+    const pTag = document.querySelector('p')
+    
+    function getRandomText() {
+      const randomIndex = Math.floor(Math.random() * randomTexts.length);
+      return randomTexts[randomIndex];
+    }
+
+    function handleWheel(event) {
+      const deltaY = event.deltaY;
+      if (deltaY > 0) {
+        pTag.textContent = getRandomText();
+      }
+    }
+
+    pTag.addEventListener("wheel", handleWheel);
+    
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,6 @@
+const title = document.querySelector('h1')
+console.log(title)
+const todoList = document.querySelectorAll('li')
+console.log(todoList)
+const itemGame = document.querySelector('#game')
+console.log(itemGame)

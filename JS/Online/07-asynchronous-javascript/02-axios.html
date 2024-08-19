@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <!-- 아래 스크립트 아래로는 CDN을 사용할수 있음 -->
+  <script>
+    const URL = 'https://api.thecatapi.com/v1/images/search'
+
+    // 1.
+    const promiseObj = axios({
+      method : 'GET',
+      url : URL
+    })
+    // axios를 통한 요청은 비동기 요청이다
+    // console.log(promiseObj)
+
+    promiseObj.then((response) => {
+      console.log(response)
+      console.log(response.data)
+      console.log(response.data[0].url)
+    })
+
+    // cat api로 보낸 요청에 대한 응답을 기다리지않고 넘어옴
+    console.log('hahahahaahahahahah')
+
+    // 2.
+
+    // 아래와 같이 axios를 작성한다.
+    axios({
+      method: 'GET',
+      url : URL
+    })
+      .then((response) => {
+        console.log(response)
+        console.log(response.data)
+        console.log(response.data[0].url)
+      })
+
+  </script>
+
+</body>
+
+</html>

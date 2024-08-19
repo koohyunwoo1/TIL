@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+  <div>
+    <p id="age"></p>
+    <p id="hasLicense"></p>
+    <p id="isStudent"></p>
+  </div>
+<body>
+  <script>
+    const age = 20
+    const hasLicense = true
+    const isStudent = false
+    
+    const ageP = document.querySelector('#age')
+    const hasLicenseP = document.querySelector('#hasLicense')
+    const isStudentP = document.querySelector('#isStudent')
+
+    ageP.textContent = `age : ${age}`
+    hasLicenseP.textContent = `hasLicense : ${hasLicense}`
+    isStudentP.textContent = `isStudent : ${isStudent}`
+
+    // 아래에 코드 작성
+
+    
+    if (age >= 17 && hasLicense === true){
+      console.log('운전 가능합니다.')
+    } else if (age >= 17 && hasLicense === false) {
+      console.log('운전 면혀증이 필요합니다.')
+    } else if (age < 17 && isStudent === true) {
+      console.log('운전 면혀증을 취득할 수 없습니다.')
+    } else {
+      console.log('운저 자격 요건을 확인하세요.')
+    }
+    
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>{{ person.username }}님의 프로필 페이지</h1>
+  {% comment %} 13. 팔로잉/팔로워 수 비동기 적용 선택을 위해 span 태그 지정 {% endcomment %}
+  <div>
+    팔로잉 : <span id="followings-count">{{ person.followings.all|length }}</span> / 
+    팔로워 : <span id="followers-count">{{ person.followers.all|length }}</span>
+  </div>
+  {% if request.user != person %}
+    <div>
+      {% comment %} 1. 요청은 axios로 대체되기 때문에 form 태그의 action과 method를 삭제 {% endcomment %}
+      {% comment %} 6. JS에게 전달할 프로필 유저의 pk를 준비 (JS에서 요청 url을 완성해야하기때문) {% endcomment %}
+      <form id="follow-form" data-user-id="{{ person.pk }}">
+        {% csrf_token %}
+        {% if request.user in person.followers.all %}
+          <input type="submit" value="언팔로우">
+        {% else %}
+          <input type="submit" value="팔로우">
+        {% endif %}
+      </form>
+    </div>
+  {% endif %}
+
+  <h2>{{ person.username }}님이 작성한 게시글</h2>
+  {% for article in person.article_set.all %}
+    <div>{{ article.title }}</div>
+  {% endfor %}
+
+  <h2>{{ person.username }}님이 작성한 댓글</h2>
+  {% for comment in person.comment_set.all %}
+    <div>{{ comment.content }}</div>
+  {% endfor %}
+
+  <h2>{{ person.username }}님이 좋아요한 게시글</h2>
+  {% for article in person.like_articles.all %}
+    <div>{{ article.title }}</div>
+  {% endfor %}
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    // 2. submit 이벤트가 발생하는 form 태그 선택
+    const formTag = document.querySelector('#follow-form')
+    // 9. csrf 토근의 value 값을 조회 및 저장
+    const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value
+
+    // 3. 선택한 form 태그에 이벤트핸들러 할당
+    formTag.addEventListener('submit', function (event) {
+      // 4. submit 이벤트의 기본 동작을 취소
+      event.preventDefault()
+      // 7. HTML에서 전달하는 프로필 유저의 PK 값 조회 및 저장
+      // console.log(event.currentTarget.dataset.userId)
+      const userId = event.currentTarget.dataset.userId
+      // console.log(this)
+      // console.log(formTag)
+
+      // 5. axios 작성
+      axios({
+        method: 'post',
+        // 8. HTML에서 보내준 프로필 유저의 PK를 활용해 url 완성
+        url: `/accounts/${userId}/follow/`,
+        // 10. 요청 header에 csrf 토큰 값 지정
+        headers: {'X-CSRFToken': csrftoken},
+      })
+        .then((response) => {
+          console.log(response.data)
+          // 11. 팔로우 여부를 알려주는 변수를 저장
+          const isFollowed = response.data.is_followed
+          // 12. isFollowed에 따라 팔로우/언팔로우 버튼을 올바르게 토글
+          const followBtn = document.querySelector('input[type=submit]')
+          if (isFollowed === true) {
+            followBtn.value = '언팔로우'
+          } else {
+            followBtn.value = '팔로우'
+          }
+          // 14. 팔로잉/팔로워 수를 출력하는 span 태그 선택
+          const followingsCountTag = document.querySelector('#followings-count')
+          const followersCountTag = document.querySelector('#followers-count')
+          // 15. django가 계산한 팔로잉/팔로워수를 받아서 span 태그의 컨텐츠를 업데이트
+          // console.log(response.data)
+          followingsCountTag.textContent = response.data.followings_count
+          followersCountTag.textContent = response.data.followers_count
+        })
+        .catch((error) => {
+          console.log(error)
+        })
+    })
+  </script>
+</body>
+</html>

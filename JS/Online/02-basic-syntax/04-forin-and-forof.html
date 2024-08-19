@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // for...in
+
+    // Array
+    const arr = ['a', 'b', 'c']
+
+    for (const element in arr) {
+      console.log(element)
+    }
+    // Object
+    const capitals = {
+      korea: '서울',
+      japan: '도쿄',
+      china: '베이징',
+    }
+
+    for (const element in capitals) {
+      console.log(element)
+    }
+
+    ////////////////////////////////////////
+
+
+    // for...of
+
+    // Array
+    const arr2 = ['a', 'b', 'c']
+    for (const elem of arr2) {
+      console.log(elem)
+    }
+    // for ()
+    // Object
+    const capitals2 = {
+      korea: '서울',
+      japan: '도쿄',
+      china: '베이징',
+    }
+
+    for (const elem of capitals2) {
+      console.log(elem)
+    }
+
+  </script>
+</body>
+
+</html>
