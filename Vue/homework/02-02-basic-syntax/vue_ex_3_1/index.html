@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .is-completed {
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <h1>Todo Application</h1>
+
+    <ul >
+      <li v-for="todo in todos" :key="todo.id" @click="toggle(todo)">
+        <p :class="{ 'is-completed': todo.isCompleted }">
+          <input type="checkbox" v-model="todo.isCompleted">{{ todo.text }}
+        </p>
+      </li>
+    </ul>
+  </div>
+  
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+    const { createApp, ref } = Vue
+
+    const app = createApp({
+      setup() {
+        const todos = ref([
+          {
+            id : 1, text : '생필품 구입', isCompleted : false
+          },
+          {
+            id : 2, text : '빨래', isCompleted : false
+          },
+          {
+            id : 3, text : '방 청소', isCompleted : false
+          }
+        ])
+
+        function toggle(todo) {
+          todo.isCompleted = !todo.isCompleted
+        }
+          
+        return {
+          todos,
+          toggle
+        }
+      }
+    })
+
+    app.mount('#app')
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <img v-bind:src="imageSrc" alt="#">
+    <a v-bind:href="myUrl">이동 !!</a>
+    <p :[dynamicattr]="dynamicattr">...........</p>
+
+
+    <!-- <img :src="imageSrc" alt="#"> -->
+    <!-- <a :href="myUrl">이동 !!</a> -->
+
+    <!-- 생략 구문 v-bind를 쓰지 않아도 된다. -->
+
+
+    <!-- 밑에서 retunn 되고 있는 imageSrc를 불러온다 -->
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+    const { createApp, ref } = Vue
+
+    const app = createApp({
+      setup() {
+        const imageSrc = ref('https://picsum.photos/200')
+        const myUrl = ref('https://www.google.co.kr/')
+        const dynamicattr = ref('title')
+        // 무조건 소문자로 작성해줘야 한다.
+        // 소문자로 작성하지 않으면 속성값이 나오지 않는다.
+        const dynamicValue = ref('Hello Vue.js')
+        return {
+          imageSrc,
+          myUrl,
+          dynamicattr,
+          dynamicValue
+        }
+      }
+    })
+
+    app.mount('#app')
+
+  </script>
+</body>
+
+</html>

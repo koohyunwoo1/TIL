@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <h1>{{ message }}</h1>
+    <button @click = "count++">카운팅 : {{ count }}</button>
+  </div>
+
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+
+    const { createApp, ref } = Vue
+
+    const app = createApp({
+      setup() { 
+        // 무조건 setup
+        const message = ref('hello Vue')
+        const count = ref(0)
+        return {
+          message,
+          // message : message
+          // key와 value이름이 같다면 하나만 써도 된다.
+          // count : count
+          count
+        }
+      }
+    })
+
+    app.mount('#app')
+    // div안쪽의 영역을 컨트롤 할 수 있음
+  </script>
+</body>
+
+</html>

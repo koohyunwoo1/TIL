@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <!-- 필터링/정렬 결과 표시하기 -->
+    <!-- 1. computed 활용 -->
+    <ul>
+      <li>
+      </li>
+    </ul>
+
+    <hr>
+
+    <!-- 2. method (computed가 불가능한 중첩된 v-for 경우) -->
+    <ul v-for="numbers in numberSets">
+      <li>
+      </li>
+    </ul>
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+    const { createApp, ref, computed } = Vue
+
+    const app = createApp({
+      setup() {
+        const numbers = ref([1, 2, 3, 4, 5])
+        const numberSets = ref([
+          [1, 2, 3, 4, 5],
+          [6, 7, 8, 9, 10]
+        ])
+
+        // const evenNumbers = computed(() => {
+        //   return numbers.value.filter((number) => number % 2 === 0)
+        // })
+
+        // const evenNumberSets = function (numbers) {
+        //   return numbers.filter((number) => number % 2 === 0)
+        // }
+
+        return {
+          numberSets,
+          // evenNumbers,
+          // evenNumberSets
+        }
+      }
+    })
+
+    app.mount('#app')
+  </script>
+</body>
+
+</html>

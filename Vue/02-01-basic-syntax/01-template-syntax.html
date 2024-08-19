@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <!-- template syntax -->
+    <p>Message: {{ msg }}</p>
+    <div v-html="rawHtml"></div>
+    <div v-bind:id="dynamicId"></div>
+    {{ number + 1 }}
+    {{ ok ? 'YES' : 'NO' }}
+    {{ msg.split('').reverse().join('') }}
+    <div :id="`list-${id}`"></div>
+
+    <!-- directive -->
+    <p v-if="seen">Hi there</p>
+    <a v-bind:href="myUrl">Link</a>
+    <button v-on:click="doSomething">button</button>
+    <form @submit.prevent="onSubmit">
+      <input type="submit">
+    </form>
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+    const { createApp, ref } = Vue
+
+    const app = createApp({
+      setup() {
+        const msg = 'Hello'
+        const rawHtml = ref('<span style="color:red">This should be red.</span>')
+        const dynamicId = ref('my-id')
+        const number = ref(1)
+        const ok = ref(true)
+        const seen = ref(true)
+        const id = ref(100)
+        const myUrl = 'https://www.google.co.kr/'
+        const doSomething = function () {
+          console.log('button clicked')
+        }
+        const onSubmit = function () {
+          console.log('form submitted')
+        }
+
+        return {
+          msg,
+          rawHtml,
+          dynamicId,
+          seen,
+          number,
+          ok,
+          id,
+          myUrl,
+          doSomething,
+          onSubmit
+        }
+      }
+    })
+
+    app.mount('#app')
+  </script>
+</body>
+
+</html>
