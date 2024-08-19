@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "outDir": "dist",
+    "strict": true,
+    // "strictNullChecks": false,
+    // 엄격하게 null 검사 false로 해놨기 때문에 number 타입에도
+    // null을 넣을 수 있다.
+    "skipLibCheck": true,
+    "moduleDetection": "force"
+  },
+  "ts-node": {
+    "esm": true
+  },
+  "include": ["src"]
+}
