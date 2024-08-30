@@ -1,0 +1,85 @@
+/* Box.css */
+.box {
+  position: relative;
+  width: 200px;
+  height: 150px;
+  perspective: 1000px;
+  margin: 50px auto;
+}
+
+.lid {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background-color: #d32f2f; /* Red color for the lid */
+  transform-origin: top;
+  transition: transform 0.6s ease;
+  transform: rotateX(0deg);
+  top: 0;
+  border-radius: 10px 10px 0 0;
+}
+
+.lid.open {
+  transform: rotateX(120deg);
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  background-color: #d32f2f; /* Same red color for the box */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.cross {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.horizontal,
+.vertical {
+  position: absolute;
+  background-color: white;
+}
+
+.horizontal {
+  width: 40px;
+  height: 10px;
+}
+
+.vertical {
+  width: 10px;
+  height: 40px;
+}
+
+.label {
+  position: absolute;
+  bottom: 10px;
+  font-size: 14px;
+  text-align: center;
+  width: 100%;
+}
+
+.toggle-button {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: #d32f2f; /* Red color for the button */
+  color: white;
+  border: none;
+  cursor: pointer;
+}
