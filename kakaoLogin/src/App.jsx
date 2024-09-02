@@ -4,8 +4,8 @@ import Box from "./components/Box";
 function App() {
   return (
     <>
-      <SocialKakao />
-      {/* <Box /> */}
+      {/* <SocialKakao /> */}
+      <Box />
     </>
   );
 }
