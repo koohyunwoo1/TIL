@@ -9,6 +9,10 @@ function AuthHomeScreen({navigation}) {
           title="로그인 화면으로 이동"
           onPress={() => navigation.navigate('Login')}
         />
+        <Button
+          title="모달 오픈"
+          onPress={() => navigation.navigate('MyModal')}
+        />
       </View>
     </SafeAreaView>
   );

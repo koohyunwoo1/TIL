@@ -6,8 +6,7 @@ import {
   TextInput,
   SafeAreaView,
   View,
-  // Button,
-  // View,
+  Button,
 } from 'react-native';
 import AuthStackNavigator from './src/navigation/AuthStackNavigator';
 
