@@ -7,7 +7,6 @@ const HomeScreen = () => {
       <Text style={styles.greeting}>현우님 안녕하세요!</Text>
       <Text style={styles.subtitle}>오늘 영양제는 드셨나요?</Text>
       <View style={styles.imageContainer}>
-        <View style={styles.glow} />
         <Image source={require('../assets/Pill.png')} style={styles.image} />
       </View>
     </View>
@@ -42,16 +41,15 @@ const styles = StyleSheet.create({
     width: 200,
     height: 200,
   },
-  glow: {
-    position: 'absolute',
-    width: 250,
-    height: 250,
-    borderRadius: 125,
-    backgroundColor: '#a4f87b',
-    opacity: 0.5,
-    blurRadius: 1,
-    elevation: 10,
-  },
+  // glow: {
+  //   position: 'absolute',
+  //   width: 250,
+  //   height: 250,
+  //   borderRadius: 125,
+  //   backgroundColor: '#a4f87b',
+  //   opacity: 0.5,
+  //   elevation: 33,
+  // },
 });
 
 export default HomeScreen;
