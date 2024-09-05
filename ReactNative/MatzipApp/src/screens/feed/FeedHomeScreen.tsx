@@ -1,14 +1,14 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 
-function LoginScreen() {
+function FeedHomeScreen() {
   return (
     <View>
-      <Text>로그인 화면</Text>
+      <Text>피드</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({});
 
-export default LoginScreen;
+export default FeedHomeScreen;
