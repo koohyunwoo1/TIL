@@ -47,3 +47,7 @@ import 'react-native-gesture-handler';
 ### 프로젝트 생성 한 후에 다른 프로젝트 생성했을시 캐시 지우고 시작하는 방법
 
 - npm start -- --reset-cache
+
+### React Native Encrypted Storage
+
+- 민감한 데이터를 암호화 하여 안전하게 저장 할 수 있는 라이브러리 (토큰, 비밀번호, 개인 정보)
