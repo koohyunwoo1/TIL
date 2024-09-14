@@ -2,6 +2,9 @@
 
 Sorry, I didn't understand what you said
 
+- 자기소개
+- Hello, my name is Hyunwoo and i am 26 yeary old. I am studying to become a developer at SSAFY, SSAFY is development training program by samsung. i am preparing for employment
+
 - 오픽 서베이 항목 선택
 
 1. 일 경험 없음
@@ -100,3 +103,7 @@ Sorry, I didn't understand what you said
 - I went to the park near my house, and the park had a soccer field, on the player and also track on the side for jogging
 
 - where do you go jogging ? Isn't it hard to do it in the moring when you wake up ? I do it at night
+
+- 모의고사 답변해보기
+
+- Hello my naem is hyunwoo, i am 26 years old and i am studying at ssafy you know ssafy ? ssafy is development training program by samsung
