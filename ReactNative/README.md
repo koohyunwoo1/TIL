@@ -51,3 +51,8 @@ import 'react-native-gesture-handler';
 ### React Native Encrypted Storage
 
 - 민감한 데이터를 암호화 하여 안전하게 저장 할 수 있는 라이브러리 (토큰, 비밀번호, 개인 정보)
+
+### 구글 라이브러리 OCR 토큰 알아내는 법
+
+- google shell sdk 창에다가 밑에 입력
+- gcloud auth print-access-token
