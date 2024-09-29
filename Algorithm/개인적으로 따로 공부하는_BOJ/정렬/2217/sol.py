@@ -2,16 +2,13 @@ import sys
 input = sys.stdin.readline
 
 n = int(input())
-
-m = []
+rope = []
 
 for i in range(n):
-    m.append(int(input()))
+    rope.append(int(input()))
+rope.sort(reverse=True)
 
-m.sort(reverse=True)
-result = []
+for i in range(n):
+    rope[i] = rope[i] * (i+1)
 
-for j in range(n):
-    result.append(m[j] * (j+1))
-
-print(max(result))
+print(max(rope))
