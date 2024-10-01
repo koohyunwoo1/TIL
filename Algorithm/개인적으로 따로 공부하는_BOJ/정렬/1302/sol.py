@@ -1,22 +1,20 @@
 import sys
 input = sys.stdin.readline
 
-n = int(input())
-sell = {}
+d = dict()
 
-for i in range(n):
-    name = input()
-    if name not in sell:
-        sell[name] = 1
+for _ in range(int(input())):
+    book = input()
+    if book in d:
+        d[book] += 1
     else:
-        sell[name] += 1
-        
-max_value = max(sell.values())
+        d[book] = 1
 
-best = []
-for key, value in sell.items():
-    if value == max_value:
-        best.append(key)
+max = max(d.values())
+ans = []
+for k, v in d.items():
+    if v == max:
+        ans.append(k)
 
-best = sorted(best)
-print(best[0])
+ans.sort()
+print(ans[0])
