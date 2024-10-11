@@ -1,0 +1,16 @@
+.Project {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.ProjectTitle {
+  font-size: 64px;
+  font-weight: bold;
+  color: white;
+  margin-top: 100px;
+}
+.ProjectItemContainer {
+  margin-top: 100px;
+  display: flex;
+  justify-content: flex-start;
+}

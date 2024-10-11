@@ -1,0 +1,31 @@
+.HeaderBar {
+  color: white;
+  width: 100%;
+  padding: 10px;
+  transition: top 0.3s ease;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.HeaderBar ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+
+.HeaderBar ul li {
+  margin: 0 15px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.HeaderBar ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.HeaderBar ul li a:hover {
+  color: wheat;
+}

@@ -1,0 +1,20 @@
+.Carrer {
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+}
+
+.CarrerTitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+.CarrerText {
+  margin-top: 20px;
+}
+
+.CarrerSubText {
+  font-size: 16px;
+  margin-left: 25px;
+}

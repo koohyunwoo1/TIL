@@ -1,0 +1,65 @@
+.Profile {
+  color: white;
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.ProfileImage {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin-right: 20px;
+  background-image: url("../../assets/증명사진.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.ProfileDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.ProfileName {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.ProfileBirth {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.Badges {
+  margin-top: 10px;
+}
+
+.Badge {
+  display: inline-block;
+  background-color: bisque;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 5px;
+  font-size: 14px;
+}
+
+.ProfileIntro {
+  margin-top: 10px;
+}
+
+.ProfileSkill {
+  color: white;
+}
+
+.ProfileHr {
+  margin-top: 50px;
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  margin: 20px 0;
+}
+
+.ProfileCarrer {
+  color: white;
+}
