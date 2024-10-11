@@ -1,5 +1,12 @@
 import React from "react";
 import "../../style/Profile/Profile.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faUser,
+  faBirthdayCake,
+  faEnvelope,
+  faCodeBranch,
+} from "@fortawesome/free-solid-svg-icons";
 import Skill from "./Skill";
 import Carrer from "./Carrer";
 
@@ -9,10 +16,19 @@ const Profile = () => {
       <div className="Profile">
         <div className="ProfileImage" />
         <div className="ProfileDetails">
-          <div className="ProfileName">구현우</div>
-          <div className="ProfileBirth">1999.07.07</div>
+          <div className="ProfileName">
+            <FontAwesomeIcon icon={faUser} /> 구현우
+          </div>
+          <div className="ProfileBirth">
+            <FontAwesomeIcon icon={faBirthdayCake} /> 1999.07.07
+          </div>
+          <div className="ProfileBirth">
+            <FontAwesomeIcon icon={faEnvelope} /> kjklovekhw@gmail.com
+          </div>
           <div className="Badges">
-            <span className="Badge">Frontend Developer</span>
+            <span className="Badge">
+              <FontAwesomeIcon icon={faCodeBranch} /> Frontend Developer
+            </span>
             <span className="Badge">React.js</span>
           </div>
           <div className="ProfileIntro">

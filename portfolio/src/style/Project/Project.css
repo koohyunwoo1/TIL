@@ -9,8 +9,39 @@
   color: white;
   margin-top: 100px;
 }
+
+.ProjectSubtitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-top: 500px;
+  margin-bottom: 10px;
+}
+.ProjectSubtitle2 {
+  font-size: 16px;
+  font-weight: 300;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
 .ProjectItemContainer {
   margin-top: 100px;
   display: flex;
   justify-content: flex-start;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
 }

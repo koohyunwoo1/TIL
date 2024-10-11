@@ -27,6 +27,10 @@ const Name = ({ onComplete }) => {
     };
 
     displayNextCharacter();
+
+    return () => {
+      index = fullText.length;
+    };
   }, []);
 
   return (

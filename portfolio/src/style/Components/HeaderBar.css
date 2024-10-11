@@ -27,5 +27,9 @@
 }
 
 .HeaderBar ul li a:hover {
-  color: wheat;
+  color: #ffcc00;
+}
+
+.HeaderBar ul li a.active {
+  color: wheat; 
 }

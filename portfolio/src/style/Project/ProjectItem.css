@@ -1,45 +1,83 @@
-.ProjectItem {
+.projectItem {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
   padding: 20px;
 }
 
-.ProjectCard {
-  background-color: #ddd;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  width: 250px;
-  height: 350px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
-  text-align: center;
+.projectCard {
+  border: 10px solid #ddd;
+  border-radius: 20px;
+  width: 400px;
+  transition: transform 0.3s;
   cursor: pointer;
   margin-top: 20px;
+  background-color: white;
 }
 
-.ProjectCard:hover {
-  transform: scale(1.2);
+.projectCard:hover {
+  transform: scale(1.2); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
 }
 
-.ProjectCard img {
+.projectCard img {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 10px;
 }
 
-.ProjectCard h1 {
-  margin: 10px 0 5px;
-  color: #000;
+
+.modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.ProjectCard p {
-  color: #000;
+.modalContent {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  max-height: 300px;
+  overflow-y: auto;
 }
 
-.ProjectLink {
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
   text-decoration: none;
+  cursor: pointer;
+}
+
+.modalLink {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: bisque;
+  color: black;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.modalLink:hover {
+  background-color: #e1c6a0;
 }

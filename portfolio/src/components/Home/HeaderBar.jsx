@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../../style/Components/HeaderBar.css";
 
 const HeaderBar = () => {
@@ -7,10 +7,14 @@ const HeaderBar = () => {
     <div className="HeaderBar">
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <NavLink to="/" activeClassName="active">
+            Home
+          </NavLink>
         </li>
         <li>
-          <Link to="/project">Projects</Link>
+          <NavLink to="/project" activeClassName="active">
+            Projects
+          </NavLink>
         </li>
       </ul>
     </div>

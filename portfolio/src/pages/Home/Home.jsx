@@ -7,6 +7,7 @@ import Profile from "../../components/Profile/Profile";
 
 const Home = () => {
   const [showHeaderBar, setShowHeaderBar] = useState(false);
+  const [showArrow, setShowArrow] = useState(false);
 
   const handleArrowClick = () => {
     const profileElement = document.getElementById("profile-section");
@@ -19,20 +20,22 @@ const Home = () => {
     const profileElement = document.getElementById("Skill");
     if (profileElement) {
       const rect = profileElement.getBoundingClientRect();
-      if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-        setShowHeaderBar(true);
-      } else {
-        setShowHeaderBar(false);
-      }
+      setShowHeaderBar(rect.top <= window.innerHeight && rect.bottom >= 0);
     }
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const handleNameComplete = () => {
+    setShowArrow(true);
+  };
 
   return (
     <>
@@ -41,11 +44,13 @@ const Home = () => {
           <Header />
         </div>
         <div className="NameContainer">
-          <Name />
-          <div className="arrow" onClick={handleArrowClick}>
-            <span></span>
-            <span></span>
-          </div>
+          <Name onComplete={handleNameComplete} />
+          {showArrow && (
+            <div className="arrow" onClick={handleArrowClick}>
+              <span></span>
+              <span></span>
+            </div>
+          )}
         </div>
         {showHeaderBar && (
           <div

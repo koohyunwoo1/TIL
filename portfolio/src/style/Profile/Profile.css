@@ -26,8 +26,7 @@
 }
 
 .ProfileBirth {
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 14px;
   margin-top: 10px;
 }
 
@@ -43,6 +42,7 @@
   border-radius: 5px;
   margin: 5px;
   font-size: 14px;
+  font-weight: bold;
 }
 
 .ProfileIntro {
