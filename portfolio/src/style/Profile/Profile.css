@@ -63,3 +63,17 @@
 .ProfileCarrer {
   color: white;
 }
+
+.ProfileGithub {
+  margin-top: 10px; 
+}
+
+.ProfileGithub a {
+  color: #f05032; 
+  text-decoration: none; 
+  font-weight: bold; 
+}
+
+.ProfileGithub a:hover {
+  color: wheat; 
+}

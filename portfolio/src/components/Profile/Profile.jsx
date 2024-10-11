@@ -7,6 +7,7 @@ import {
   faEnvelope,
   faCodeBranch,
 } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import Skill from "./Skill";
 import Carrer from "./Carrer";
 
@@ -33,6 +34,15 @@ const Profile = () => {
           </div>
           <div className="ProfileIntro">
             안녕하세요 프론트개발자를 꿈꾸고 있는 학생입니다.
+          </div>
+          <div className="ProfileGithub">
+            <a
+              href="https://github.com/koohyunwoo1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faGithub} /> GitHub
+            </a>
           </div>
         </div>
       </div>
