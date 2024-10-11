@@ -1,0 +1,15 @@
+.Container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.HeaderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.NameContainer {
+  padding-top: 280px;
+}
