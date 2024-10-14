@@ -2,70 +2,51 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 50px;
   padding: 20px;
 }
 
 .projectCard {
-  border: 10px solid #ddd;
   border-radius: 20px;
-  width: 400px;
-  transition: transform 0.3s;
-  cursor: pointer;
-  margin-top: 20px;
+  width: 1200px;
+  height: 600px;
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 20px;
 }
 
-.projectCard:hover {
-  transform: scale(1.2); 
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+.projectCard h2 {
+  margin: 20px 0 0;
 }
 
-.projectCard img {
+.projectPeriod {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
   width: 100%;
-  height: 200px;
+}
+
+.carousel img {
+  width: 50%;
+  height: 300px;
   object-fit: cover;
   border-radius: 10px;
 }
 
-
-.modal {
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.modalContent {
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 20px;
+.projectDescription {
   text-align: center;
-  width: 90%;
-  max-width: 400px;
-  max-height: 300px;
-  overflow-y: auto;
-}
-
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+  margin: 20px;
 }
 
 .modalLink {
