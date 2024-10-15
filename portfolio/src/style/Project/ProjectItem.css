@@ -2,30 +2,35 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
-  padding: 20px;
+  gap: 100px;
 }
 
 .projectCard {
   border-radius: 20px;
-  width: 1200px;
-  background-color: white;
+  width: 1000px;
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  transition: transform 0.3s ease;
+}
+
+.projectCard:hover {
+  transform: translateY(-50px);
 }
 
 .projectCard h2 {
   margin: 20px 0;
-  font-size: 24px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
 }
 
 .projectPeriod {
   margin: 0;
-  font-size: 14px;
-  color: #666;
+  font-size: 16px;
+  color: #999;
 }
 
 .carousel {
@@ -33,32 +38,40 @@
 }
 
 .carouselImage {
-  margin-right: 10px; /* 이미지 간격 추가 */
+  margin-right: 10px;
 }
 
 .carousel img {
   width: 100%;
-  max-height: 1000px;
+  max-height: 800px;
   object-fit: cover;
   border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .projectDescription {
   text-align: center;
   margin: 20px 0;
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
 }
 
 .modalLink {
   display: inline-block;
-  margin-top: 10px;
-  padding: 10px 15px;
-  background-color: bisque;
-  color: black;
-  border-radius: 5px;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background-color: #ffdfb9;
+  color: #333;
+  border-radius: 30px;
   text-decoration: none;
   font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .modalLink:hover {
-  background-color: #e1c6a0;
+  background-color: #f4c784;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
