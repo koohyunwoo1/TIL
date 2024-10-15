@@ -9,18 +9,17 @@
 .projectCard {
   border-radius: 20px;
   width: 1200px;
-  height: 600px;
   background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  position: relative;
   padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .projectCard h2 {
-  margin: 20px 0 0;
+  margin: 20px 0;
+  font-size: 24px;
 }
 
 .projectPeriod {
@@ -30,23 +29,23 @@
 }
 
 .carousel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
   width: 100%;
 }
 
+.carouselImage {
+  margin-right: 10px; /* 이미지 간격 추가 */
+}
+
 .carousel img {
-  width: 50%;
-  height: 300px;
+  width: 100%;
+  max-height: 1000px;
   object-fit: cover;
   border-radius: 10px;
 }
 
 .projectDescription {
   text-align: center;
-  margin: 20px;
+  margin: 20px 0;
 }
 
 .modalLink {
@@ -57,6 +56,7 @@
   color: black;
   border-radius: 5px;
   text-decoration: none;
+  font-size: 16px;
 }
 
 .modalLink:hover {
