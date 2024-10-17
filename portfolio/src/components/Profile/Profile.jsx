@@ -9,7 +9,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import Skill from "./Skill";
-import Carrer from "./Carrer";
+import Career from "./Career";
 
 const Profile = () => {
   return (
@@ -51,8 +51,8 @@ const Profile = () => {
         <Skill />
       </div>
       <hr className="ProfileHr" />
-      <div className="ProfileCarrer">
-        <Carrer />
+      <div className="ProfileCareer">
+        <Career />
       </div>
     </div>
   );

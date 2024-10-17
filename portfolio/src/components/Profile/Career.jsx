@@ -1,21 +1,21 @@
 import React from "react";
-import "../../style/Profile/Carrer.css";
+import "../../style/Profile/Career.css";
 import "../../style/Profile/Profile.css";
 
-const Carrer = () => {
+const Career = () => {
   return (
     <>
-      <div className="Carrer">
+      <div className="Career">
         <i
           className="fas fa-project-diagram"
           style={{ marginRight: "10px" }}
         ></i>
-        Carrer
+        Career
       </div>
-      <ul className="CarrerTitle">
-        <li className="CarrerText">
+      <ul className="CareerTitle">
+        <li className="CareerText">
           삼성청년SW아카데미 11th ( 2024.01 ~ 2024.12 )
-          <ul className="CarrerSubText">
+          <ul className="CareerSubText">
             <li>
               파이썬 반에서 시작하여 파이썬을 이용해 Django 프레임워크를
               학습했습니다. 이 과정에서 HTML과 CSS와 같은 웹 기본 기술을 익혔고,
@@ -32,7 +32,7 @@ const Carrer = () => {
         </li>
       </ul>
       <hr className="ProfileHr" />
-      <div className="Carrer">
+      <div className="Career">
         <i
           className="fas fa-project-diagram"
           style={{ marginRight: "10px" }}
@@ -40,10 +40,10 @@ const Carrer = () => {
         Education
       </div>
 
-      <ul className="CarrerTitle">
-        <li className="CarrerText">
+      <ul className="CareerTitle">
+        <li className="CareerText">
           경성대학교 빅데이터응용통계학과 ( 2018.03 ~ 2024.02 )
-          <ul className="CarrerSubText">
+          <ul className="CareerSubText">
             <li>자세한 내용</li>
           </ul>
         </li>
@@ -52,4 +52,4 @@ const Carrer = () => {
   );
 };
 
-export default Carrer;
+export default Career;

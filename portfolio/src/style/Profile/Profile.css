@@ -60,20 +60,20 @@
   margin: 20px 0;
 }
 
-.ProfileCarrer {
+.ProfileCareer {
   color: white;
 }
 
 .ProfileGithub {
-  margin-top: 10px; 
+  margin-top: 10px;
 }
 
 .ProfileGithub a {
-  color: #f05032; 
-  text-decoration: none; 
-  font-weight: bold; 
+  color: #f05032;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .ProfileGithub a:hover {
-  color: wheat; 
+  color: wheat;
 }
