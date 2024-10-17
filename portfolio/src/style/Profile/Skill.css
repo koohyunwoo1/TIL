@@ -12,7 +12,15 @@
 }
 
 .SkillBadges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin-top: 10px;
+}
+
+.SkillBadgeContainer {
+  width: 18%;
+  margin-bottom: 20px;
 }
 
 .SkillBadge {
@@ -26,20 +34,90 @@
   font-weight: bold;
 }
 
-.SkillBadge.js { background-color: #f7df1e; } 
-.SkillBadge.ts { background-color: #007acc; } 
-.SkillBadge.html { background-color: #e44d26; } 
-.SkillBadge.css { background-color: #264de4; }
-.SkillBadge.python { background-color: #306998; } 
-.SkillBadge.react { background-color: #61dafb; } 
-.SkillBadge.react-native { background-color: #61dafb; } 
-.SkillBadge.android { background-color: #3ddc84; } 
-.SkillBadge.vue { background-color: #42b883; } 
-.SkillBadge.django { background-color: #092e20; color: white; } 
-.SkillBadge.bootstrap { background-color: #563d7c; color: white; } 
-.SkillBadge.visualstudio { background-color: #5c2d91; color: white; } 
-.SkillBadge.figma { background-color: #f24e1e; } 
-.SkillBadge.notion { background-color: #ffffff; color: black; } 
-.SkillBadge.jira { background-color: #0052cc; color: white; } 
-.SkillBadge.mysql { background-color: #00758f; color: white; }
-.SkillBadge.git { background-color: #f05032; color: white; } 
+.SkillBadge.js {
+  background-color: #f7df1e;
+}
+
+.SkillBadge.ts {
+  background-color: #007acc;
+}
+
+.SkillBadge.html {
+  background-color: #e44d26;
+}
+
+.SkillBadge.css {
+  background-color: #264de4;
+}
+
+.SkillBadge.python {
+  background-color: #306998;
+}
+
+.SkillBadge.react {
+  background-color: #61dafb;
+}
+
+.SkillBadge.react-native {
+  background-color: #61dafb;
+}
+
+.SkillBadge.android {
+  background-color: #3ddc84;
+}
+
+.SkillBadge.vue {
+  background-color: #42b883;
+}
+
+.SkillBadge.django {
+  background-color: #092e20;
+  color: white;
+}
+
+.SkillBadge.bootstrap {
+  background-color: #563d7c;
+  color: white;
+}
+
+.SkillBadge.visualstudio {
+  background-color: #5c2d91;
+  color: white;
+}
+
+.SkillBadge.figma {
+  background-color: #f24e1e;
+}
+
+.SkillBadge.notion {
+  background-color: #ffffff;
+  color: black;
+}
+
+.SkillBadge.jira {
+  background-color: #0052cc;
+  color: white;
+}
+
+.SkillBadge.mysql {
+  background-color: #00758f;
+  color: white;
+}
+
+.SkillBadge.git {
+  background-color: #f05032;
+  color: white;
+}
+
+.SkillProgress {
+  background-color: white;
+  border-radius: 5px;
+  height: 8px;
+  margin-top: 5px;
+}
+
+.SkillProgressBar {
+  height: 100%;
+  background-color: skyblue;
+  border-radius: 5px;
+}

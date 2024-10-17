@@ -2,6 +2,7 @@
   font-size: 48px;
   font-weight: bold;
   color: white;
+  margin-top: 80px;
 }
 
 .CarrerTitle {
@@ -12,9 +13,32 @@
 
 .CarrerText {
   margin-top: 20px;
+  font-weight: bold;
 }
 
 .CarrerSubText {
   font-size: 16px;
+  margin-top: 20px;
   margin-left: 25px;
+  font-weight: 400;
+}
+
+.CarrerTitle li {
+  padding-left: 10px;
+}
+
+.CarrerTitle li::marker {
+  content: "•";
+  color: white;
+  font-size: 24px;
+}
+
+.CarrerSubText li {
+  padding-left: 10px;
+}
+
+.CarrerSubText li::marker {
+  content: "✓";
+  color: bisque;
+  font-size: 24px;
 }

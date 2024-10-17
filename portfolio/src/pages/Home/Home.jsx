@@ -4,7 +4,7 @@ import Header from "../../components/Home/Header";
 import HeaderBar from "../../components/Home/HeaderBar";
 import Name from "../../components/Profile/Name";
 import Profile from "../../components/Profile/Profile";
-
+import Project from "../../pages/Project/Project";
 const Home = () => {
   const [showHeaderBar, setShowHeaderBar] = useState(false);
   const [showArrow, setShowArrow] = useState(false);

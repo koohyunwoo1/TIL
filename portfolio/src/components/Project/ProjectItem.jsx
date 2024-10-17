@@ -1,81 +1,179 @@
 import React, { Component } from "react";
-import Slider from "react-slick";
+import { FaGithub } from "react-icons/fa";
 import "../../style/Project/ProjectItem.css";
+
+import GflexThumbnail from "../../assets/Gflex.png";
+import PillSooThumbnail from "../../assets/PillSoo.png";
+import RunUsThumbnail from "../../assets/RunUs.png";
 
 const projects = [
   {
+    id: 1,
     title: "Gflex",
+    thumbnail: GflexThumbnail,
     images: Array.from(
       { length: 12 },
       (_, index) => `/assets/Gflex/image${index}.png`
     ),
-    description: "기분/무드별 영화 추천 서비스입니다.",
-    period: "2023.01 - 2023.06",
+    period: "2024.05.16 - 2024.05.24 (1주)",
     link: "https://github.com/koohyunwoo1/G-flex",
   },
   {
-    title: "PillSoo",
-    images: Array.from(
-      { length: 12 },
-      (_, index) => `/assets/PillSoo/image${index}.jpg`
-    ),
-    description: "사용자 기반 영양제 추천 서비스입니다.",
-    period: "2023.01 - 2023.06",
-    link: "https://github.com/koohyunwoo1/PillSoo",
-  },
-  {
+    id: 2,
     title: "RunUs",
+    thumbnail: RunUsThumbnail,
     images: Array.from(
       { length: 12 },
       (_, index) => `/assets/RunUs/image${index}.gif`
     ),
-    description: "함께 뛰는 러닝 서비스입니다.",
-    period: "2023.07 - 2023.12",
+    period: "2024.07.05 - 2024.08.16 (6주)",
     link: "https://github.com/koohyunwoo1/RunUs",
+  },
+  {
+    id: 3,
+    title: "PillSoo",
+    thumbnail: PillSooThumbnail,
+    images: Array.from(
+      { length: 12 },
+      (_, index) => `/assets/PillSoo/image${index}.jpg`
+    ),
+    period: "2024.08.26 - 2024.10.11 (7주)",
+    link: "https://github.com/koohyunwoo1/PillSoo",
   },
 ];
 
 class ProjectItem extends Component {
-  render() {
-    const settings = {
-      dots: false,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 2000,
-      cssEase: "ease-in-out",
-    };
+  state = {
+    selectedProject: null,
+  };
 
+  openModal = (project) => {
+    this.setState({ selectedProject: project });
+  };
+
+  closeModal = () => {
+    this.setState({ selectedProject: null });
+  };
+
+  render() {
     return (
       <div className="projectItem">
         {projects.map((project) => (
-          <div key={project.title} className="projectCard">
-            <h2>{project.title}</h2>
-            <p className="projectPeriod">{project.period}</p>
-            <div className="carousel">
-              <Slider {...settings}>
-                {project.images.map((image, index) => (
-                  <div key={index} className="carouselImage">
-                    <img src={image} alt={`${project.title} ${index}`} />
-                  </div>
-                ))}
-              </Slider>
-            </div>
-            <div className="projectDescription">
-              <p>{project.description}</p>
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="modalLink"
-              >
-                GitHub 링크
-              </a>
+          <div
+            key={project.id}
+            className="projectCard"
+            onClick={() => this.openModal(project)}
+          >
+            <img
+              src={project.thumbnail}
+              alt={project.title}
+              className="projectImage"
+            />
+            <div className="projectDetails">
+              <h2>{project.title}</h2>
+              <p className="projectPeriod">{project.period}</p>
             </div>
           </div>
         ))}
+
+        {this.state.selectedProject && (
+          <div className="modal" onClick={this.closeModal}>
+            <div className="modalContent" onClick={(e) => e.stopPropagation()}>
+              <span className="modalClose" onClick={this.closeModal}>
+                &times;
+              </span>
+              <div className="modalHeader">
+                <h2 style={{ color: "white", marginLeft: "20px" }}>
+                  {this.state.selectedProject.title}
+                </h2>
+                <a
+                  href={this.state.selectedProject.link}
+                  className="githubButton"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaGithub style={{ fontSize: "24px" }} /> GitHub
+                </a>
+              </div>
+              <div className="projectDetail">
+                <p className="projectPeriod">
+                  {this.state.selectedProject.period}
+                </p>
+                <div className="projectSkills">
+                  <h1>Skills</h1>
+                  <div>
+                    {this.state.selectedProject.title === "Gflex" ? (
+                      <>
+                        <span className="projectBadge">Django</span>
+                        <span className="projectBadge">Vue.js</span>
+                      </>
+                    ) : this.state.selectedProject.title === "RunUs" ? (
+                      <>
+                        <span className="projectBadge">React.js</span>
+                        <span className="projectBadge">Spring</span>
+                      </>
+                    ) : (
+                      <>
+                        <span className="projectBadge">ReactNative</span>
+                        <span className="projectBadge">Spring</span>
+                      </>
+                    )}
+                  </div>
+                </div>
+
+                <div className="projectTools">
+                  <h1>Tools</h1>
+                  <div>
+                    {this.state.selectedProject.title === "Gflex" ? (
+                      <span className="projectBadge">Visual Studio</span>
+                    ) : (
+                      <>
+                        <span className="projectBadge">Visual Studio</span>
+                        <span className="projectBadge">MySQL</span>
+                      </>
+                    )}
+                  </div>
+                </div>
+
+                <div className="projectTeam">
+                  <h1>개발 인원</h1>
+                  <p>
+                    {this.state.selectedProject.title === "Gflex"
+                      ? "2명 (백엔드 1명, 프론트엔드 1명)"
+                      : this.state.selectedProject.title === "RunUs"
+                      ? "7명 (백엔드 5명, 프론트엔드 2명)"
+                      : "6명 (백엔드 4명, 프론트엔드 2명)"}
+                  </p>
+                </div>
+                <div className="projectRole">
+                  <h1>역할</h1>
+                  <p>
+                    {this.state.selectedProject.title === "Gflex"
+                      ? "기획, 프론트엔드, 백엔드"
+                      : this.state.selectedProject.title === "RunUs"
+                      ? "기획, 전체적인 UI 담당, Geolocation 위치 튐 현상 보정, Auth 제외 모든 기능"
+                      : "기획, 전체적인 UI 담당, Auth 기능, API 연동"}
+                  </p>
+                </div>
+                <div className="projectDescription">
+                  <h1>설명</h1>
+                  <p>
+                    {this.state.selectedProject.title === "Gflex"
+                      ? "Gflex는..."
+                      : this.state.selectedProject.title === "RunUs"
+                      ? "RunUs는..."
+                      : "PillSoo는..."}
+                  </p>
+                </div>
+              </div>
+              <div className="projectImages">
+                {this.state.selectedProject.images.map((image, index) => (
+                  <img key={index} src={image} alt={`project ${index}`} />
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     );
   }
