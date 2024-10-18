@@ -1,19 +1,18 @@
 import sys
 sys.stdin = open('input.txt')
 
-num = int(input())
-line = 1
+X=int(input())
 
-while num > line:
-    num -= line
-    line += 1
+line=1
+while X>line:
+    X-=line
+    line+=1
     
-if line % 2 == 0:
-    a = num
-    b = line - num + 1
-
-elif line % 2 == 1:
-    a = line - num + 1
-    b = num
-
-print(f'{a}/{b}')
+if line%2==0:
+    a=X
+    b=line-X+1
+else:
+    a=line-X+1
+    b=X
+    
+print(a, '/', b, sep='')
