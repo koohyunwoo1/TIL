@@ -70,7 +70,7 @@ class ProjectItem extends Component {
               className="projectImage"
             />
             <div className="projectDetails">
-              <h2>{project.title}</h2>
+              <h1>{project.title}</h1>
               <p className="projectPeriod">{project.period}</p>
             </div>
           </div>
@@ -156,10 +156,10 @@ class ProjectItem extends Component {
                   </p>
                 </div>
                 <div className="projectDescription">
-                  <h1>설명</h1>
+                  <h1>프로젝트 설명</h1>
                   <p>
                     {this.state.selectedProject.title === "Gflex"
-                      ? "Gflex는..."
+                      ? "Gflex는 검색을 통한 영화 추천 서비스 , 장르 및 무드에 따른 영화 추천 서비스를 제공 하는 프로젝트입니다 !"
                       : this.state.selectedProject.title === "RunUs"
                       ? "RunUs는..."
                       : "PillSoo는..."}

@@ -5,7 +5,7 @@
 }
 
 .SkillTitle {
-  font-size: 40px;
+  font-size: 48px;
   font-weight: bold;
   color: white;
   margin-top: 40px;
@@ -14,8 +14,8 @@
 
 .SkillSubTitle {
   margin-top: 50px;
-  font-size: 32px;
-  font-weight: 300;
+  font-size: 24px;
+  font-weight: bold;
   color: white;
 }
 
