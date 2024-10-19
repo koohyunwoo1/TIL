@@ -17,7 +17,7 @@ import {
 import { IoLogoVercel } from "react-icons/io5";
 
 const Skill = () => {
-  const skills = [
+  const hardSkills = [
     {
       title: "Language",
       items: [
@@ -107,7 +107,23 @@ const Skill = () => {
     },
   ];
 
+  const softSkills = [
+    {
+      title: "Communication",
+      items: [
+        {
+          des: "저는 소통을 가장 중요하게 생각하며, 팀워크를 통해 협력하는 것을 선호합니다. 팀원들과의 열린 대화를 통해 아이디어를 나누고, 명확하게 의견을 전달하는 것이 중요하다고 믿습니다. 저는 팀 내에서 서로의 강점을 살리고 다양한 의견을 존중하며, 협업을 통해 더 나은 결과물을 만들어내는 것을 지향합니다.",
+        },
+      ],
+    },
+    // {
+    //   title: "Leadership",
+    //   items: [{ des: "Project Management" }],
+    // },
+  ];
+
   const [isVisible, setIsVisible] = useState(false);
+
   const skillRef = useRef(null);
 
   useEffect(() => {
@@ -119,7 +135,7 @@ const Skill = () => {
           setIsVisible(false);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.4 }
     );
 
     if (skillRef.current) {
@@ -143,29 +159,48 @@ const Skill = () => {
         Skill
       </div>
 
-      {skills.map((skillGroup, index) => (
-        <div className="SkillSection" key={index}>
-          <div className="SkillSubTitle">{skillGroup.title}</div>
-          <div className="SkillBadges">
-            {skillGroup.items.map((skill, idx) => (
-              <div className="SkillBadgeContainer" key={idx}>
-                <span className={`SkillBadge ${skill.className}`}>
-                  {skill.icon} {skill.name}
-                </span>
-                <div className="SkillProgress">
-                  <div
-                    className="SkillProgressBar"
-                    style={{
-                      width: isVisible ? `${skill.percent}%` : "0%",
-                      transition: "width 1s ease-in-out",
-                    }}
-                  />
+      <div>
+        <h2 className="SkillTitle">Hard Skills</h2>
+        {hardSkills.map((skillGroup, index) => (
+          <div className="SkillSection" key={index}>
+            <div className="SkillSubTitle">{skillGroup.title}</div>
+            <div className="SkillBadges">
+              {skillGroup.items.map((skill, idx) => (
+                <div className="SkillBadgeContainer" key={idx}>
+                  <span className={`SkillBadge ${skill.className}`}>
+                    {skill.icon} {skill.name}
+                  </span>
+                  <div className="SkillProgress">
+                    <div
+                      className="SkillProgressBar"
+                      style={{
+                        width: isVisible ? `${skill.percent}%` : "0%",
+                        transition: "width 1s ease-in-out",
+                      }}
+                    />
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
+
+      <div className="SkillSection">
+        <h2 className="SkillTitle">Soft Skills</h2>
+        <ul className="SoftSkillTitle">
+          {softSkills.map((skillGroup, index) => (
+            <li key={index} className="SoftSkillText">
+              {skillGroup.title}
+              <ul className="SoftSkillSubText">
+                {skillGroup.items.map((skill, idx) => (
+                  <li key={idx}>{skill.des}</li>
+                ))}
+              </ul>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

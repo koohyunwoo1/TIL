@@ -4,6 +4,14 @@
   color: white;
 }
 
+.SkillTitle {
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  margin-top: 40px;
+  text-align: center;
+}
+
 .SkillSubTitle {
   margin-top: 50px;
   font-size: 32px;
@@ -32,6 +40,42 @@
   margin-top: 15px;
   font-size: 14px;
   font-weight: bold;
+}
+.SoftSkillTitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+.SoftSkillText {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.SoftSkillSubText {
+  font-size: 16px;
+  margin-top: 20px;
+  margin-left: 25px;
+  font-weight: 400;
+}
+.SkillTitle li {
+  padding-left: 10px;
+}
+
+.SkillTitle li::marker {
+  content: "•";
+  color: white;
+  font-size: 24px;
+}
+
+.SoftSkillSubText li {
+  padding-left: 10px;
+}
+
+.SoftSkillSubText li::marker {
+  content: "✓";
+  color: bisque;
+  font-size: 24px;
 }
 
 .SkillBadge.js {
