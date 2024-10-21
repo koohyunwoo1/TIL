@@ -151,7 +151,7 @@ class ProjectItem extends Component {
                     {this.state.selectedProject.title === "Gflex"
                       ? "기획, 프론트엔드, 백엔드"
                       : this.state.selectedProject.title === "RunUs"
-                      ? "기획, 전체적인 UI 담당, Geolocation 위치 튐 현상 보정, Auth 제외 모든 기능"
+                      ? "기획, 전체적인 UI 담당, Auth 기능 제외 모든 기능 담당, Geolocation API를 사용해서 위치 튐 현상 보정"
                       : "기획, 전체적인 UI 담당, Auth 기능, API 연동"}
                   </p>
                 </div>

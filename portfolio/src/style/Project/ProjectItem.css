@@ -19,7 +19,6 @@
   transform: scale(1.2);
 }
 
-
 .projectDetails {
   margin-left: 40px;
 }
@@ -133,9 +132,9 @@
   margin-bottom: 20px;
   display: flex;
   align-items: center;
-  white-space: nowrap; 
-  overflow: hidden;   
-  text-overflow: ellipsis; 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .projectSkills h1,
@@ -153,11 +152,10 @@
 .projectRole p,
 .projectDescription p {
   margin-left: 30px;
-  white-space: nowrap;
-  overflow: hidden;    
-  text-overflow: ellipsis; 
+  /* white-space: nowrap; */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-
 
 .projectImages {
   display: flex;
@@ -183,4 +181,3 @@
   font-weight: bold;
   transition: background-color 0.3s;
 }
-
