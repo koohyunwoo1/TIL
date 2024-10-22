@@ -149,20 +149,20 @@ class ProjectItem extends Component {
                   <h1>역할</h1>
                   <p>
                     {this.state.selectedProject.title === "Gflex"
-                      ? "기획, 프론트엔드, 백엔드"
+                      ? "기획, 프론트엔드, 백엔드(Django) 담당"
                       : this.state.selectedProject.title === "RunUs"
-                      ? "기획, 전체적인 UI 담당, Auth 기능 제외 모든 기능 담당, Geolocation API를 사용해서 위치 튐 현상 보정"
-                      : "기획, 전체적인 UI 담당, Auth 기능, API 연동"}
+                      ? "기획, 전체적인 UI 담당, Auth 기능을 제외한 모든 기능 개발. Geolocation API를 사용하여 위치 정보를 받아오고, 알고리즘을 활용해 위치 튐 현상을 보정"
+                      : "기획, 전체적인 UI 담당, Auth 기능, REST API, OCR 분석 담당"}
                   </p>
                 </div>
                 <div className="projectDescription">
                   <h1>프로젝트 설명</h1>
                   <p>
                     {this.state.selectedProject.title === "Gflex"
-                      ? "Gflex는 검색을 통한 영화 추천 서비스 , 장르 및 무드에 따른 영화 추천 서비스를 제공 하는 프로젝트입니다 !"
+                      ? "Gflex는 사용자의 검색을 기반으로 영화 추천을 제공하는 서비스입니다. 장르와 무드에 따라 맞춤형 영화 추천을 받을 수 있습니다."
                       : this.state.selectedProject.title === "RunUs"
-                      ? "RunUs는..."
-                      : "PillSoo는..."}
+                      ? "RunUs는 러닝을 시작하는 데 동기가 필요한 사람들을 위한 서비스입니다. 웹 소켓을 이용한 실시간 통신으로 함께 달리는 경험을 제공하는 앱입니다."
+                      : "PillSoo는 바쁜 현대인들이 적절한 영양제를 선택할 수 있도록 돕는 서비스입니다. 연령대별로 맞춤형 영양제를 추천하고, 사용자의 현재 건강 상태를 입력하면 알맞은 영양제를 추천받을 수 있습니다."}
                   </p>
                 </div>
               </div>
