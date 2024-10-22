@@ -8,6 +8,7 @@ import {
   faCodeBranch,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { SiNotion } from "react-icons/si"; // react-icons에서 Notion 아이콘 사용
 import Skill from "./Skill";
 import Career from "./Career";
 
@@ -35,14 +36,25 @@ const Profile = () => {
           <div className="ProfileIntro">
             안녕하세요 프론트개발자를 꿈꾸고 있는 학생입니다.
           </div>
-          <div className="ProfileGithub">
-            <a
-              href="https://github.com/koohyunwoo1"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faGithub} /> GitHub
-            </a>
+          <div className="ProfileLink">
+            <div className="ProfileGithub">
+              <a
+                href="https://github.com/koohyunwoo1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faGithub} /> GitHub
+              </a>
+            </div>
+            <div className="ProfileNotion">
+              <a
+                href="https://www.notion.so/Frontend-developer-1257c5ebb36c804f9f48f9ef42e64263"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <SiNotion /> Notion
+              </a>
+            </div>
           </div>
         </div>
       </div>

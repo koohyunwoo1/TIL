@@ -64,16 +64,26 @@
   color: white;
 }
 
-.ProfileGithub {
+.ProfileLink {
+  display: flex;
+  gap: 20px;
   margin-top: 10px;
 }
 
-.ProfileGithub a {
+.ProfileGithub a,
+.ProfileNotion a {
+  display: flex;
+  align-items: center;
   color: #f05032;
   text-decoration: none;
   font-weight: bold;
 }
 
-.ProfileGithub a:hover {
+.ProfileNotion a {
+  color: white;
+}
+
+.ProfileGithub a:hover,
+.ProfileNotion a:hover {
   color: wheat;
 }
