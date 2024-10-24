@@ -38,7 +38,7 @@ const projects = [
       (_, index) => `/assets/PillSoo/image${index}.jpg`
     ),
     period: "2024.08.26 - 2024.10.11 (7주)",
-    link: "https://github.com/GOOTEAKIM/Pillsoo",
+    link: "https://github.com/koohyunwoo1/Pillsoo",
   },
 ];
 

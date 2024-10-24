@@ -1,5 +1,5 @@
 import "./App.css";
-import GreetingParents from "./Pages/greetingParents";
+import GreetingParents from "./pages/greetingParents";
 
 function App() {
   return (
