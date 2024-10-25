@@ -4,10 +4,11 @@ const { v4: uuidv4 } = require("uuid");
 const wss = new WebSocket.Server({ port: 8080 });
 let connectedClients = 0;
 let chatHistory = [];
-
+console.log("gdgd2", chatHistory);
 wss.on("connection", (ws) => {
   connectedClients++;
   const userId = uuidv4();
+  // userId를 사용하여 userId를 36자의 랜덤한 문자열로 표현 함
   console.log(`유저 연결: ${userId}, 현재 연결된 유저 수: ${connectedClients}`);
 
   ws.send(JSON.stringify({ type: "assignUserId", userId }));
@@ -25,13 +26,11 @@ wss.on("connection", (ws) => {
       broadcast({ type: "chatHistory", messages: chatHistory });
       return;
     }
-
     const { id, userId, message: msg } = parsedMessage;
-    console.log(`${userId}: ${msg}`);
+    // console.log(`${userId}: ${msg}`);
 
     const newMessage = { id, userId, message: msg };
     chatHistory.push(newMessage);
-
     wss.clients.forEach((client) => {
       if (client.readyState === WebSocket.OPEN) {
         client.send(JSON.stringify(newMessage));
