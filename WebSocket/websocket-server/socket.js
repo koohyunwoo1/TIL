@@ -4,7 +4,6 @@ const { v4: uuidv4 } = require("uuid");
 const wss = new WebSocket.Server({ port: 8080 });
 let connectedClients = 0;
 let chatHistory = [];
-console.log("gdgd2", chatHistory);
 wss.on("connection", (ws) => {
   connectedClients++;
   const userId = uuidv4();

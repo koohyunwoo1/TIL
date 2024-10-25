@@ -17,7 +17,7 @@ const Chat = () => {
 
   const handleChatButtonClick = () => {
     if (modalOpen) {
-      setModalOpen(false);
+      closeModal();
       return;
     }
 
@@ -31,6 +31,13 @@ const Chat = () => {
       ws.onmessage = (event) => {
         const data = JSON.parse(event.data);
         handleMessage(data);
+      };
+
+      ws.onclose = () => {
+        console.log("웹소켓 연결 끊김");
+        setSocket(null);
+        setUserId(null);
+        sessionStorage.removeItem("userId");
       };
 
       setSocket(ws);
@@ -83,6 +90,17 @@ const Chat = () => {
     socket.send(JSON.stringify({ type: "clearMessages" }));
   };
 
+  const closeSocket = () => {
+    if (socket) {
+      socket.close();
+    }
+  };
+
+  const closeModal = () => {
+    closeSocket();
+    setModalOpen(false);
+  };
+
   useEffect(() => {
     if (messagesEndRef.current) {
       messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
@@ -95,10 +113,6 @@ const Chat = () => {
     window.scrollTimeout = setTimeout(() => {
       setShowScrollBar(false);
     }, 1000);
-  };
-
-  const closeModal = () => {
-    setModalOpen(false);
   };
 
   return (
