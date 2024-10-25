@@ -8,9 +8,6 @@ const Sidebar = () => {
         <li>
           <Link to="/">홈</Link>
         </li>
-        <li>
-          <Link to="/chat">채팅</Link>
-        </li>
       </ul>
     </div>
   );
