@@ -73,6 +73,7 @@ input[type="text"]:focus {
   border-radius: 20px;
   font-size: 14px;
   font-weight: bold;
+  font-family: "OneMobile";
   cursor: pointer;
   transition: background-color 0.2s ease;
 }

@@ -1,8 +1,9 @@
 @font-face {
   font-family: "OneMobile";
-  src: url("/public/fonts/ONE\ Mobile\ POP\ OTF.otf") format("opentype");
+  src: url("/fonts/ONE%20Mobile%20POP%20OTF.otf") format("opentype");
 }
+
 @font-face {
   font-family: "MICE";
-  src: url("/public/fonts/MICEGothic\ OTF.otf") format("opentype");
+  src: url("/fonts/MICEGothic%20OTF.otf") format("opentype");
 }
