@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "../style/GameDrum.css";
 
-// 사운드 파일 경로를 정의합니다.
 const sounds = {
   kick: new Audio("/sounds/kick.wav"),
   snare: new Audio("/sounds/snare.wav"),
@@ -15,64 +14,109 @@ const sounds = {
 };
 
 const GameDrum = () => {
-  const [score, setScore] = useState(0);
-  const [currentBeat, setCurrentBeat] = useState(null); // 현재 비트
+  const [currentBeat, setCurrentBeat] = useState(null);
   const [playing, setPlaying] = useState(false);
-  const beatOptions = ["kick", "snare", "clap", "hihat"]; // 사용할 수 있는 비트 종류
+  const [beatCount, setBeatCount] = useState(0);
+  const [messages, setMessages] = useState("");
+  const [intervalDuration, setIntervalDuration] = useState(1000);
+
+  const beatOptions = [
+    "kick",
+    "snare",
+    "clap",
+    "hihat",
+    "openhat",
+    "ride",
+    "boom",
+    "tink",
+    "tom",
+  ];
 
   useEffect(() => {
     if (playing) {
       const interval = setInterval(() => {
         const randomBeat =
           beatOptions[Math.floor(Math.random() * beatOptions.length)];
-        setCurrentBeat(randomBeat); // 랜덤 비트 설정
-        playSound(randomBeat); // 비트 재생
-      }, 1000); // 1초마다 비트 재생
+        setCurrentBeat(randomBeat);
+        playSound(randomBeat);
+        setBeatCount((prev) => prev + 1);
+
+        // 2개의 비트가 끝났을 때 메시지 변경
+        if (beatCount >= 1) {
+          setMessages("이제 따라쳐보세요!");
+          clearInterval(interval);
+          setPlaying(false); // 비트가 끝나면 게임 종료
+        } else {
+          setMessages("잘 들어보세요!");
+        }
+      }, intervalDuration);
 
       return () => clearInterval(interval);
     }
-  }, [playing]);
+  }, [playing, intervalDuration, beatCount]);
 
   const playSound = (soundType) => {
-    sounds[soundType].currentTime = 0; // 사운드 재생 전 시간 초기화
-    sounds[soundType].play(); // 사운드 재생
-    console.log(`${soundType} 소리 재생`); // 현재는 콘솔 로그로 대체
+    sounds[soundType].currentTime = 0;
+    sounds[soundType].play();
+    console.log(`${soundType} 소리 재생`);
   };
 
   const handleDrumClick = (drumType) => {
-    if (drumType === currentBeat) {
-      setScore(score + 10); // 점수 추가
-      console.log("정답! 점수:", score + 10);
-    } else {
-      setScore(score - 5); // 점수 차감
-      console.log("오답! 점수:", score - 5);
-    }
+    playSound(drumType);
+  };
+
+  const resetGame = () => {
+    setBeatCount(0);
+    setIntervalDuration(1000);
+    setMessages("");
+    setPlaying(false);
   };
 
   return (
     <div className="GameDrumContainer">
       <div className="GameDrumTitle">드럼 비트 챌린지</div>
-      <div className="ScoreDisplay">점수: {score}</div>
-      <button onClick={() => setPlaying(!playing)}>
+      <button onClick={() => setPlaying(!playing)} className="DrumButton">
         {playing ? "중지" : "시작"}
       </button>
+
       <div className="DrumContainer">
         <div className="Drum" onClick={() => handleDrumClick("kick")}>
-          킥
+          킥 드럼
         </div>
         <div className="Drum" onClick={() => handleDrumClick("snare")}>
-          스네어
+          스네어 드럼
         </div>
         <div className="Drum" onClick={() => handleDrumClick("clap")}>
-          박수
+          클랩
         </div>
         <div className="Drum" onClick={() => handleDrumClick("hihat")}>
           하이햇
         </div>
       </div>
+
+      <div className="DrumContainer">
+        <div className="Drum" onClick={() => handleDrumClick("openhat")}>
+          오픈햇
+        </div>
+        <div className="Drum" onClick={() => handleDrumClick("ride")}>
+          라이드 심벌
+        </div>
+        <div className="Drum" onClick={() => handleDrumClick("boom")}>
+          붐
+        </div>
+        <div className="Drum" onClick={() => handleDrumClick("tink")}>
+          팅크
+        </div>
+        <div className="Drum" onClick={() => handleDrumClick("tom")}>
+          톰
+        </div>
+      </div>
+
       <div className="CurrentBeatDisplay">
         현재 비트: {currentBeat ? currentBeat.toUpperCase() : "없음"}
       </div>
+
+      <div className="MessageDisplay">{messages}</div>
     </div>
   );
 };
