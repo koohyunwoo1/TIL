@@ -1,0 +1,12 @@
+.GameMelodyContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color: #02001f;
+  color: white;}
+
+.GameMelodyTitle {
+  font-size: 32px;
+  text-align: center;
+}

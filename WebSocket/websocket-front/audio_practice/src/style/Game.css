@@ -1,0 +1,54 @@
+.GameContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  height: 100vh;
+  background-color: #02001f;
+  color: white;
+}
+
+.GameTitle {
+  font-size: 32px;
+  font-family: "OneMobile";
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+.CategoryContainer {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  max-width: 800px;
+  margin-bottom: 40px;
+}
+
+.GameCategory {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  background-color: #1c1b3f;
+  padding: 20px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  width: 150px;
+  height: 150px;
+  justify-content: center;
+}
+
+.GameCategory:hover {
+  background-color: #4e4b7e;
+}
+
+.CategoryIcon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.GameCategory span {
+  font-size: 18px;
+  font-weight: bold;
+}

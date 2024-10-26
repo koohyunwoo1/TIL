@@ -1,14 +1,16 @@
 .sidebar {
-  width: 200px;
+  width: 250px;
   background-color: #02001f;
-  padding: 10px;
+  padding: 20px;
   height: 100vh;
   overflow-y: auto;
+  border-right: 4px solid #1c1b3f;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.sidebar h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+.sidebarTitle {
+  font-size: 16px;
+  font-family: "OneMobile";
   text-align: center;
   color: #ffffff;
 }
@@ -19,16 +21,34 @@
 }
 
 .sidebar li {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.sidebar li:hover {
+  transform: translateX(10px);
 }
 
 .sidebar li a {
   text-decoration: none;
   color: #ffffff;
-  font-size: 1.1rem;
-  transition: color 0.2s;
+  font-size: 18px;
+  font-family: "MICE";
+  display: block;
+  padding: 10px 15px;
+  background-color: #1c1b3f;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .sidebar li a:hover {
-  color: gray;
+  background-color: #ffffff;
+  color: #02001f;
+}
+
+.sidebar li a::before {
+  content: "▶";
+  margin-right: 10px;
+  font-size: 0.9rem;
+  color: #f8f8f8;
 }

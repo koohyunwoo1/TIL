@@ -1,0 +1,12 @@
+.GameDrumContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  color: white;
+}
+
+.GameDrumTitle {
+  font-size: 32px;
+  text-align: center;
+}

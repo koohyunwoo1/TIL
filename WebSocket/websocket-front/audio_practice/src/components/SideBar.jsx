@@ -3,10 +3,16 @@ import "../style/SideBar.css";
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <h2>사이드바</h2>
+      <div className="sidebarTitle">
+        음악의 <br />
+        재구SoNG
+      </div>
       <ul>
         <li>
           <Link to="/">홈</Link>
+        </li>
+        <li>
+          <Link to="/Game">게임</Link>
         </li>
       </ul>
     </div>
