@@ -56,7 +56,8 @@ const GamePiano = () => {
 
   // 정답 검증 (음정 맞추기)
   const checkNoteAnswer = () => {
-    if (userInput === note) {
+    if (userInput.toLowerCase() === note.toLowerCase()) {
+      // 대소문자 구분 없이 비교
       setMessage("정답입니다!");
     } else {
       setMessage(`오답입니다! 정답은 ${note} 입니다.`);

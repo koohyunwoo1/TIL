@@ -2,9 +2,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center; 
   height: 100vh;
   background-color: #02001f;
   color: white;
+  font-family: 'OneMobile', sans-serif;
 }
 
 .GameMelodyTitle {
@@ -22,9 +24,17 @@
   margin-top: 20px;
 }
 
-/* 버튼 스타일을 className으로 지정 */
+.MessageDisplay.perfect {
+  color: #1e90ff; 
+}
+
+.NoteDisplay {
+  font-size: 28px;
+  margin: 20px 0;
+}
+
 .start-button {
-  background-color: #4caf50;
+  background-color: #1e90ff; 
   border: none;
   color: white;
   padding: 15px 32px;
@@ -34,8 +44,9 @@
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+  font-family: 'OneMobile', sans-serif;
 }
 
 .start-button:hover {
-  background-color: #45a049;
+  background-color: blue;
 }
