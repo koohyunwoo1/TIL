@@ -1,7 +1,8 @@
 import Chat from "../components/chat";
 import "../style/Game.css";
 import { Link } from "react-router-dom";
-import { FaDrum, FaGuitar, FaMicrophone, FaMusic } from "react-icons/fa";
+import { FaDrum, FaGuitar, FaMicrophone } from "react-icons/fa";
+import { GiPianoKeys } from "react-icons/gi";
 
 const Game = () => {
   return (
@@ -13,7 +14,7 @@ const Game = () => {
           <span>드럼</span>
         </Link>
         <Link to="/piano" className="GameCategory">
-          <FaMusic className="CategoryIcon" /> <span>건반</span>
+          <GiPianoKeys className="CategoryIcon" /> <span>건반</span>
         </Link>
         <Link to="/melody" className="GameCategory">
           <FaMicrophone className="CategoryIcon" />

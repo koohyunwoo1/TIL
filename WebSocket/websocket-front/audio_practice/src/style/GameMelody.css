@@ -4,9 +4,38 @@
   align-items: center;
   height: 100vh;
   background-color: #02001f;
-  color: white;}
+  color: white;
+}
 
 .GameMelodyTitle {
   font-size: 32px;
   text-align: center;
+}
+
+.Mission {
+  margin: 20px 0;
+  font-size: 24px;
+}
+
+.MessageDisplay {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+/* 버튼 스타일을 className으로 지정 */
+.start-button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.start-button:hover {
+  background-color: #45a049;
 }

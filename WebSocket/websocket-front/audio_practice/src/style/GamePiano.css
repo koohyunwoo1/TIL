@@ -2,11 +2,69 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   height: 100vh;
   background-color: #02001f;
-  color: white;}
+  color: white;
+}
 
 .GamePianoTitle {
   font-size: 32px;
   text-align: center;
+  margin-bottom: 20px;
+}
+
+.ModeSelect button {
+  background-color: #444;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.ModeSelect button:hover {
+  background-color: #666;
+}
+
+.NoteGuessing,
+.ChordGuessing {
+  margin-top: 20px;
+}
+
+.NoteGuessing button,
+.ChordGuessing button {
+  background-color: #444;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.NoteGuessing button:hover,
+.ChordGuessing button:hover {
+  background-color: #666;
+}
+
+.Options button {
+  background-color: #444;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.Options button:hover {
+  background-color: #666;
+}
+
+.MessageDisplay {
+  margin-top: 20px;
+  font-size: 20px;
+  color: yellow;
 }

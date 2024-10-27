@@ -11,11 +11,7 @@
   font-size: 32px;
   text-align: center;
   margin-bottom: 20px; 
-}
-
-.ScoreDisplay {
-  font-size: 24px;
-  margin-bottom: 20px; 
+  color: #f0f0f0;
 }
 
 .DrumContainer {
@@ -26,61 +22,31 @@
 }
 
 .Drum {
-  width: 100px; 
-  height: 100px; 
-  border: 2px solid #fff; 
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 18px;
   cursor: pointer;
-  background-color: #444; 
-  margin: 10px; 
-  transition: background-color 0.2s, transform 0.2s; 
+  background: radial-gradient(circle, #a0a0a0, #666);
+  margin: 20px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.6);
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 
 .Drum:hover {
-  background-color: #666; 
+  background: radial-gradient(circle, #c0c0c0, #888);
 }
 
 .Drum:active {
-  transform: scale(0.95); 
+  transform: scale(0.95);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.8);
 }
 
 .CurrentBeatDisplay {
   font-size: 20px;
   margin-top: 20px; 
-}
-
-.DrumButton {
-  padding: 10px 20px;
-  font-size: 18px; 
-  color: white; 
-  background-color: #444; 
-  border: none; 
-  border-radius: 5px; 
-  cursor: pointer;
-  transition: background-color 0.3s; 
-  margin-bottom: 20px; 
-}
-
-.DrumButton:hover {
-  background-color: #666;
-}
-
-.DrumButton:active {
-  transform: scale(0.8); 
-}
-
-.Modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  z-index: 1000;
+  color: #f0f0f0;
 }
