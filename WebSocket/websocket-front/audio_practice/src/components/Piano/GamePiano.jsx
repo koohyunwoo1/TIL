@@ -1,7 +1,6 @@
 import { useState } from "react";
-import * as Tone from "tone"; // Tone.js 라이브러리 불러오기
-import "../style/GamePiano.css";
-
+import * as Tone from "tone";
+import "../../style/Piano/GamePiano.css";
 const notes = ["C4", "D4", "E4", "F4", "G4", "A4", "B4", "C#4", "D#4"];
 const chords = [
   { name: "C", notes: ["C4", "E4", "G4"] },
@@ -84,15 +83,16 @@ const GamePiano = () => {
 
   return (
     <div className="GamePianoContainer">
-      <div className="GamePianoTitle">게임 건반 페이지</div>
+      <div className="GamePianoTitle">
+        절대 음감
+        <img src="/assets/note.png" />
+      </div>
 
-      {/* 모드 선택 */}
       <div className="ModeSelect">
         <button onClick={() => setMode("note")}>음정 맞추기</button>
         <button onClick={() => setMode("chord")}>코드 맞추기</button>
       </div>
 
-      {/* 음정 맞추기 모드 */}
       {mode === "note" && (
         <div className="NoteGuessing">
           <button onClick={playRandomNote}>음정 들려주기</button>
@@ -107,7 +107,6 @@ const GamePiano = () => {
         </div>
       )}
 
-      {/* 코드 맞추기 모드 */}
       {mode === "chord" && (
         <div className="ChordGuessing">
           <button onClick={playRandomChord}>코드 들려주기</button>
@@ -118,7 +117,7 @@ const GamePiano = () => {
               </button>
             ))}
           </div>
-          <div className="MessageDisplay">{message}</div>
+          <div className="PianoMessageDisplay">{message}</div>
         </div>
       )}
     </div>

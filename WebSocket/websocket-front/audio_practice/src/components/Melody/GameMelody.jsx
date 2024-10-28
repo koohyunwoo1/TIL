@@ -1,7 +1,6 @@
 import { useState } from "react";
 import PitchFinder from "pitchfinder";
-import "../style/GameMelody.css";
-
+import "../../style/Melody/GameMelody.css";
 const GameMelody = () => {
   const [audioContext, setAudioContext] = useState(null);
   const [microphone, setMicrophone] = useState(null);

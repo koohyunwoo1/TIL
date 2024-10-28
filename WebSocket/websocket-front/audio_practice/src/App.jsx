@@ -2,10 +2,10 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Game from "./pages/Game";
 import Sidebar from "./components/SideBar";
-import GameDrum from "./components/GameDrum";
-import GameGuitar from "./components/GameGuitar";
-import GameMelody from "./components/GameMelody";
-import GamePiano from "./components/GamePiano";
+import GameDrum from "./components/Drum/GameDrum";
+import GameGuitar from "./components/Guitar/GameGuitar";
+import GameMelody from "./components/Melody/GameMelody";
+import GamePiano from "./components/Piano/GamePiano";
 import "./App.css";
 
 const App = () => {

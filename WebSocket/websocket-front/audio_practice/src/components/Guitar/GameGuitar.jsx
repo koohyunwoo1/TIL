@@ -1,5 +1,4 @@
-import "../style/GameGuitar.css";
-
+import "../../style/Guitar/GameGuitar.css";
 const GameGuitar = () => {
   return (
     <div className="GameGuitarContainer">
