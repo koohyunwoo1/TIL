@@ -2,81 +2,126 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  margin-top: 100px;
   height: 100vh;
   color: white;
+  font-family: "OneMobile";
+  padding: 20px;
 }
 
 .GamePianoTitle {
   font-size: 72px;
-  font-family: "OneMobile";
   text-align: center;
-  margin-bottom: 60px;
   color: #c796ff;
   position: relative;
+  margin-bottom: 30px;
 }
 
 .GamePianoTitle img {
   position: absolute;
-  top: -10px;
-  left: 50%;
+  top: -60px;
+  left: 80%;
   width: 100px;
   z-index: 1;
 }
 
-.ModeSelect button {
-  background-color: #444;
-  color: white;
-  font-family: "OneMobile";
-  padding: 10px 20px;
-  margin: 10px;
+.ModeSelect {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.ModeSelect Button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 200px;
+  height: 200px;
+  justify-content: center;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
+  font-size: 28px;
+  font-family: "OneMobile";
 }
 
-.ModeSelect button:hover {
-  background-color: #666;
+.ModeSelect Button:hover {
+  background-color: #272753;
+  transform: scale(1.2);
 }
 
-.NoteGuessing,
-.ChordGuessing {
+.GameOverMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   margin-top: 20px;
 }
 
-.NoteGuessing button,
-.ChordGuessing button {
-  background-color: #444;
-  color: white;
-  padding: 10px 20px;
-  margin: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-family: "OneMobile";
+.GameOverMessage > p {
+  font-size: 32px;
 }
 
-.NoteGuessing button:hover,
-.ChordGuessing button:hover {
-  background-color: #666;
-}
-
-.Options button {
-  background-color: #444;
-  color: white;
-  padding: 10px 20px;
-  margin: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.Options button:hover {
-  background-color: #666;
+/* 여기서부터 각 게임의 css */
+.NoteGuessing,
+.ChordGuessing {
+  position: relative;
+  top: 30px;
 }
 
 .PianoMessageDisplay {
   margin-top: 20px;
-  font-size: 20px;
-  color: yellow;
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-family: "OneMobile";
+  color: skyblue;
+  text-align: center;
+}
+
+.PianoLevelDisplay {
+  font-size: 32px;
+  text-align: center;
+  color: white;
+}
+
+.PianoOptions {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.PianoOptions button {
+  width: 200px;
+  height: 200px;
+  font-size: 24px;
+  margin: 10px 30px;
+}
+
+.PianoGameButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  width: auto;
+  margin-top: 0;
+}
+
+/* note css */
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 20px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 255, 0, 0.5);
 }
