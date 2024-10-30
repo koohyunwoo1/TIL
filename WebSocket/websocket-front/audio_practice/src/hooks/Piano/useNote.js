@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { notes } from "../../utils/pianoSound";
 import * as Tone from "tone";
 
 const useNote = () => {
-  const [octave, setOctave] = useState("1옥타브"); // 선택된 옥타브
+  const [octave, setOctave] = useState(null); // 선택된 옥타브를 null로 초기화
+  console.log(octave);
   const [note, setNote] = useState(null); // 현재 정답 음
   const [options, setOptions] = useState([]); // 선택지
   const [message, setMessage] = useState(""); // 피드백 메시지
@@ -31,8 +32,20 @@ const useNote = () => {
     }
   };
 
+  // 옥타브 선택 시 호출되는 함수
+  const selectOctave = (oct) => {
+    console.log(oct);
+    setOctave(oct);
+    setOctaveSelected(true);
+    generateNewQuestion();
+  };
+
   // 새로운 문제를 생성하는 함수 (랜덤한 음과 선택지를 설정)
   const generateNewQuestion = () => {
+    if (!octave) {
+      setMessage("먼저 옥타브를 선택하세요!");
+      return;
+    }
     const selectedNotes = notes[octave];
     const randomNote =
       selectedNotes[Math.floor(Math.random() * selectedNotes.length)];
@@ -44,12 +57,11 @@ const useNote = () => {
     setMessage("음 듣기를 눌러 음을 들어주세요 !");
   };
 
-  // 옥타브 선택 시 호출되는 함수
-  const selectOctave = (oct) => {
-    setOctave(oct);
-    setOctaveSelected(true);
-    generateNewQuestion();
-  };
+  useEffect(() => {
+    if (octave) {
+      generateNewQuestion();
+    }
+  }, [octave]);
 
   // 선택지 3가지를 랜덤으로 생성하여 리턴하는 함수
   const generateOptions = (correct) => {
@@ -70,7 +82,6 @@ const useNote = () => {
     if (level >= 10) {
       setMessage(`게임이 끝났습니다! ${correctCount * 10}점 입니다 !`);
       setGameOver(true);
-      console.log(gameOver);
       return;
     }
 
@@ -103,8 +114,8 @@ const useNote = () => {
     setNote(null);
     setIsDisabled(true);
     setOctaveSelected(false);
+    setOctave(null);
     generateNewQuestion();
-    // setOptions([]);
   };
 
   return {
