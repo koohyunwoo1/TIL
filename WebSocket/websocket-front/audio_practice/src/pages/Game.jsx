@@ -24,7 +24,7 @@ const Game = () => {
       <div className="GameTitle">미니 게임</div>
       <div className="CategoryContainer">
         <button onClick={() => openModal("piano")} className="GameCategory">
-          <GiPianoKeys className="CategoryIcon" /> <span>코드 천재</span>
+          <GiPianoKeys className="CategoryIcon" /> <span>절대 음감</span>
         </button>
         <button onClick={() => openModal("drum")} className="GameCategory">
           <FaDrum className="CategoryIcon" />

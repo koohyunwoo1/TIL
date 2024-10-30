@@ -63,12 +63,8 @@ const GamePiano = () => {
 
           {mode === "note" && (
             <div>
-              <div className="PianoLevelDisplay">
-                점수: {noteCorrectCount * 10} &nbsp; 단계: {noteLevel}
-              </div>
-
               <div className="PianoMessageDisplay">
-                {!octaveSelected ? "옥타브를 선택해주세요!" : noteMessage}
+                {!octaveSelected ? "옥타브를 선택해주세요!" : ""}
               </div>
 
               {!octaveSelected && (
@@ -87,6 +83,10 @@ const GamePiano = () => {
 
               {octaveSelected && (
                 <>
+                  <div className="PianoLevelDisplay">
+                    점수: {noteCorrectCount * 10} &nbsp; 단계: {noteLevel}
+                  </div>
+                  <div className="PianoMessageDisplay">{noteMessage}</div>
                   <div className="PianoOptions">
                     {!isNoteAnswered &&
                       noteOptions.map((option) => (
