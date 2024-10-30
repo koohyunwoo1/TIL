@@ -3,7 +3,6 @@ import Home from "./pages/Home";
 import Game from "./pages/Game";
 import Sidebar from "./components/SideBar";
 import GameDrum from "./components/Drum/GameDrum";
-import GameGuitar from "./components/Guitar/GameGuitar";
 import GameMelody from "./components/Melody/GameMelody";
 import GamePiano from "./components/Piano/GamePiano";
 import "./App.css";
@@ -18,7 +17,6 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/Game" element={<Game />} />
             <Route path="/drum" element={<GameDrum />} />
-            <Route path="/guitar" element={<GameGuitar />} />
             <Route path="/melody" element={<GameMelody />} />
             <Route path="/piano" element={<GamePiano />} />
           </Routes>

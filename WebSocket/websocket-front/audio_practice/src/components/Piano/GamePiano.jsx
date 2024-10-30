@@ -7,115 +7,144 @@ import useChord from "../../hooks/Piano/useChord";
 const GamePiano = () => {
   const [mode, setMode] = useState(null);
   const {
-    setOctave,
-    userInput,
-    setUserInput,
+    note,
+    selectOctave,
+    options: noteOptions,
     message: noteMessage,
     playRandomNote,
     checkNoteAnswer,
+    level: noteLevel,
+    correctCount: noteCorrectCount,
+    gameOver: noteGameOver,
+    resetGame: resetNoteGame,
+    handleNextLevel: handleNextNoteLevel,
+    octaveSelected,
+    isAnswered: isNoteAnswered,
   } = useNote();
+
   const {
-    options,
+    options: chordOptions,
     message: chordMessage,
     playRandomChord,
     checkChordAnswer,
-    level,
-    correctCount,
-    gameOver,
-    resetGame,
-    handleNextLevel,
-    isAnswered,
+    level: chordLevel,
+    correctCount: chordCorrectCount,
+    gameOver: chordGameOver,
+    resetGame: resetChordGame,
+    handleNextLevel: handleNextChordLevel,
+    isAnswered: isChordAnswered,
   } = useChord();
 
   return (
     <div className="GamePianoContainer">
       <div className="GamePianoTitle">
         절대 음감
-        <img src="/assets/note.png" alt="Note Icon" />
+        <img src="/assets/note.png" />
       </div>
 
-      {gameOver ? (
-        <div className="GameOverMessage">
-          <p>{`게임이 끝났습니다! 맞춘 개수: ${correctCount}`}</p>
-          <Button onClick={resetGame}>게임 다시 시작하기</Button>
-        </div>
+      {mode === "note" && noteGameOver ? (
+        <>
+          <div className="PianoMessageDisplay">{noteMessage}</div>
+          <Button onClick={resetNoteGame}>게임 다시 시작하기</Button>
+        </>
+      ) : mode === "chord" && chordGameOver ? (
+        <>
+          <div className="PianoMessageDisplay">{chordMessage}</div>
+          <Button onClick={resetChordGame}>게임 다시 시작하기</Button>
+        </>
       ) : (
         <>
           {mode === null && (
             <div className="ModeSelect">
               <Button onClick={() => setMode("note")}>음정 맞추기</Button>
-              <Button onClick={() => setMode("chord")}>코드 맞추기</Button>
+              <Button onClick={() => setMode("chord")}>화음 맞추기</Button>
             </div>
           )}
 
           {mode === "note" && (
-            <div className="NoteGuessing">
-              <div className="OctaveSelect">
-                <Button
-                  onClick={() => {
-                    setOctave("1옥타브");
-                    playRandomNote();
-                  }}
-                >
-                  1옥타브
-                </Button>
-                <Button
-                  onClick={() => {
-                    setOctave("2옥타브");
-                    playRandomNote();
-                  }}
-                >
-                  2옥타브
-                </Button>
-                <Button
-                  onClick={() => {
-                    setOctave("3옥타브");
-                    playRandomNote();
-                  }}
-                >
-                  3옥타브
-                </Button>
+            <div>
+              <div className="PianoLevelDisplay">
+                점수: {noteCorrectCount * 10} &nbsp; 단계: {noteLevel}
               </div>
-              <input
-                type="text"
-                value={userInput}
-                onChange={(e) => setUserInput(e.target.value)}
-                placeholder="정답 입력 (ex. C4)"
-              />
-              <Button onClick={checkNoteAnswer}>제출</Button>
-              <div className="MessageDisplay">{noteMessage}</div>
+
+              <div className="PianoMessageDisplay">
+                {!octaveSelected ? "옥타브를 선택해주세요!" : noteMessage}
+              </div>
+
+              {!octaveSelected && (
+                <div className="PianoOptions">
+                  <Button onClick={() => selectOctave("1옥타브")}>
+                    1옥타브
+                  </Button>
+                  <Button onClick={() => selectOctave("2옥타브")}>
+                    2옥타브
+                  </Button>
+                  <Button onClick={() => selectOctave("3옥타브")}>
+                    3옥타브
+                  </Button>
+                </div>
+              )}
+
+              {octaveSelected && (
+                <>
+                  <div className="PianoOptions">
+                    {!isNoteAnswered &&
+                      noteOptions.map((option) => (
+                        <Button
+                          key={option}
+                          onClick={() => checkNoteAnswer(option)}
+                        >
+                          {option}
+                        </Button>
+                      ))}
+                  </div>
+
+                  <div className="PianoGameButton">
+                    {isNoteAnswered ? (
+                      <Button onClick={handleNextNoteLevel}>
+                        다음 문제로 가기
+                      </Button>
+                    ) : (
+                      <Button onClick={() => playRandomNote(note)}>
+                        음 듣기
+                      </Button>
+                    )}
+                  </div>
+                </>
+              )}
             </div>
           )}
 
           {mode === "chord" && (
-            <>
-              <div className="ChordGuessing">
-                <div className="PianoLevelDisplay">
-                  점수: {correctCount * 10} &nbsp; 단계: {level}
-                </div>
-
-                <div className="PianoMessageDisplay">{chordMessage}</div>
-
-                <div className="PianoOptions">
-                  {!isAnswered &&
-                    options.map((option) => (
-                      <Button
-                        key={option}
-                        onClick={() => checkChordAnswer(option)}
-                      >
-                        {option}
-                      </Button>
-                    ))}
-                </div>
+            <div>
+              <div className="PianoLevelDisplay">
+                점수: {chordCorrectCount * 10} &nbsp; 단계: {chordLevel}
               </div>
+
+              <div className="PianoMessageDisplay">{chordMessage}</div>
+
+              <div className="PianoOptions">
+                {!isChordAnswered &&
+                  chordOptions.map((option) => (
+                    <Button
+                      key={option}
+                      onClick={() => checkChordAnswer(option)}
+                    >
+                      {option}
+                    </Button>
+                  ))}
+              </div>
+
               <div className="PianoGameButton">
-                {isAnswered ? (
-                  <Button onClick={handleNextLevel}>다음 문제로 가기</Button>
+                {isChordAnswered ? (
+                  <Button onClick={handleNextChordLevel}>
+                    다음 문제로 가기
+                  </Button>
                 ) : (
-                  <Button onClick={playRandomChord}>코드 듣기</Button>
+                  <Button onClick={playRandomChord}>화음 듣기</Button>
                 )}
               </div>
-            </>
+            </div>
           )}
         </>
       )}

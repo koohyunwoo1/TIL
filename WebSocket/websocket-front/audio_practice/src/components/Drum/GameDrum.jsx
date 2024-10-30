@@ -25,8 +25,7 @@ const GameDrum = () => {
       {isGameStarted && (
         <>
           <div className="ScoreLevelContainer">
-            <div className="DrumScoreDisplay">점수: {score}</div>
-            <div className="DrumLevelDisplay">단계: {level}</div>
+            점수 : {score} &nbsp; 단계: {level}
           </div>
           <div className="DrumMessageDisplay">{message}</div>
         </>

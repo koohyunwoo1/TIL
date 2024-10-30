@@ -21,14 +21,9 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
-}
-
-.DrumScoreDisplay,
-.DrumLevelDisplay {
   font-size: 32px;
-  margin: 0 30px;
-  color: #f0f0f0;
   font-family: "OneMobile";
+  color: white;
 }
 
 .DrumMessageDisplay {

@@ -10,11 +10,11 @@
 }
 
 .GamePianoTitle {
-  font-size: 72px;
+  font-size: 64px;
   text-align: center;
   color: #c796ff;
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .GamePianoTitle img {
@@ -37,7 +37,7 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  margin: 20px;
+  margin: 30px;
   border-radius: 10px;
   transition: background-color 0.3s ease, transform 0.3s ease;
   width: 200px;
@@ -54,29 +54,9 @@
   transform: scale(1.2);
 }
 
-.GameOverMessage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin-top: 20px;
-}
-
-.GameOverMessage > p {
-  font-size: 32px;
-}
-
-/* 여기서부터 각 게임의 css */
-.NoteGuessing,
-.ChordGuessing {
-  position: relative;
-  top: 30px;
-}
-
 .PianoMessageDisplay {
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   font-size: 30px;
   font-family: "OneMobile";
   color: skyblue;
@@ -109,19 +89,4 @@
   justify-content: center;
   width: auto;
   margin-top: 0;
-}
-
-/* note css */
-input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  margin: 20px 0;
-  border: none;
-  border-radius: 5px;
-  font-size: 18px;
-}
-
-input[type="text"]:focus {
-  outline: none;
-  box-shadow: 0 0 5px rgba(255, 255, 0, 0.5);
 }
