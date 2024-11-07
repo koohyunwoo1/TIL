@@ -22,25 +22,35 @@
 .SkillBadges {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start; 
+  gap: 25px;
   margin-top: 10px;
 }
 
 .SkillBadgeContainer {
-  width: 18%;
+  width: calc(20% - 20px); 
   margin-bottom: 20px;
+  cursor: url('/assets/cursor.png'), auto 
 }
 
+
 .SkillBadge {
-  display: inline-block;
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
   color: black;
   padding: 5px 10px;
-  border-radius: 5px;
-  margin: 5px;
+  border-radius: 15px;
   margin-top: 15px;
-  font-size: 14px;
+  font-size: 24px;
   font-weight: bold;
+  width: 150px;
+  height: 150px;
+  text-align: center;
 }
+
+
 .SoftSkillTitle {
   font-size: 20px;
   font-weight: bold;
@@ -88,6 +98,7 @@
 
 .SkillBadge.html {
   background-color: #e44d26;
+  color: white;
 }
 
 .SkillBadge.css {
@@ -131,6 +142,7 @@
 
 .SkillBadge.figma {
   background-color: #f24e1e;
+  color: white;
 }
 
 .SkillBadge.notion {

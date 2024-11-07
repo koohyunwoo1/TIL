@@ -12,7 +12,7 @@
   display: flex;
   align-items: center;
   transition: transform 0.3s ease;
-  cursor: pointer;
+  cursor: url('/assets/cursor.png'), auto 
 }
 
 .projectCard:hover {
@@ -152,9 +152,7 @@
 .projectDescription p {
   margin-left: 30px;
   white-space: normal;
-  /* 텍스트가 상자 밖으로 넘치지 않게 줄바꿈이 가능하다. */
   word-break: break-all;
-  /* 긴 단어나 공백이 없는 긴 텍스트가 있을 때 강제로 단어를 끊어 다음 줄로 넘깁니다. */
 }
 
 .projectImages {

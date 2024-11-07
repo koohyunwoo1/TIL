@@ -15,26 +15,81 @@ import {
   SiGit,
 } from "react-icons/si";
 import { IoLogoVercel } from "react-icons/io5";
+import Modal from "../common/Modal";
 
 const Skill = () => {
   const hardSkills = [
     {
       title: "Language",
       items: [
-        { name: "JavaScript", icon: <FaJs />, percent: 65, className: "js" },
+        {
+          name: "JavaScript",
+          icon: <FaJs />,
+          percent: 65,
+          className: "js",
+          description: (
+            <>
+              - ES6 이후의 문법: 템플릿 리터럴, 화살표 함수, 스프레드 연산자
+              등을 활용할 수 있습니다.
+              <br />- async/await와 Fetch API를 사용해 비동기 작업 및 서버와의
+              동적 통신을 구현했습니다.
+            </>
+          ),
+        },
         {
           name: "TypeScript",
           icon: <SiTypescript />,
           percent: 30,
           className: "ts",
+          description: (
+            <>
+              - JavaScript의 타입 안정성을 제공하여 유지보수성과 가독성을 높일
+              수 있습니다.
+              <br />- React와 같은 라이브러리와 함께 사용해 타입 안정성을
+              보장하며 오류를 줄일 수 있습니다.
+            </>
+          ),
         },
-        { name: "HTML5", icon: <FaHtml5 />, percent: 70, className: "html" },
-        { name: "CSS3", icon: <FaCss3Alt />, percent: 70, className: "css" },
+        {
+          name: "HTML5",
+          icon: <FaHtml5 />,
+          percent: 70,
+          className: "html",
+          description: (
+            <>
+              - 시맨틱 태그를 활용해 구조적이고 접근성 높은 웹 페이지를 설계할
+              수 있습니다.
+              <br />- 최신 브라우저 API를 사용해 동적인 웹 기능을 구현할 수
+              있습니다.
+            </>
+          ),
+        },
+        {
+          name: "CSS3",
+          icon: <FaCss3Alt />,
+          percent: 70,
+          className: "css",
+          description: (
+            <>
+              - CSS3를 사용해 스타일링과 레이아웃 설계를 할 수 있으며, 반응형
+              디자인을 구현할 수 있습니다.
+              <br />- Flexbox와 Grid를 활용해 복잡한 레이아웃을 효율적으로
+              개발할 수 있습니다.
+            </>
+          ),
+        },
         {
           name: "Python",
           icon: <FaPython />,
           percent: 70,
           className: "python",
+          description: (
+            <>
+              - Python을 사용해 데이터 분석 및 간단한 스크립트를 작성할 수
+              있습니다.
+              <br />- Flask와 Django를 사용해 웹 서버를 구축한 경험이 있습니다.
+            </>
+          ),
         },
       ],
     },
@@ -46,66 +101,149 @@ const Skill = () => {
           icon: <SiReact />,
           percent: 70,
           className: "react",
+          description: (
+            <>
+              - React를 사용해 UI를 컴포넌트 기반으로 설계하고, 동적 웹
+              애플리케이션을 개발할 수 있습니다.
+              <br />- 상태 관리 라이브러리(Redux, Context API 등)를 사용해
+              대규모 애플리케이션을 관리할 수 있습니다.
+            </>
+          ),
         },
         {
-          name: "React Native",
+          name: "ReactNative",
           icon: "📱",
           percent: 30,
           className: "react-native",
+          description: (
+            <>
+              - React Native로 크로스플랫폼 모바일 애플리케이션을 개발한 경험이
+              있습니다.
+              <br />- 네이티브 모듈 연동과 애니메이션 처리를 통해 사용자 경험을
+              향상시켰습니다.
+            </>
+          ),
         },
-        {
-          name: "Android",
-          icon: <SiAndroid />,
-          percent: 30,
-          className: "android",
-        },
+        // {
+        //   name: "Android",
+        //   icon: <SiAndroid />,
+        //   percent: 30,
+        //   className: "android",
+        // },
         {
           name: "Vue.js",
           icon: <IoLogoVercel />,
           percent: 30,
           className: "vue",
+          description: (
+            <>
+              - Vue.js로 간단한 SPA(Single Page Application)를 구현한 경험이
+              있습니다.
+              <br />- Vuex를 활용한 상태 관리와 컴포넌트 기반 설계 경험이
+              있습니다.
+            </>
+          ),
         },
-        {
-          name: "Django",
-          icon: <SiDjango />,
-          percent: 20,
-          className: "django",
-        },
+        // {
+        //   name: "Django",
+        //   icon: <SiDjango />,
+        //   percent: 20,
+        //   className: "django",
+        // },
       ],
     },
-    {
-      title: "Library",
-      items: [
-        {
-          name: "Bootstrap",
-          icon: <SiBootstrap />,
-          percent: 50,
-          className: "bootstrap",
-        },
-      ],
-    },
+    // {
+    //   title: "Library",
+    //   items: [
+    //     {
+    //       name: "Bootstrap",
+    //       icon: <SiBootstrap />,
+    //       percent: 50,
+    //       className: "bootstrap",
+    //     },
+    //   ],
+    // },
     {
       title: "Tools",
       items: [
+        // {
+        //   name: "Visual Studio",
+        //   icon: <SiVisualstudio />,
+        //   percent: 80,
+        //   className: "visualstudio",
+        // },
         {
-          name: "Visual Studio",
-          icon: <SiVisualstudio />,
-          percent: 80,
-          className: "visualstudio",
+          name: "Figma",
+          icon: <SiFigma />,
+          percent: 70,
+          className: "figma",
+          description: (
+            <>
+              - UI/UX 디자인 협업 도구로 사용하며, 프로토타입을 설계한 경험이
+              있습니다.
+              <br />- 컴포넌트 기반 설계와 Auto Layout을 활용해 효율적으로
+              디자인을 제작할 수 있습니다.
+            </>
+          ),
         },
-        { name: "Figma", icon: <SiFigma />, percent: 70, className: "figma" },
         {
           name: "Notion",
           icon: <SiNotion />,
           percent: 50,
           className: "notion",
+          description: (
+            <>
+              - 팀 협업 및 프로젝트 관리 도구로 사용하며, 효율적인 작업 흐름을
+              구성했습니다.
+              <br />- 데이터베이스와 템플릿을 활용해 체계적인 문서화를 진행할 수
+              있습니다.
+            </>
+          ),
         },
-        { name: "JIRA", icon: <SiJira />, percent: 70, className: "jira" },
-        { name: "MySql", icon: <SiMysql />, percent: 30, className: "mysql" },
-        { name: "Git", icon: <SiGit />, percent: 70, className: "git" },
+        {
+          name: "JIRA",
+          icon: <SiJira />,
+          percent: 70,
+          className: "jira",
+          description: (
+            <>
+              - 애자일 기반 프로젝트 관리를 위해 사용하며, 스프린트 및 태스크
+              관리를 효율적으로 수행했습니다.
+              <br />- JIRA 보드를 활용해 팀 내 작업 진행 상황을 시각적으로
+              관리했습니다.
+            </>
+          ),
+        },
+        // { name: "MySql", icon: <SiMysql />, percent: 30, className: "mysql" },
+        {
+          name: "Git",
+          icon: <SiGit />,
+          percent: 70,
+          className: "git",
+          description: (
+            <>
+              - Git을 활용해 버전 관리를 체계적으로 수행하고, 협업 시 브랜치
+              전략을 사용합니다.
+              <br />- GitHub Actions를 통해 CI/CD 자동화를 경험했습니다.
+            </>
+          ),
+        },
       ],
     },
   ];
+
+  const [isModalVisible, setModalVisible] = useState(false);
+  const [modalContent, setModalContent] = useState("");
+
+  const openModal = (description) => {
+    setModalContent(description);
+    setModalVisible(true);
+  };
+
+  const closeModal = () => {
+    setModalContent("");
+    setModalVisible(false);
+  };
 
   const softSkills = [
     {
@@ -233,32 +371,32 @@ const Skill = () => {
     },
   ];
 
-  const [isVisible, setIsVisible] = useState(false);
-
   const skillRef = useRef(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        } else {
-          setIsVisible(false);
-        }
-      },
-      { threshold: 0.4 }
-    );
+  // const [isVisible, setIsVisible] = useState(false);
 
-    if (skillRef.current) {
-      observer.observe(skillRef.current);
-    }
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //     ([entry]) => {
+  //       if (entry.isIntersecting) {
+  //         setIsVisible(true);
+  //       } else {
+  //         setIsVisible(false);
+  //       }
+  //     },
+  //     { threshold: 0.4 }
+  //   );
 
-    return () => {
-      if (skillRef.current) {
-        observer.unobserve(skillRef.current);
-      }
-    };
-  }, []);
+  //   if (skillRef.current) {
+  //     observer.observe(skillRef.current);
+  //   }
+
+  //   return () => {
+  //     if (skillRef.current) {
+  //       observer.unobserve(skillRef.current);
+  //     }
+  //   };
+  // }, []);
 
   return (
     <div ref={skillRef}>
@@ -277,12 +415,16 @@ const Skill = () => {
             <div className="SkillSubTitle">{skillGroup.title}</div>
             <div className="SkillBadges">
               {skillGroup.items.map((skill, idx) => (
-                <div className="SkillBadgeContainer" key={idx}>
+                <div
+                  className="SkillBadgeContainer"
+                  key={idx}
+                  onClick={() => openModal(skill.description)}
+                >
                   <span className={`SkillBadge ${skill.className}`}>
                     {skill.icon}
                     {skill.name}
                   </span>
-                  <div className="SkillProgress">
+                  {/* <div className="SkillProgress">
                     <div
                       className="SkillProgressBar"
                       style={{
@@ -290,7 +432,7 @@ const Skill = () => {
                         transition: "width 1s ease-in-out",
                       }}
                     />
-                  </div>
+                  </div> */}
                 </div>
               ))}
             </div>
@@ -313,6 +455,11 @@ const Skill = () => {
           ))}
         </ul>
       </div>
+      <Modal
+        isVisible={isModalVisible}
+        onClose={closeModal}
+        content={modalContent}
+      />
     </div>
   );
 };
