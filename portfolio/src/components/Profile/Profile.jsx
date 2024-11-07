@@ -8,7 +8,7 @@ import {
   faCodeBranch,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { SiNotion } from "react-icons/si"; // react-icons에서 Notion 아이콘 사용
+import { SiNotion } from "react-icons/si";
 import Skill from "./Skill";
 import Career from "./Career";
 
@@ -24,9 +24,13 @@ const Profile = () => {
           <div className="ProfileBirth">
             <FontAwesomeIcon icon={faBirthdayCake} /> 1999.07.07
           </div>
-          <div className="ProfileBirth">
-            <FontAwesomeIcon icon={faEnvelope} /> kjklovekhw@gmail.com
+          <div className="ProfileEmailContainer">
+            <FontAwesomeIcon icon={faEnvelope} />
+            <a href="mailto:kjklovekhw@gmail.com" className="ProfileEmail">
+              kjklovekhw@gmail.com
+            </a>
           </div>
+
           <div className="Badges">
             <span className="Badge">
               <FontAwesomeIcon icon={faCodeBranch} /> Frontend Developer
@@ -34,7 +38,7 @@ const Profile = () => {
             <span className="Badge">React.js</span>
           </div>
           <div className="ProfileIntro">
-            안녕하세요 프론트개발자를 꿈꾸고 있는 학생입니다.
+            사용자 중심의 인터페이스를 만들어가는 프론트엔드 개발자입니다.
           </div>
           <div className="ProfileLink">
             <div className="ProfileGithub">

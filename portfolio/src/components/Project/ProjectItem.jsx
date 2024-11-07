@@ -9,14 +9,14 @@ import RunUsThumbnail from "../../assets/RunUs.png";
 const projects = [
   {
     id: 1,
-    title: "Gflex",
-    thumbnail: GflexThumbnail,
+    title: "PillSoo",
+    thumbnail: PillSooThumbnail,
     images: Array.from(
       { length: 12 },
-      (_, index) => `/assets/Gflex/image${index}.png`
+      (_, index) => `/assets/PillSoo/image${index}.jpg`
     ),
-    period: "2024.05.16 - 2024.05.24 (1주)",
-    link: "https://github.com/koohyunwoo1/G-flex",
+    period: "2024.08.26 - 2024.10.11 (7주)",
+    link: "https://github.com/koohyunwoo1/Pillsoo",
   },
   {
     id: 2,
@@ -31,14 +31,14 @@ const projects = [
   },
   {
     id: 3,
-    title: "PillSoo",
-    thumbnail: PillSooThumbnail,
+    title: "Gflex",
+    thumbnail: GflexThumbnail,
     images: Array.from(
       { length: 12 },
-      (_, index) => `/assets/PillSoo/image${index}.jpg`
+      (_, index) => `/assets/Gflex/image${index}.png`
     ),
-    period: "2024.08.26 - 2024.10.11 (7주)",
-    link: "https://github.com/koohyunwoo1/Pillsoo",
+    period: "2024.05.16 - 2024.05.24 (1주)",
+    link: "https://github.com/koohyunwoo1/G-flex",
   },
 ];
 

@@ -125,11 +125,20 @@ const Skill = () => {
               >
                 소통
               </strong>
-              을 가장 중요하게 생각하며, 팀워크를 통해 협력하는 것을 선호합니다.
-              팀원들과의 열린 대화를 통해 아이디어를 나누고, 명확하게 의견을
-              전달하는 것이 중요하다고 믿습니다. 저는 팀 내에서 서로의 강점을
-              살리고 다양한 의견을 존중하며, 협업을 통해 더 나은 결과물을
-              만들어내는 것을 지향합니다.
+              을 가장 중요하게 생각하며,
+              <strong
+                style={{
+                  color: "orange",
+                  fontSize: "18px",
+                  fontWeight: "bold",
+                  fontStyle: "oblique",
+                }}
+              >
+                팀워크
+              </strong>
+              를 통해 협력하는 것을 선호합니다. 팀원들과의 열린 대화를 통해
+              아이디어를 나누고, 명확하게 의견을 전달하는 것이 중요하다고
+              믿습니다.
             </>
           ),
         },
@@ -270,7 +279,8 @@ const Skill = () => {
               {skillGroup.items.map((skill, idx) => (
                 <div className="SkillBadgeContainer" key={idx}>
                   <span className={`SkillBadge ${skill.className}`}>
-                    {skill.icon} {skill.name}
+                    {skill.icon}
+                    {skill.name}
                   </span>
                   <div className="SkillProgress">
                     <div

@@ -1,12 +1,10 @@
 .HeaderBar {
   color: white;
-  width: 100%;
+  font-size: 18px;
   padding: 10px;
   transition: top 0.3s ease;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
-  border-radius: 5px;
   font-weight: bold;
 }
 
