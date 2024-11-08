@@ -21,6 +21,10 @@
   margin-top: 20px;
   margin-left: 25px;
   font-weight: 400;
+  background-color: #2d2d2d;
+  padding: 60px;
+  border-radius: 20px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 1); */
 }
 
 .CareerTitle li {
