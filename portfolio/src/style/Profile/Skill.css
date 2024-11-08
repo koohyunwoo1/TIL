@@ -22,23 +22,22 @@
 .SkillBadges {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start; 
-  gap: 25px;
+  justify-content: flex-start;
+  gap: 15x;
   margin-top: 10px;
 }
 
 .SkillBadgeContainer {
-  width: calc(20% - 20px); 
+  width: calc(20% - 20px);
   margin-bottom: 20px;
-  cursor: url('/assets/cursor.png'), auto 
+  cursor: url("/assets/cursor.png"), auto;
 }
 
-
 .SkillBadge {
-  display: flex; 
-  flex-direction: column; 
-  justify-content: center; 
-  align-items: center; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: black;
   padding: 5px 10px;
   border-radius: 15px;
@@ -48,8 +47,12 @@
   width: 150px;
   height: 150px;
   text-align: center;
+  transition: transform 0.3s ease;
 }
 
+.SkillBadge:hover {
+  transform: scale(1.2);
+}
 
 .SoftSkillTitle {
   font-size: 20px;
