@@ -1,20 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import "../../style/Profile/Skill.css";
-import { FaJs, FaPython, FaHtml5, FaCss3Alt } from "react-icons/fa";
-import {
-  SiTypescript,
-  SiReact,
-  SiAndroid,
-  SiDjango,
-  SiBootstrap,
-  SiVisualstudio,
-  SiFigma,
-  SiNotion,
-  SiJira,
-  SiMysql,
-  SiGit,
-} from "react-icons/si";
-import { IoLogoVercel } from "react-icons/io5";
 import Modal from "../common/Modal";
 
 const Skill = () => {
@@ -24,8 +9,7 @@ const Skill = () => {
       items: [
         {
           name: "JavaScript",
-          icon: <FaJs />,
-          percent: 65,
+          imageSrc: "/assets/skills/JavaScript.png",
           className: "js",
           description: (
             <>
@@ -38,8 +22,7 @@ const Skill = () => {
         },
         {
           name: "TypeScript",
-          icon: <SiTypescript />,
-          percent: 30,
+          imageSrc: "/assets/skills/TypeScript.png",
           className: "ts",
           description: (
             <>
@@ -52,8 +35,7 @@ const Skill = () => {
         },
         {
           name: "HTML5",
-          icon: <FaHtml5 />,
-          percent: 70,
+          imageSrc: "/assets/skills/HTML5.png",
           className: "html",
           description: (
             <>
@@ -66,8 +48,7 @@ const Skill = () => {
         },
         {
           name: "CSS3",
-          icon: <FaCss3Alt />,
-          percent: 70,
+          imageSrc: "/assets/skills/CSS3.png",
           className: "css",
           description: (
             <>
@@ -80,14 +61,13 @@ const Skill = () => {
         },
         {
           name: "Python",
-          icon: <FaPython />,
-          percent: 70,
+          imageSrc: "/assets/skills/Python.png",
           className: "python",
           description: (
             <>
               - Python을 사용해 데이터 분석 및 간단한 스크립트를 작성할 수
               있습니다.
-              <br />- Flask와 Django를 사용해 웹 서버를 구축한 경험이 있습니다.
+              <br />- Django를 사용해 웹 서버를 구축한 경험이 있습니다.
             </>
           ),
         },
@@ -98,84 +78,50 @@ const Skill = () => {
       items: [
         {
           name: "React.js",
-          icon: <SiReact />,
-          percent: 70,
+          imageSrc: "/assets/skills/React.png",
           className: "react",
           description: (
             <>
               - React를 사용해 UI를 컴포넌트 기반으로 설계하고, 동적 웹
               애플리케이션을 개발할 수 있습니다.
-              <br />- 상태 관리 라이브러리(Redux, Context API 등)를 사용해
-              대규모 애플리케이션을 관리할 수 있습니다.
+              <br />- 상태 관리 라이브러리(Redux, Zustand, Context API 등)를
+              사용해 대규모 웹 서비스를 관리할 수 있습니다.
             </>
           ),
         },
         {
           name: "ReactNative",
-          icon: "📱",
-          percent: 30,
+          imageSrc: "/assets/skills/ReactNative.png",
           className: "react-native",
           description: (
             <>
-              - React Native로 크로스플랫폼 모바일 애플리케이션을 개발한 경험이
-              있습니다.
+              - React Native로 모바일 애플리케이션을 개발한 경험이 있습니다.
               <br />- 네이티브 모듈 연동과 애니메이션 처리를 통해 사용자 경험을
               향상시켰습니다.
             </>
           ),
         },
-        // {
-        //   name: "Android",
-        //   icon: <SiAndroid />,
-        //   percent: 30,
-        //   className: "android",
-        // },
         {
           name: "Vue.js",
-          icon: <IoLogoVercel />,
-          percent: 30,
+          imageSrc: "/assets/skills/Vue.png",
           className: "vue",
           description: (
             <>
               - Vue.js로 간단한 SPA(Single Page Application)를 구현한 경험이
               있습니다.
-              <br />- Vuex를 활용한 상태 관리와 컴포넌트 기반 설계 경험이
+              <br />- Pinia를 활용한 상태 관리와 컴포넌트 기반 설계 경험이
               있습니다.
             </>
           ),
         },
-        // {
-        //   name: "Django",
-        //   icon: <SiDjango />,
-        //   percent: 20,
-        //   className: "django",
-        // },
       ],
     },
-    // {
-    //   title: "Library",
-    //   items: [
-    //     {
-    //       name: "Bootstrap",
-    //       icon: <SiBootstrap />,
-    //       percent: 50,
-    //       className: "bootstrap",
-    //     },
-    //   ],
-    // },
     {
       title: "Tools",
       items: [
-        // {
-        //   name: "Visual Studio",
-        //   icon: <SiVisualstudio />,
-        //   percent: 80,
-        //   className: "visualstudio",
-        // },
         {
           name: "Figma",
-          icon: <SiFigma />,
-          percent: 70,
+          imageSrc: "/assets/skills/Figma.png",
           className: "figma",
           description: (
             <>
@@ -188,8 +134,7 @@ const Skill = () => {
         },
         {
           name: "Notion",
-          icon: <SiNotion />,
-          percent: 50,
+          imageSrc: "/assets/skills/Notion.png",
           className: "notion",
           description: (
             <>
@@ -202,8 +147,7 @@ const Skill = () => {
         },
         {
           name: "JIRA",
-          icon: <SiJira />,
-          percent: 70,
+          imageSrc: "/assets/skills/Jira.png",
           className: "jira",
           description: (
             <>
@@ -214,11 +158,9 @@ const Skill = () => {
             </>
           ),
         },
-        // { name: "MySql", icon: <SiMysql />, percent: 30, className: "mysql" },
         {
           name: "Git",
-          icon: <SiGit />,
-          percent: 70,
+          imageSrc: "/assets/skills/Git.png",
           className: "git",
           description: (
             <>
@@ -231,19 +173,6 @@ const Skill = () => {
       ],
     },
   ];
-
-  const [isModalVisible, setModalVisible] = useState(false);
-  const [modalContent, setModalContent] = useState("");
-
-  const openModal = (description) => {
-    setModalContent(description);
-    setModalVisible(true);
-  };
-
-  const closeModal = () => {
-    setModalContent("");
-    setModalVisible(false);
-  };
 
   const softSkills = [
     {
@@ -371,68 +300,36 @@ const Skill = () => {
     },
   ];
 
-  const skillRef = useRef(null);
+  // const [isModalVisible, setModalVisible] = useState(false);
+  // const [modalContent, setModalContent] = useState("");
 
-  // const [isVisible, setIsVisible] = useState(false);
+  // const openModal = (description) => {
+  //   setModalContent(description);
+  //   setModalVisible(true);
+  // };
 
-  // useEffect(() => {
-  //   const observer = new IntersectionObserver(
-  //     ([entry]) => {
-  //       if (entry.isIntersecting) {
-  //         setIsVisible(true);
-  //       } else {
-  //         setIsVisible(false);
-  //       }
-  //     },
-  //     { threshold: 0.4 }
-  //   );
-
-  //   if (skillRef.current) {
-  //     observer.observe(skillRef.current);
-  //   }
-
-  //   return () => {
-  //     if (skillRef.current) {
-  //       observer.unobserve(skillRef.current);
-  //     }
-  //   };
-  // }, []);
+  // const closeModal = () => {
+  //   setModalContent("");
+  //   setModalVisible(false);
+  // };
 
   return (
-    <div ref={skillRef}>
+    <div>
       <div className="Skill">
-        <i
-          className="fas fa-project-diagram"
-          style={{ marginRight: "10px" }}
-        ></i>
-        Skill
-      </div>
-
-      <div>
         <h2 className="SkillTitle">Hard Skills</h2>
         {hardSkills.map((skillGroup, index) => (
           <div className="SkillSection" key={index}>
-            <div className="SkillSubTitle">{skillGroup.title}</div>
+            <h3 className="SkillSubTitle">{skillGroup.title}</h3>
             <div className="SkillBadges">
               {skillGroup.items.map((skill, idx) => (
-                <div
-                  className="SkillBadgeContainer"
-                  key={idx}
-                  onClick={() => openModal(skill.description)}
-                >
-                  <span className={`SkillBadge ${skill.className}`}>
-                    {skill.icon}
-                    {skill.name}
-                  </span>
-                  {/* <div className="SkillProgress">
-                    <div
-                      className="SkillProgressBar"
-                      style={{
-                        width: isVisible ? `${skill.percent}%` : "0%",
-                        transition: "width 1s ease-in-out",
-                      }}
-                    />
-                  </div> */}
+                <div className="SkillBadgeContainer" key={idx}>
+                  <img
+                    src={skill.imageSrc}
+                    alt={skill.name}
+                    className="SkillBadgeImage"
+                  />
+                  <span className="SkillBadgeText">{skill.name}</span>
+                  <div className="SkillDescription">{skill.description}</div>
                 </div>
               ))}
             </div>
@@ -441,7 +338,7 @@ const Skill = () => {
       </div>
 
       <div className="SkillSection">
-        <h2 className="SkillTitle">Soft Skills</h2>
+        <h2 className="SoftSkill">Soft Skills</h2>
         <ul className="SoftSkillTitle">
           {softSkills.map((skillGroup, index) => (
             <li key={index} className="SoftSkillText">
@@ -455,11 +352,6 @@ const Skill = () => {
           ))}
         </ul>
       </div>
-      <Modal
-        isVisible={isModalVisible}
-        onClose={closeModal}
-        content={modalContent}
-      />
     </div>
   );
 };

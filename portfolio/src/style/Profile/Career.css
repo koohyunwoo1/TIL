@@ -24,7 +24,8 @@
   background-color: #2d2d2d;
   padding: 60px;
   border-radius: 20px;
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 1); */
+  display: grid; /* Grid 적용 */
+  gap: 20px; /* 요소 간 간격 */
 }
 
 .CareerTitle li {

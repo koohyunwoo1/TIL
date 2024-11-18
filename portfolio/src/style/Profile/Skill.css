@@ -12,6 +12,17 @@
   text-align: center;
 }
 
+.SoftSkill {
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+  margin-top: 120px;
+  text-align: center;
+}
+
+.SkillSection {
+  margin-top: 30px;
+}
 .SkillSubTitle {
   margin-top: 50px;
   font-size: 24px;
@@ -23,35 +34,66 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  gap: 15x;
+  gap: 20px;
   margin-top: 10px;
 }
 
 .SkillBadgeContainer {
-  width: calc(20% - 20px);
-  margin-bottom: 20px;
-  cursor: url("/assets/cursor.png"), auto;
-}
-
-.SkillBadge {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: black;
-  padding: 5px 10px;
-  border-radius: 15px;
-  margin-top: 15px;
-  font-size: 24px;
-  font-weight: bold;
-  width: 150px;
-  height: 150px;
-  text-align: center;
+  width: 180px;
+  height: 180px;
+  cursor: pointer;
   transition: transform 0.3s ease;
+  margin: 15px;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  overflow: visible;
 }
 
-.SkillBadge:hover {
-  transform: scale(1.2);
+.SkillBadgeContainer:hover {
+  transform: scale(1.3);
+  z-index: 10;
+}
+
+.SkillBadgeImage {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.SkillBadgeText {
+  font-size: 20px;
+  color: black;
+  text-align: center;
+}
+
+.SkillDescription {
+  position: absolute;
+  bottom: -140px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 14px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  z-index: 20;
+}
+
+.SkillBadgeContainer:hover .SkillDescription {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-10px);
 }
 
 .SoftSkillTitle {
@@ -73,16 +115,6 @@
   background-color: #2d2d2d;
   padding: 40px;
   border-radius: 20px;
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 1); */
-}
-.SkillTitle li {
-  padding-left: 10px;
-}
-
-.SkillTitle li::marker {
-  content: "•";
-  color: white;
-  font-size: 24px;
 }
 
 .SoftSkillSubText li {
@@ -92,95 +124,5 @@
 .SoftSkillSubText li::marker {
   content: "✓";
   color: bisque;
-  font-size: 24px;
-}
-
-.SkillBadge.js {
-  background-color: #f7df1e;
-}
-
-.SkillBadge.ts {
-  background-color: #007acc;
-}
-
-.SkillBadge.html {
-  background-color: #e44d26;
-  color: white;
-}
-
-.SkillBadge.css {
-  background-color: #264de4;
-}
-
-.SkillBadge.python {
-  background-color: #306998;
-}
-
-.SkillBadge.react {
-  background-color: #61dafb;
-}
-
-.SkillBadge.react-native {
-  background-color: #61dafb;
-}
-
-.SkillBadge.android {
-  background-color: #3ddc84;
-}
-
-.SkillBadge.vue {
-  background-color: #42b883;
-}
-
-.SkillBadge.django {
-  background-color: #092e20;
-  color: white;
-}
-
-.SkillBadge.bootstrap {
-  background-color: #563d7c;
-  color: white;
-}
-
-.SkillBadge.visualstudio {
-  background-color: #5c2d91;
-  color: white;
-}
-
-.SkillBadge.figma {
-  background-color: #f24e1e;
-  color: white;
-}
-
-.SkillBadge.notion {
-  background-color: #ffffff;
-  color: black;
-}
-
-.SkillBadge.jira {
-  background-color: #0052cc;
-  color: white;
-}
-
-.SkillBadge.mysql {
-  background-color: #00758f;
-  color: white;
-}
-
-.SkillBadge.git {
-  background-color: #f05032;
-  color: white;
-}
-
-.SkillProgress {
-  background-color: white;
-  border-radius: 5px;
-  height: 8px;
-  margin-top: 5px;
-}
-
-.SkillProgressBar {
-  height: 100%;
-  background-color: skyblue;
-  border-radius: 5px;
+  font-size: 20px;
 }
