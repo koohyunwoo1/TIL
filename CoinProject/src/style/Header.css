@@ -1,0 +1,13 @@
+.HeaderContainer {
+  background-color: #003597;
+  height: 80px;
+  color: white;
+  font-size: 48px;
+  font-weight: bold;
+  font-style: oblique;
+  padding-left: 40px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
